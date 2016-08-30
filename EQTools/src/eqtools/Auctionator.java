@@ -190,7 +190,6 @@ public class Auctionator extends javax.swing.JFrame {
         }
         
         auction = new Auction();
-        auction.addBidder(new Bidder("Cheese", "Nacho"));
         lblStatus.setText("Auction started. Waiting for tells ...");
     }//GEN-LAST:event_btnStartNewAuctionActionPerformed
 
