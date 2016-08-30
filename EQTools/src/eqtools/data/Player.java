@@ -20,6 +20,7 @@ public class Player {
     private int gearTotalAllTime;
     private String looted;
     private boolean isCorrupted;
+    private boolean isUnknown = false;
     
     public Player() {
         name = "noname";
@@ -29,6 +30,7 @@ public class Player {
         gearTotal60 = 0;
         gearTotalAllTime = 0;
         looted = "00000000";
+        isUnknown = true;
     }
     
     public Player(String line) {
@@ -84,5 +86,9 @@ public class Player {
         score += diceWeight; 
         
         return score;
+    }
+    
+    public boolean isUnknown() {
+        return isUnknown;
     }
 }

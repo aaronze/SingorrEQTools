@@ -57,7 +57,11 @@ public class Auctionator extends javax.swing.JFrame {
             });
             
             for (Bidder bidder : list) {
-                text += bidder.name + ": " + bidder.score(DICE_WEIGHT) + " \"" + bidder.message + "\" \n";
+                if (PlayerInfo.getPlayer(bidder.name).isUnknown()) {
+                    text += bidder.name + ": ? \"" + bidder.message + "\" \n";
+                } else {
+                    text += bidder.name + ": " + bidder.score(DICE_WEIGHT) + " \"" + bidder.message + "\" \n";
+                }
             }
 
             bidders.setText(text);
@@ -186,6 +190,7 @@ public class Auctionator extends javax.swing.JFrame {
         }
         
         auction = new Auction();
+        auction.addBidder(new Bidder("Cheese", "Nacho"));
         lblStatus.setText("Auction started. Waiting for tells ...");
     }//GEN-LAST:event_btnStartNewAuctionActionPerformed
 
@@ -233,7 +238,11 @@ public class Auctionator extends javax.swing.JFrame {
         });
 
         for (Bidder bidder : list) {
-            text += bidder.name + "[" + bidder.score() + "] ";
+            if (PlayerInfo.getPlayer(bidder.name).isUnknown()) {
+                text += bidder.name + "[?] ";
+            } else {
+                text += bidder.name + "[" + bidder.score() + "] ";
+            }
         }
         
         StringSelection stringSelection = new StringSelection(text);
