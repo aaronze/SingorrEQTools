@@ -70,10 +70,6 @@ public class Player {
      * Gives a weighted score based on players raid stats and items looted.
      * A weighted dice can be added by including a diceWeight more then 0.
      * 
-     * Note: A diceWeight of more than 1000 is effectively a completely random winner
-     * This can actually be used to simply randomly award loot (With a small weighted bonus to loyal raiders)
-     * Possibly a neat solution for open raids.
-     * 
      * @param diceWeight
      * @return 
      */
@@ -85,7 +81,7 @@ public class Player {
         score -= 5 * gearTotal60; // Give a small defecit per item won in the last 60 days
         score += dkp / 200; // Give a tiny bonus to long term loyal raiders
         
-        score += (int)(Math.random() * diceWeight); // If used, give a random bonus to "shake things up a bit".
+        score += diceWeight; 
         
         return score;
     }

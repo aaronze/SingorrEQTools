@@ -15,6 +15,7 @@ import eqtools.PlayerInfo;
 public class Bidder implements Comparable<Bidder> {
     public String name;
     public String message;
+    public int dice;
     
     public Bidder(String name, String message) {
         this.name = name;
@@ -27,7 +28,7 @@ public class Bidder implements Comparable<Bidder> {
      * @return 
      */
     public int score() {
-        return PlayerInfo.getPlayer(name).score(0);
+        return score(0);
     }
     
     /**
@@ -42,7 +43,11 @@ public class Bidder implements Comparable<Bidder> {
      * @return 
      */
     public int score(int diceWeight) {
-        return PlayerInfo.getPlayer(name).score(diceWeight);
+        if (diceWeight != 0 && dice == 0) {
+            dice = (int)(Math.random()*diceWeight);
+        }
+        
+        return PlayerInfo.getPlayer(name).score(dice);
     }
 
     @Override

@@ -57,7 +57,7 @@ public class Auctionator extends javax.swing.JFrame {
             });
             
             for (Bidder bidder : list) {
-                text += bidder.name + ": " + bidder.score() + " \"" + bidder.message + "\" \n";
+                text += bidder.name + ": " + bidder.score(DICE_WEIGHT) + " \"" + bidder.message + "\" \n";
             }
 
             bidders.setText(text);
@@ -80,7 +80,7 @@ public class Auctionator extends javax.swing.JFrame {
 
         btnStartNewAuction = new javax.swing.JButton();
         btnSendToEQ = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        txtChannel = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         bidders = new javax.swing.JTextArea();
@@ -105,10 +105,10 @@ public class Auctionator extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.setText("/2 ");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtChannel.setText("/2 ");
+        txtChannel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtChannelActionPerformed(evt);
             }
         });
 
@@ -146,7 +146,7 @@ public class Auctionator extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 521, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtChannel, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(63, 63, 63)
                         .addComponent(btnSendToEQ, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -170,7 +170,7 @@ public class Auctionator extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtChannel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btnSendToEQ, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
@@ -189,9 +189,9 @@ public class Auctionator extends javax.swing.JFrame {
         lblStatus.setText("Auction started. Waiting for tells ...");
     }//GEN-LAST:event_btnStartNewAuctionActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtChannelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtChannelActionPerformed
         
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtChannelActionPerformed
 
     private void mnuLoadLogFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuLoadLogFileActionPerformed
         // If user has loaded a log before, start with that folder in File Chooser
@@ -222,13 +222,26 @@ public class Auctionator extends javax.swing.JFrame {
     }//GEN-LAST:event_mnuLoadLogFileActionPerformed
 
     private void btnSendToEQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendToEQActionPerformed
-        String string = "";
+        String text = txtChannel.getText() + " ";
         
+        List<Bidder> list = Arrays.asList(auction.getBidders());
+        Collections.sort(list, new Comparator<Bidder>() {
+            @Override
+            public int compare(Bidder left, Bidder right)  {
+                return right.score(DICE_WEIGHT) - left.score(DICE_WEIGHT);
+            }
+        });
+
+        for (Bidder bidder : list) {
+            text += bidder.name + "[" + bidder.score() + "] ";
+        }
         
-        
-        StringSelection stringSelection = new StringSelection(string);
+        StringSelection stringSelection = new StringSelection(text);
         Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
         clpbrd.setContents(stringSelection, null);
+        
+        lblStatus.setText("Copied to Clipboard.");
+        auction.closeAuction();
     }//GEN-LAST:event_btnSendToEQActionPerformed
 
     
@@ -275,8 +288,8 @@ public class Auctionator extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblStatus;
     private javax.swing.JMenuItem mnuLoadLogFile;
+    private javax.swing.JTextField txtChannel;
     // End of variables declaration//GEN-END:variables
 }

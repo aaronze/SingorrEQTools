@@ -52,7 +52,7 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="521" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTextField1" min="-2" pref="183" max="-2" attributes="0"/>
+                          <Component id="txtChannel" min="-2" pref="183" max="-2" attributes="0"/>
                           <Component id="jLabel1" min="-2" pref="183" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
@@ -83,7 +83,7 @@
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtChannel" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="btnSendToEQ" alignment="1" min="-2" pref="44" max="-2" attributes="0"/>
               </Group>
@@ -109,12 +109,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSendToEQActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="txtChannel">
       <Properties>
         <Property name="text" type="java.lang.String" value="/2 "/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtChannelActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">

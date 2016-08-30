@@ -14,6 +14,7 @@ import java.util.ArrayList;
  */
 public class Auction {
     private ArrayList<Bidder> bidders = new ArrayList<>();
+    private boolean isOpen = true;
 
     public void addBidder(Bidder bidder) {
         // Ensure person auctioning sending tells and using tell windows
@@ -24,6 +25,11 @@ public class Auction {
         
         // Ensure no bidder is added twice
         if (hasBidder(bidder.name)) {
+            return;
+        }
+        
+        // If auction is closed
+        if (!isOpen) {
             return;
         }
         
@@ -46,5 +52,9 @@ public class Auction {
     
     public Bidder[] getBidders() {
         return bidders.toArray(new Bidder[0]);
+    }
+    
+    public void closeAuction() {
+        isOpen = false;
     }
 }
