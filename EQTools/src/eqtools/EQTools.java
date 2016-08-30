@@ -5,10 +5,10 @@
  */
 package eqtools;
 
+import eqtools.data.Player;
+import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.io.FileReader;
 import javax.swing.JFrame;
 
 /**
@@ -23,13 +23,21 @@ public class EQTools {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        new EQTools();
+    }
+    
+    public static void testScores() {
         try {
-            LogParser lp = new LogParser(new File("C:\\Users\\Public\\Daybreak Game Company\\Installed Games\\EverQuest\\Logs\\eqlog_Letmeintotacvi_bristle.txt"));
-            lp.start();
+            File f = new File("data.txt");
+            BufferedReader reader = new BufferedReader(new FileReader(f));
             
-            new EQTools();
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(EQTools.class.getName()).log(Level.SEVERE, null, ex);
+            String line;
+            while ((line = reader.readLine()) != null) {
+                Player player = new Player(line);
+                System.out.println(player.getName() + ": " + player.score(0));
+            }
+        } catch (Exception e) {
+            System.err.println(e);
         }
     }
     
@@ -38,5 +46,10 @@ public class EQTools {
         auctionator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         auctionator.setTitle("Auctionator");
         auctionator.setVisible(true);
+        
+        while (true) {
+            auctionator.step();
+            try {Thread.sleep(40);}catch (Exception e) {}
+        }
     }
 }

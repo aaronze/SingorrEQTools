@@ -6,7 +6,15 @@
 package eqtools;
 
 import eqtools.data.Bidder;
-import java.awt.GridLayout;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.io.File;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import javax.swing.JFileChooser;
 
 /**
  *
@@ -14,14 +22,52 @@ import java.awt.GridLayout;
  */
 public class Auctionator extends javax.swing.JFrame {
 
+    public static Auction auction;
+    public static LogParser logReader;
+    public static int DICE_WEIGHT = 0;
+    
     /**
      * Creates new form Auctionator
      */
     public Auctionator() {
         initComponents();
         
-        bidders.setLayout(new GridLayout(0, 4, 10, 10));
+        if (Config.hasConfig(Config.DICE_WEIGHT)) {
+            DICE_WEIGHT = Integer.parseInt(Config.getConfig(Config.DICE_WEIGHT));
+        }
     }
+    
+    public void step() {
+        if (logReader != null) {
+            try {
+                logReader.parseNext();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        
+        if (auction != null) {
+            String text = "";
+            
+            List<Bidder> list = Arrays.asList(auction.getBidders());
+            Collections.sort(list, new Comparator<Bidder>() {
+                public int compare(Bidder left, Bidder right)  {
+                    return right.score(DICE_WEIGHT) - left.score(DICE_WEIGHT);
+                }
+            });
+            
+            for (Bidder bidder : list) {
+                text += bidder.name + ": " + bidder.score() + " \"" + bidder.message + "\" \n";
+            }
+
+            bidders.setText(text);
+        }
+        
+        validate();
+        repaint();
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -32,25 +78,32 @@ public class Auctionator extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnStartNewAuction = new javax.swing.JButton();
+        btnSendToEQ = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        bidders = new BidderScrollPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        bidders = new javax.swing.JTextArea();
+        lblStatus = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        mnuLoadLogFile = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Start New Auction");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnStartNewAuction.setText("Start New Auction");
+        btnStartNewAuction.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnStartNewAuctionActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Send To EQ");
-
-        jButton3.setText("Select Random Winner");
+        btnSendToEQ.setText("Send To EQ");
+        btnSendToEQ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSendToEQActionPerformed(evt);
+            }
+        });
 
         jTextField1.setText("/2 ");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -61,16 +114,26 @@ public class Auctionator extends javax.swing.JFrame {
 
         jLabel1.setText("Use Chat Channel");
 
-        javax.swing.GroupLayout biddersLayout = new javax.swing.GroupLayout(bidders);
-        bidders.setLayout(biddersLayout);
-        biddersLayout.setHorizontalGroup(
-            biddersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        biddersLayout.setVerticalGroup(
-            biddersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 408, Short.MAX_VALUE)
-        );
+        bidders.setColumns(20);
+        bidders.setRows(5);
+        jScrollPane1.setViewportView(bidders);
+
+        lblStatus.setText("Waiting for Log File ... (File -> Load Log File)");
+        lblStatus.setToolTipText("");
+
+        jMenu1.setText("File");
+
+        mnuLoadLogFile.setText("Load Log File");
+        mnuLoadLogFile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuLoadLogFileActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mnuLoadLogFile);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,52 +142,94 @@ public class Auctionator extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bidders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 322, Short.MAX_VALUE)
+                        .addGap(0, 521, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(63, 63, 63)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnSendToEQ, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(btnStartNewAuction, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(12, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnStartNewAuction, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblStatus))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bidders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(btnSendToEQ, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        ((BidderScrollPane)bidders).clearBidders();
+    private void btnStartNewAuctionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStartNewAuctionActionPerformed
+        // Must have loaded a log before starting auction
+        if (logReader == null) {
+            lblStatus.setText("Failed to start auction. Load a Log File first!");
+            return;
+        }
         
-        ((BidderScrollPane)bidders).addBidder(new Bidder("Singorr", "This is a test"));
-        ((BidderScrollPane)bidders).addBidder(new Bidder("Singorr", "This is a test"));
-    }//GEN-LAST:event_jButton1ActionPerformed
+        auction = new Auction();
+        lblStatus.setText("Auction started. Waiting for tells ...");
+    }//GEN-LAST:event_btnStartNewAuctionActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void mnuLoadLogFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuLoadLogFileActionPerformed
+        // If user has loaded a log before, start with that folder in File Chooser
+        JFileChooser chooser;
+        if (Config.hasConfig(Config.LAST_LOADED_LOG)) {
+            chooser = new JFileChooser(new File(Config.getConfig(Config.LAST_LOADED_LOG)));
+        } else {
+            chooser = new JFileChooser();
+        }
+
+        int returnVal = chooser.showOpenDialog(this);
+        
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            try {
+                File file = chooser.getSelectedFile();
+                logReader = new LogParser(file);
+                logReader.consumeFile(); // Only start reading from end of log file
+                
+                // Save this path for next time
+                Config.setConfig(Config.LAST_LOADED_LOG, file.getParent());
+                
+                lblStatus.setText("Log Loaded Successfully!");
+            } catch (Exception e) {
+                lblStatus.setText("Failed to Load Log File. Try Again?");
+                e.printStackTrace();
+            }
+        }
+    }//GEN-LAST:event_mnuLoadLogFileActionPerformed
+
+    private void btnSendToEQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendToEQActionPerformed
+        String string = "";
+        
+        
+        
+        StringSelection stringSelection = new StringSelection(string);
+        Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clpbrd.setContents(stringSelection, null);
+    }//GEN-LAST:event_btnSendToEQActionPerformed
 
     
     /**
@@ -163,11 +268,15 @@ public class Auctionator extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel bidders;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JTextArea bidders;
+    private javax.swing.JButton btnSendToEQ;
+    private javax.swing.JButton btnStartNewAuction;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lblStatus;
+    private javax.swing.JMenuItem mnuLoadLogFile;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,6 +5,7 @@
  */
 package eqtools;
 
+import eqtools.data.Bidder;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,6 +13,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  *
@@ -33,6 +36,10 @@ public class LogParser extends Thread {
         name = name.replace(".txt", "");
         name = name.substring(0, name.indexOf("_"));
         characterName = name;
+    }
+    
+    public String getCharacterName() {
+        return characterName;
     }
     
     @Override
@@ -57,11 +64,18 @@ public class LogParser extends Thread {
         }
     }
     
+    public void parseNext() throws IOException {
+        String line;
+        while ((line = logReader.readLine()) != null) {
+            parseLine(line);
+        }
+    }
+    
     public void stopParsing() {
         keepAlive = false;
     }
     
-    private void consumeFile() {
+    public void consumeFile() {
         try {
             logReader.skip(logFile.length());
         } catch (IOException ex) {
@@ -70,14 +84,26 @@ public class LogParser extends Thread {
     }
     
     private void parseLine(String line) {
-        parseDeaths(line);
-    }
-    
-    
-    
-    private void parseDeaths(String line) {
-        if (line.contains("You have been slain by ")) {
-            System.out.println(characterName + " died.");
+        if (Auctionator.auction != null) {
+            parseAuction(line);
         }
     }
+    
+    private void parseAuction(String line) {
+        // TODO Find a way to exclude outbound messages adding player by detecting player name by log file name
+        Matcher tellWindowMatcher = Pattern.compile("\\[.*\\] (.*) \\-\\> .*: (.*)").matcher(line);
+        if (tellWindowMatcher.find()) {
+            String name = tellWindowMatcher.group(1);
+            String message = tellWindowMatcher.group(2);
+            Auctionator.auction.addBidder(new Bidder(name, message));
+        }
+        
+        Matcher tellMatcher = Pattern.compile("\\[.*\\] (.*) tells you, '(.*)'").matcher(line);
+        if (tellMatcher.find()) {
+            String name = tellMatcher.group(1);
+            String message = tellMatcher.group(2);
+            Auctionator.auction.addBidder(new Bidder(name, message));
+        }
+    }
+    
 }
