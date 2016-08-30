@@ -15,6 +15,6 @@ hs_err_pid*
 /EQTools/nbbuild.xml
 /EQTools/nbdist/
 /EQTools/build/
+/EQTools/build/config.txt
 EQTools/nbproject/build-impl.xml
 EQTools/config.txt
-/EQTools/dist/
