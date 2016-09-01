@@ -89,6 +89,8 @@ public class Auctionator extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         lblStatus = new javax.swing.JLabel();
         pnlBidders = new BiddersView();
+        jLabel2 = new javax.swing.JLabel();
+        boxSortBy = new javax.swing.JComboBox();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         mnuLoadLogFile = new javax.swing.JMenuItem();
@@ -134,6 +136,10 @@ public class Auctionator extends javax.swing.JFrame {
             .addGap(0, 381, Short.MAX_VALUE)
         );
 
+        jLabel2.setText("Sort By:");
+
+        boxSortBy.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Score", "Tells Received" }));
+
         jMenu1.setText("File");
 
         mnuLoadLogFile.setText("Load Log File");
@@ -169,7 +175,10 @@ public class Auctionator extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(pnlBidders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 521, Short.MAX_VALUE)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boxSortBy, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 371, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtChannel, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -184,7 +193,7 @@ public class Auctionator extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnStartNewAuction, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblStatus))
@@ -193,7 +202,10 @@ public class Auctionator extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(boxSortBy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtChannel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btnSendToEQ, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -211,6 +223,8 @@ public class Auctionator extends javax.swing.JFrame {
         }
         
         auction = new Auction();
+        auction.addBidder(new Bidder("Darom", "test"));
+        auction.addBidder(new Bidder("Veanda", "test"));
         lblStatus.setText("Auction started. Waiting for tells ...");
     }//GEN-LAST:event_btnStartNewAuctionActionPerformed
 
@@ -304,6 +318,9 @@ public class Auctionator extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_mnuAddBiddersActionPerformed
 
+    public String getSortBy() {
+        return (String)boxSortBy.getSelectedItem();
+    }
     
     /**
      * @param args the command line arguments
@@ -341,9 +358,11 @@ public class Auctionator extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox boxSortBy;
     private javax.swing.JButton btnSendToEQ;
     private javax.swing.JButton btnStartNewAuction;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;

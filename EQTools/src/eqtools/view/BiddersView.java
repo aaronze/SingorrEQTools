@@ -104,11 +104,14 @@ public class BiddersView extends JPanel {
             
             if (Auctionator.auction != null) {
                 List<Bidder> list = Arrays.asList(Auctionator.auction.getBidders());
-                Collections.sort(list, new Comparator<Bidder>() {
-                    public int compare(Bidder left, Bidder right)  {
-                        return right.score(DICE_WEIGHT) - left.score(DICE_WEIGHT);
-                    }
-                });
+                
+                if (Auctionator.instance.getSortBy().equalsIgnoreCase("Score")) {
+                    Collections.sort(list, new Comparator<Bidder>() {
+                        public int compare(Bidder left, Bidder right)  {
+                            return right.score(DICE_WEIGHT) - left.score(DICE_WEIGHT);
+                        }
+                    });
+                }
 
                 graphics.setColor(Color.BLACK);
                 graphics.setFont(new Font("Arial", Font.PLAIN, 12));
