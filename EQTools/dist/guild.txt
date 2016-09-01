@@ -7,12 +7,12 @@ Abern	105	Paladin	Inactive		05/02/15		g Main		off	off	528441	01/21/15	g Main
 Absoul	105	Necromancer	Member		08/27/16		Main (Therisid - name change)		off	off	0		Main (Therisid - name change)	
 Accused	101	Shadow Knight	Member		04/17/16		Main		on	off	48475	03/28/15	Main	
 Achillas	77	Warrior	Inactive	A	12/27/08		Alt - Eindyn		on	off	0		Alt - Eindyn	
-Acruxx	105	Shadow Knight	Member		08/28/16	Crescent Reach	Main		on	on	0		Main	
+Acruxx	105	Shadow Knight	Member		09/01/16		Main		on	on	0		Main	
 Action	105	Monk	Officer		08/28/16		g Main		on	on	1882348	06/19/16	g Main	
 Addrielle	66	Magician	Inactive	A	06/26/13		Alt - Larilia		off	off	0		Alt - Larilia	
 Adrina	85	Druid	Inactive		09/27/09		Main		on	off	3650	03/20/05	Main	
 Aduro	95	Wizard	Inactive	A	09/14/14		Alt - Tahn		off	off	0		Alt - Tahn	
-Aegerin	105	Ranger	Member		08/27/16		Main		on	off	17887	05/16/16	Main	
+Aegerin	105	Ranger	Member		08/31/16		Main		on	off	17887	05/16/16	Main	
 Aeldara	71	Cleric	Inactive		07/03/08		Main - MIA		off	off	0		Main - MIA	
 Aeromith	51	Ranger	Inactive	A	04/30/08		Alt - Airomith		off	off	0		Alt - Airomith	
 Aftershok	94	Shadow Knight	Recruit		07/29/16		alt - ninn		off	off	0		alt - ninn	
@@ -23,9 +23,9 @@ Ajanay	100	Magician	Inactive	A	08/24/15		Alt - Effieldra		on	on	4970	06/16/13	Al
 Akami	85	Shaman	Inactive	A	01/28/13		Alt - Karouu		off	off	0		Alt - Karouu	
 Alchemyz	97	Shaman	Inactive	A	06/08/13		Alt - Drhealgood		on	off	0		Alt - Drhealgood	
 Aleiza	95	Shadow Knight	Inactive	A	12/19/14		Alt - Souixxe		off	off	0		Alt - Souixxe	
-Aliea	105	Magician	Legend	A	08/26/16	Grand Guild Hall	Alt - Souixxe		off	off	323508	01/08/15	Alt - Souixxe	
-Alluredra	105	Enchanter	Member		08/22/16		Alt - Acruxx		off	off	0		Alt - Acruxx	
-Alore	105	Enchanter	Legend		08/28/16		Main		on	off	906657	06/04/16	Main	
+Aliea	105	Magician	Legend	A	09/02/16	Grand Guild Hall	Alt - Souixxe		off	off	323508	01/08/15	Alt - Souixxe	
+Alluredra	105	Enchanter	Member		09/01/16		Alt - Acruxx		off	off	0		Alt - Acruxx	
+Alore	105	Enchanter	Legend		09/02/16	Crypt of Sul	Main		on	off	906657	06/04/16	Main	
 Alumriel	93	Bard	Inactive		09/08/14		Main 27Jul14		on	off	21070	08/30/14	Main 27Jul14	
 Ameni	100	Cleric	Inactive		03/17/14		Main		on	on	0		Main	
 Amian	105	Rogue	Inactive	A	07/04/16		Alt - Biko		off	off	0		Alt - Biko	
@@ -37,22 +37,23 @@ Anteac	105	Druid	Member		08/09/16		g Main 		on	on	114892	04/30/16	g Main
 Antuan	85	Druid	Inactive	A	12/15/15		Alt - Arey		off	off	0		Alt - Arey	
 Antuanv	64	Shadow Knight	Inactive	A	12/21/15		Alt - Arey		off	off	0		Alt - Arey	
 Anwynn	79	Cleric	Inactive		02/23/13		Main		off	off	0		Main	
-Anza	105	Cleric	Member		08/28/16	The Dead Hills	Main		off	off	7056	08/27/16	Main	
+Anza	105	Cleric	Member		09/02/16	Grand Guild Hall	Main		off	off	7056	08/27/16	Main	
 Aoraddor	105	Paladin	Member	A	07/24/16		Alt - Sargtlin		off	off	5444	09/24/14	Alt - Sargtlin	
 Arazanos	73	Bard	Inactive		06/26/07		Retired MIA		off	off	26217	01/04/06	Retired MIA	
 Arey	97	Beastlord	Inactive		12/24/15		Main		off	off	0		Main	
-Arillia	105	Enchanter	Member		08/28/16		Main		on	on	2160	07/08/15	Main	
+Arillia	105	Enchanter	Member		09/01/16		Main		on	on	2160	07/08/15	Main	
 Armoured	104	Shadow Knight	Member		08/16/16		KIN - Main		on	off	0		KIN - Main	
 Artemice	85	Druid	Inactive	A	09/10/14		Alt - Rimaraf		off	off	0		Alt - Rimaraf	
-Articulus	105	Enchanter	Member	A	08/28/16	Gulf of Gunthak	Alt - Olarien		off	off	0		Alt - Olarien	
-Arukus	105	Wizard	Member		08/28/16		g Main		on	off	106541	04/11/16	g Main	
+Articulus	105	Enchanter	Member	A	09/02/16		Alt - Olarien		off	off	0		Alt - Olarien	
+Arukus	105	Wizard	Member		08/29/16		g Main		on	off	106541	04/11/16	g Main	
 Aryhm	76	Cleric	Inactive	A	02/11/09		Alt - Callistto		off	off	0		Alt - Callistto	
 Asamarreth	87	Magician	Inactive		08/20/12		Main		on	off	10087	05/14/12	Main	
 Asghignazzo	73	Enchanter	Inactive	A	10/01/15		Alt - Byokii		off	off	0		Alt - Byokii	
 Ashameon	105	Shaman	Inactive		08/10/16		Main		on	off	84608	05/17/15	Main	
-Ashiatsu	84	Shadow Knight	Recruit	A	08/26/16		Atl - Oshu		off	off	0		Atl - Oshu	
+Ashiatsu	84	Shadow Knight	Recruit	A	09/01/16		Alt - Oshu		off	off	0		Alt - Oshu	
 Astrow	81	Ranger	Inactive	A	07/15/13		Alt - Gnerfed		off	off	0		Alt - Gnerfed	
 Atlans	105	Magician	Member		08/27/16		Main 		off	off	14387	02/26/16	Main 	
+Atlantez	76	Wizard	Recruit	A	09/01/16		Alt - Oshu		off	off	0		Alt - Oshu	
 Attune	105	Bard	Class Mentor		07/28/16		g Main		off	off	5804	07/25/15	g Main	
 Aurally	85	Bard	Inactive	A	05/30/13		Alt - Drhealgood		off	off	0		Alt - Drhealgood	
 Aurayia	77	Wizard	Inactive	A	07/19/15		Alt - Moonrosedrop		off	off	0		Alt - Moonrosedrop	
@@ -62,29 +63,29 @@ Auspie	77	Shaman	Inactive	A	05/21/14		Alt - Metimbo		off	off	0		Alt - Metimbo
 Autumn	100	Monk	Inactive		07/09/15		Main		on	on	1918189	05/06/15	Main	
 Avatarr	105	Enchanter	Member	A	04/09/16		Alt - Liosis		off	off	0		Alt - Liosis	
 Ayula	98	Magician	Inactive		06/28/13		Main		on	off	1109	04/29/13	Main	
-Baertamer	102	Beastlord	Recruit		08/28/16		Alt - Gotjja		off	off	0		Alt - Gotjja	
+Baertamer	105	Beastlord	Member		09/02/16	Grand Guild Hall	Alt - Gotjja		off	off	0		Alt - Gotjja	
 Baleful	100	Monk	Member		08/14/16		Main		on	on	169812	12/22/13	Main	
 Balthier	105	Ranger	Legend		08/28/16		g Main		on	on	160517	12/08/14	g Main	
 Balveda	100	Cleric	Inactive	A	07/19/15		Alt - Rimaraf		off	off	63217	10/07/14	Alt - Rimaraf	
 Bandiren	105	Enchanter	Member	A	08/21/16		Alt - Sargtlin 		off	off	0		Alt - Sargtlin 	
 Banjjo	105	Bard	Member	A	08/21/16		Alt - Sargtlin		off	off	1228	06/21/15	Alt - Sargtlin	
-Bannory	105	Cleric	Officer	A	08/28/16	Grand Guild Hall	Has noidea what she is doing!		on	on	198945	06/28/15	Has noidea what she is doing!	
+Bannory	105	Cleric	Officer	A	08/29/16		Has noidea what she is doing!		on	on	198945	06/28/15	Has noidea what she is doing!	
 Barnical	100	Monk	Inactive		07/25/15		Main		on	on	0		Main	
-Baroness	98	Wizard	Member	A	08/14/16		Alt - Starchild		off	off	0		Alt - Starchild	
-Baroot	105	Magician	Member	A	08/27/16		Alt - Glenn		off	off	0		Alt - Glenn	
+Baroness	98	Wizard	Member	A	08/30/16		Alt - Starchild		off	off	0		Alt - Starchild	
+Baroot	105	Magician	Member	A	09/02/16	Crypt of Sul	Alt - Glenn		off	off	0		Alt - Glenn	
 Baroq	80	Bard	Inactive		10/04/08		Main - MIA		off	off	0		Main - MIA	
 Barper	105	Magician	Inactive		08/20/16		Main		off	off	34365	06/20/15	Main	
 Bartx	100	Cleric	Inactive	A	02/22/15		Alt - Jatum		off	off	0		Alt - Jatum	
 Bashfury	105	Shadow Knight	Member		07/07/16		Alt - Bashhum		on	off	4460	04/22/16	Alt - Bashhum	
 Bashhum	105	Warrior	Legend		08/28/16		g Main		on	on	10064040	08/27/16	g Main	
-Batevil	105	Wizard	Officer		08/28/16	Grand Guild Hall	g Main - AFK Since Beta 1999!		on	on	277456	04/24/16	g Main - AFK Since Beta 1999!	
-Baytoven	105	Bard	Member	A	08/22/16		Alt- Shaymous		off	off	0		Alt- Shaymous	
-Beastmodus	89	Berserker	Member		08/18/16		Alt - Kurrie		off	off	0		Alt - Kurrie	
+Batevil	105	Wizard	Officer		09/01/16	Grand Guild Hall	g Main - AFK Since Beta 1999!		on	on	277456	04/24/16	g Main - AFK Since Beta 1999!	
+Baytoven	105	Bard	Member	A	08/29/16		Alt- Shaymous		off	off	0		Alt- Shaymous	
+Beastmodus	89	Berserker	Member		09/01/16		Alt - Kurrie		off	off	0		Alt - Kurrie	
 Beefzerky	85	Berserker	Inactive	A	08/18/16		Alt - Bashhum		off	off	0		Alt - Bashhum	
 Berzarkin	105	Berserker	Inactive		08/16/16		Main		off	on	9475	10/22/13	Main	
 Bhaok	70	Beastlord	Inactive	A	06/20/14		Alt - Regbok		off	off	0		Alt - Regbok	
-Bigbboom	105	Magician	Member		08/21/16		Alt - Bigganz		off	off	0		Alt - Bigganz	
-Bigganz	105	Berserker	Member		08/28/16	Grand Guild Hall	Main		on	on	0		Main	
+Bigbboom	105	Magician	Member		09/01/16		Alt - Bigganz		off	off	0		Alt - Bigganz	
+Bigganz	105	Berserker	Member		09/02/16	Grand Guild Hall	Main		on	on	0		Main	
 Biggumz	80	Shadow Knight	Inactive	A	09/07/15		Alt - Kieff		off	off	0		Alt - Kieff	
 Bigums	85	Berserker	Inactive	A	02/20/14		Alt - Todadome - KIN - Aegerin		off	off	0		Alt - Todadome - KIN - Aegerin	
 Biko	105	Beastlord	Member		07/04/16		Main		off	off	0		Main	
@@ -106,41 +107,41 @@ Boredil	48	Warrior	Inactive	A	10/10/13		Alt - Vanwe		off	off	0		Alt - Vanwe
 Boronia	28	Berserker	Inactive	A	12/12/14		Alt - Taigan		off	off	0		Alt - Taigan	
 Bosaap	14	Druid	Inactive		09/08/14		Kin - Hhrolf		off	off	0		Kin - Hhrolf	
 Boslam	85	Shaman	Inactive		05/05/13		Main		on	off	0		Main	
-Brach	105	Cleric	Recruit		08/14/16		Recruit		off	off	0		Recruit	
+Brach	105	Cleric	Recruit		08/31/16		Recruit		off	off	0		Recruit	
 Brakinn	105	Monk	Member		03/18/16		Main		off	off	0		Main	
 Bromosexual	105	Beastlord	Member	A	07/14/16		Alt - Phantasmus		off	off	11165	02/06/16	Alt - Phantasmus	
 Brujos	95	Shaman	Inactive	A	03/18/14		Alt - Gathora 		off	off	0		Alt - Gathora 	
 Brunder	85	Ranger	Inactive		01/17/16		Retired MIA		on	off	5320	10/16/08	Retired MIA	
 Bunie	103	Cleric	Recruit		10/03/15		( Pre-app) until 105 		off	off	0		( Pre-app) until 105 	
 Burff	87	Shaman	Inactive	A	04/26/15		KIN Alt - Corvoh		off	off	0		KIN Alt - Corvoh	
-Burgular	100	Rogue	Member	A	08/20/16		Alt - Gaeuven		off	off	0		Alt - Gaeuven	
+Burgular	100	Rogue	Member	A	08/30/16		Alt - Gaeuven		off	off	0		Alt - Gaeuven	
 Busch	105	Beastlord	Inactive	A	09/15/15		Alt - Cursive		off	off	0		Alt - Cursive	
-Byen	105	Rogue	Member	A	08/26/16		Alt - Aegerin		off	off	0		Alt - Aegerin	
+Byen	105	Rogue	Member	A	08/30/16		Alt - Aegerin		off	off	0		Alt - Aegerin	
 Byok	82	Warrior	Inactive	A	12/29/15		Alt - Byokii		off	off	0		Alt - Byokii	
 Byokii	92	Necromancer	Inactive		11/07/15		Main		on	off	950	04/09/06	Main	
-Caleesi	100	Magician	Recruit		08/23/16		Alt - Wahzoo		off	off	0		Alt - Wahzoo	
+Caleesi	100	Magician	Recruit		08/31/16		Alt - Wahzoo		off	off	0		Alt - Wahzoo	
 Callistto	80	Rogue	Inactive		02/11/09		Main		on	off	2426	10/01/08	Main	
 Calloneous	105	Paladin	Member		08/27/16		Main		off	off	31362	07/06/16	Main	
 Calypso	100	Shadow Knight	Inactive	A	06/10/13		Alt - Drhealgood		on	off	0		Alt - Drhealgood	
 Caponae	85	Wizard	Inactive		06/29/09		Main		off	off	0		Main	
 Captyin	86	Bard	Inactive	A	02/04/15		Alt - Macadayno		on	off	0		Alt - Macadayno	
 Carerna	105	Paladin	Member	A	08/24/16		Alt - Liosis		off	off	0		Alt - Liosis	
-Catness	105	Shaman	Recruit		08/28/16		Main - 28 july 2016		off	off	0		Main - 28 july 2016	
+Catness	105	Shaman	Recruit		08/29/16		Main - 28 july 2016		off	off	0		Main - 28 july 2016	
 Cazzin	105	Rogue	Recruit		08/28/16		Main 3 july 2016		off	off	0		Main 3 july 2016	
 Ceelo	95	Shaman	Inactive	A	08/22/16		Alt - Georgeo		off	off	0		Alt - Georgeo	
 Cegar	91	Magician	Inactive	A	01/16/12		Alt - Grimjaw		on	off	0		Alt - Grimjaw	
-Cerberrus	102	Shadow Knight	Recruit		08/28/16		Alt - Phriyne		off	off	0		Alt - Phriyne	
-Chalore	97	Enchanter	Member	A	08/28/16	Modest Guild Hall	Alt - Lorewood		off	off	0		Alt - Lorewood	
+Cerberrus	102	Shadow Knight	Recruit		09/01/16		Alt - Phriyne		off	off	0		Alt - Phriyne	
+Chalore	97	Enchanter	Member	A	08/29/16		Alt - Lorewood		off	off	0		Alt - Lorewood	
 Chanced	105	Cleric	Member	A	07/02/16		Alt - Phantasmus		off	off	0		Alt - Phantasmus	
 Changg	86	Monk	Inactive	A	04/27/16		Alt - Gaborn		off	off	0		Alt - Gaborn	
 Charrmeen	20	Enchanter	Member	A	07/18/16		Alt - Hhrolf		off	off	0		Alt - Hhrolf	
 Chermane	80	Cleric	Inactive	A	10/18/08		Alt - Hhrolf - may be played by his daughter at times		off	off	0		Alt - Hhrolf - may be played by his daughter at times	
-Chewi	105	Magician	Class Mentor		08/28/16		g *CLASS MENTOR (Mag) Main		on	on	16582	11/30/14	g *CLASS MENTOR (Mag) Main	
+Chewi	105	Magician	Class Mentor		08/30/16	Modest Guild Hall	g *CLASS MENTOR (Mag) Main		on	on	16582	11/30/14	g *CLASS MENTOR (Mag) Main	
 Chigafish	30	Shadow Knight	Member	A	03/17/12		Honored Legend, Alt - Meco (RIP) =*(		off	off	0		Honored Legend, Alt - Meco (RIP) =*(	
 Chilla	103	Necromancer	Member		05/05/16		Main		off	off	729	12/14/15	Main	
 Chinna	70	Cleric	Inactive		03/26/06		Retired Alumni		on	off	3900	05/24/05	Retired Alumni	
 Chiwaho	77	Warrior	Member	A	06/19/16		alt - Anteac		off	off	0		alt - Anteac	
-Chronk	105	Enchanter	Recruit		08/24/16				off	off	0			
+Chronk	105	Enchanter	Recruit		08/30/16				off	off	0			
 Cinumpus	74	Cleric	Inactive	A	11/25/15		Kin - Sargtlin		off	off	0		Kin - Sargtlin	
 Cisbusiel	105	Necromancer	Recruit		07/12/16		Main 25oct2015		off	off	0		Main 25oct2015	
 Cizu	87	Monk	Member	A	05/02/16		Alt - Starchild		off	off	0		Alt - Starchild	
@@ -151,14 +152,14 @@ Comey	104	Shaman	Inactive	A	06/10/15		Alt - Gromey		off	off	0		Alt - Gromey
 Cooperr	105	Shaman	Member	A	02/23/16		KIN - Nimandar		off	off	0		KIN - Nimandar	
 Crontab	105	Shaman	Member	A	08/27/16		Alt - Glenntop		off	off	0		Alt - Glenntop	
 Cuervou	80	Ranger	Member	A	06/18/16		Alt - Tandaor		off	off	0		Alt - Tandaor	
-Cuff	105	Rogue	Member	A	08/28/16	Grand Guild Hall	Alt- Quay		off	off	0		Alt- Quay	
+Cuff	105	Rogue	Member	A	08/30/16		Alt- Quay		off	off	0		Alt- Quay	
 Cursive	105	Berserker	Inactive		09/14/15		g Main		on	off	0		g Main	
 Cynderz	78	Enchanter	Inactive	A	05/29/13		Alt - Drhealgood		off	off	0		Alt - Drhealgood	
 Daard	76	Rogue	Inactive	A	07/21/08		Alt - Pherns		off	off	0		Alt - Pherns	
-Daigeh	105	Monk	Legend		08/28/16	Plane of Knowledge	g Main - Alumni		on	off	2984	06/11/16	g Main - Alumni	
+Daigeh	105	Monk	Legend		08/30/16		g Main - Alumni		on	off	2984	06/11/16	g Main - Alumni	
 Dakanmer	72	Cleric	Inactive	A	08/24/13		Alt - Raiyghn		off	off	0		Alt - Raiyghn	
 Dalavar	105	Magician	Inactive	A	01/06/15		Alt - Kimmuriel		on	off	30425	12/08/14	Alt - Kimmuriel	
-Damagee	105	Necromancer	Recruit		08/20/16		Recruit Main 26 June		off	off	0		Recruit Main 26 June	
+Damagee	105	Necromancer	Recruit		08/31/16		Recruit Main 26 June		off	off	0		Recruit Main 26 June	
 Damass	105	Ranger	Member	A	07/03/16		Alt - Sargtlin		off	off	0		Alt - Sargtlin	
 Danaerys	100	Cleric	Inactive		08/04/14		Kin - Mingsawshi		off	off	0		Kin - Mingsawshi	
 Daphnei	104	Rogue	Member		07/14/16		Alt - Phantasmus		off	off	0		Alt - Phantasmus	
@@ -166,7 +167,7 @@ Darach	88	Wizard	Member		08/05/16		Kin - Darom		off	off	0		Kin - Darom
 Daran	100	Wizard	Inactive	A	07/04/16		Alt - Baleful		off	off	46186	12/29/13	Alt - Baleful	
 Darklust	75	Cleric	Inactive	A	03/03/16		Alt - Darkzero		off	off	0		Alt - Darkzero	
 Darkvaderr	105	Magician	Member	A	07/09/16		Alt - Liosis		off	off	0		Alt - Liosis	
-Darom	105	Cleric	Officer		08/28/16		Class Mentor (CLR) - Main Officer Newbie!		on	on	1271	06/16/16	Class Mentor (CLR) - Main Officer Newbie!	
+Darom	105	Cleric	Officer		09/02/16	Grand Guild Hall	Class Mentor (CLR) - Main Officer Newbie!		on	on	1271	06/16/16	Class Mentor (CLR) - Main Officer Newbie!	
 Daromsbard	84	Bard	Member	A	08/05/16		Alt - Darom		off	off	0		Alt - Darom	
 Darthemage	100	Magician	Inactive	A	08/04/14		Alt - Mingsawshi		off	off	0		Alt - Mingsawshi	
 Deadembrace	85	Shadow Knight	Inactive	A	02/06/15		Alt - Tanisa		off	off	0		Alt - Tanisa	
@@ -175,13 +176,13 @@ Deamonne	59	Shadow Knight	Recruit	A	03/09/16		Alt - Chilla		off	off	0		Alt - Chi
 Deardra	102	Magician	Member		06/25/16		Main		off	off	0		Main	
 Deenah	85	Paladin	Inactive	A	07/22/16		Alt - Taigan		off	off	0		Alt - Taigan	
 Deflep	100	Bard	Inactive	A	07/11/15		Alt - Barper		off	off	131905	01/02/15	Alt - Barper	
-Deltavion	104	Enchanter	Member	A	08/13/16		Alt  - Rashelf		off	off	0		Alt  - Rashelf	
+Deltavion	104	Enchanter	Member	A	08/30/16		Alt  - Rashelf		off	off	0		Alt  - Rashelf	
 Denya	101	Paladin	Inactive		11/23/15		Main		off	off	0		Main	
 Desecra	101	Wizard	Inactive	A	07/24/15		Alt - Barper		off	off	60092	03/17/15	Alt - Barper	
 Devilika	75	Enchanter	Inactive	A	07/25/08		Alt - Kaelarya		on	off	2841	03/07/07	Alt - Kaelarya	
 Devoss	90	Paladin	Inactive		02/19/16		Main		off	off	0		Main	
 Digginit	105	Ranger	Recruit		08/14/16		Main - 22 july 2016		off	off	0		Main - 22 july 2016	
-Dinerila	105	Bard	Recruit		08/28/16		Main - 26 aug 2016		off	off	0		Main - 26 aug 2016	
+Dinerila	105	Bard	Recruit		09/01/16		Main - 26 aug 2016		off	off	0		Main - 26 aug 2016	
 Dingleberrie	89	Druid	Inactive	A	05/04/15		Alt - Uisge		off	off	0		Alt - Uisge	
 Dlaze	70	Monk	Inactive		08/14/06		Retired Alumni		on	off	7112	11/28/05	Retired Alumni	
 Dluim	80	Necromancer	Inactive		08/05/09		Main		on	off	1540	07/17/06	Main	
@@ -198,8 +199,7 @@ Druadd	102	Druid	Member	A	08/16/16		Alt - Darom		off	off	0		Alt - Darom
 Duanya	24	Druid	Inactive	A	09/30/08		Alt - Veanda		off	off	0		Alt - Veanda	
 Duco	95	Enchanter	Inactive	A	09/14/14		Alt - Tahn		off	off	0		Alt - Tahn	
 Duladas	85	Cleric	Inactive		06/05/16		Main		off	off	0		Main	
-Dunkn	105	Cleric	Recruit		08/28/16		Main - 11/29		off	off	0		Main - 11/29	
-Dunraz	105	Magician	Member	A	08/28/16		Alt - Keltiklen		off	off	0		Alt - Keltiklen	
+Dunkn	105	Cleric	Recruit		09/01/16		Main - 11/29		off	off	0		Main - 11/29	
 Durran	95	Rogue	Member	A	07/03/16		Alt - Sargtlin		off	off	0		Alt - Sargtlin	
 Dylane	94	Cleric	Inactive	A	08/23/15		Alt - Effieldra		off	off	0		Alt - Effieldra	
 Eanlas	85	Cleric	Inactive	A	06/06/16		Alt - Daigeh		off	off	0		Alt - Daigeh	
@@ -209,11 +209,11 @@ Effieldra	100	Ranger	Inactive		08/24/15		Main		on	on	5256	06/16/13	Main
 Egam	97	Magician	Member	A	08/23/16		Alt - Bashhum		on	off	0		Alt - Bashhum	
 Egamad	62	Rogue	Inactive	A	01/03/15		Alt - Abern		off	off	0		Alt - Abern	
 Eindyn	85	Ranger	Inactive		03/20/12		Main		on	off	0		Main	
-Einini	105	Enchanter	Member	A	08/28/16		Alt - Starchild		off	off	86846	05/18/16	Alt - Starchild	
-Elderos	105	Necromancer	Member		03/17/16		g Main		on	on	0		g Main	
+Einini	105	Enchanter	Member	A	09/01/16		Alt - Starchild		off	off	86846	05/18/16	Alt - Starchild	
+Elderos	105	Necromancer	Member		08/31/16		g Main		on	on	0		g Main	
 Eldros	105	Wizard	Member		06/20/16		g Main		on	on	1990898	04/09/16	g Main	
 Elendar	92	Magician	Inactive	A	05/03/14		Alt - Andurr		off	off	0		Alt - Andurr	
-Elgluth	105	Warrior	Member		08/26/16		g Main		off	on	0		g Main	
+Elgluth	105	Warrior	Member		08/31/16		g Main		off	on	0		g Main	
 Elkerek	80	Necromancer	Inactive	A	05/23/12		Alt - Sindawen		off	off	57256	05/16/12	Alt - Sindawen	
 Elrose	100	Ranger	Inactive		03/07/16		Main		off	off	0		Main	
 Emerys	105	Magician	Member		07/03/16		g Main 		on	on	673323	04/16/16	g Main 	
@@ -236,7 +236,7 @@ Faldenx	87	Shaman	Inactive	A	06/23/16		Alt - Daigeh		off	off	0		Alt - Daigeh
 Fallseto	92	Bard	Inactive	A	06/22/13		Alt - Gregais		off	off	0		Alt - Gregais	
 Falthorn	70	Shadow Knight	Inactive		01/23/06		Retired Alumni		on	off	239552	12/24/04	Retired Alumni	
 Famora	75	Cleric	Inactive		09/17/07		Main		on	off	0		Main	
-Fanadan	105	Enchanter	Recruit		08/27/16		Alt - Zaibez		off	off	0		Alt - Zaibez	
+Fanadan	105	Enchanter	Recruit	A	09/02/16	Plane of Knowledge	Alt - Zaibez		off	off	0		Alt - Zaibez	
 Fanglador	71	Monk	Inactive	A	05/02/16		Alt - Kranth		off	off	0		Alt - Kranth	
 Feillan	105	Warrior	Member		08/27/16		Kin - Batevil		off	off	0		Kin - Batevil	
 Festalin	66	Druid	Inactive	A	07/27/16		Alt - Hhrolf		off	off	54	01/19/07	Alt - Hhrolf	
@@ -247,51 +247,50 @@ Fitsan	85	Wizard	Inactive		03/20/14		Retired MIA		on	off	9232	12/27/11	Retired M
 Fizzlebiskit	100	Necromancer	Inactive	A	06/23/15		Alt - Silycibin		off	off	0		Alt - Silycibin	
 Fizzlebop	105	Magician	Member	A	07/14/16		Alt - Phantasmus		off	off	1266	01/24/16	Alt - Phantasmus	
 Flyngfist	64	Monk	Recruit		08/23/16		KIN - Rorszale		off	off	0		KIN - Rorszale	
-Fonin	105	Magician	Member	A	08/14/16		Alt - Squashbettle		off	off	0		Alt - Squashbettle	
-Forad	105	Rogue	Recruit		08/28/16	Plane of Knowledge	Main		off	off	0		Main	
+Fonin	105	Magician	Member	A	08/30/16		Alt - Squashbettle		off	off	0		Alt - Squashbettle	
+Forad	105	Rogue	Recruit		09/02/16	Highpass Hold	Main		on	off	0		Main	
 Foresst	105	Ranger	Recruit		08/21/16		Main - 17th July 2016		off	off	0		Main - 17th July 2016	
 Freakadayen	81	Shadow Knight	Inactive	A	08/27/16		Alt - Liosis		off	off	0		Alt - Liosis	
 Frekken	86	Druid	Member	A	07/02/16		Alt - Kanjin		off	off	0		Alt - Kanjin	
-Frianie	82	Bard	Recruit	A	08/28/16		Alt - Tadaen		on	off	45618	08/27/16	Alt - Tadaen	
+Frianie	83	Bard	Recruit	A	09/02/16		Alt - Tadaen		on	off	45618	08/27/16	Alt - Tadaen	
 Frogenheimer	98	Cleric	Member		12/07/15		Alt - Byokii		off	off	0		Alt - Byokii	
 Froskr	105	Wizard	Member	A	08/23/16		Alt - Ruarik		off	off	0		Alt - Ruarik	
 Fumanshoo	105	Monk	Member		05/18/16		App 02/13/2016		off	off	0		App 02/13/2016	
 Furiousa	105	Cleric	Member	A	08/28/16		Alt - Madstomper		off	off	0		Alt - Madstomper	
 Gaborn	105	Warrior	Member		04/21/16		g Main		on	off	129497	11/23/14	g Main	
 Gabtwo	45	Ranger	Inactive	A	12/25/14		Alt - Gaborn		off	off	0		Alt - Gaborn	
-Gaeve	105	Magician	Member	A	08/17/16		Alt - Geauven		on	off	35756	08/15/16	Alt - Geauven	
+Gaeve	105	Magician	Member	A	09/01/16		Alt - Geauven		on	off	35756	08/15/16	Alt - Geauven	
 Galandori	105	Bard	Inactive	A	08/07/16		Alt - Souixxe		off	off	71086	06/27/13	Alt - Souixxe	
 Galathil	92	Rogue	Inactive		07/13/16		Main - kin		on	off	0		Main - kin	
 Galhob	60	Rogue	Inactive	A	06/16/12		Alt - Macadayno		off	off	0		Alt - Macadayno	
 Gallium	85	Bard	Inactive	A	09/28/14		Alt - Rim		off	off	0		Alt - Rim	
 Galthan	43	Magician	Inactive	A	03/07/14		Alt - Kranth		off	off	0		Alt - Kranth	
-Gardnaz	105	Shaman	Recruit		08/26/16		Notes Please		off	off	0		Notes Please	
+Gardnaz	105	Shaman	Recruit		08/30/16		Notes Please		off	off	0		Notes Please	
 Gask	80	Warrior	Inactive		10/15/08		Retired Alumni		off	off	1217	10/07/08	Retired Alumni	
 Gathora	97	Berserker	Inactive		07/15/16		Main		off	off	0		Main	
 Gault	100	Beastlord	Inactive	A	04/04/15		Alt - Barper		off	off	0		Alt - Barper	
-Gautaz	100	Magician	Member	A	08/27/16		Alt - Keltiklen		off	off	0		Alt - Keltiklen	
-Geauven	105	Bard	Member		08/26/16		KIN		on	off	80724	06/06/16	KIN	
-Gegan	105	Warrior	Member		08/24/16	Grand Guild Hall	Main		off	off	64074	06/14/14	Main	
+Geauven	105	Bard	Member		09/02/16	Plane of Knowledge	KIN		on	off	80724	06/06/16	KIN	
+Gegan	105	Warrior	Member		08/29/16		Main		off	off	64074	06/14/14	Main	
 Geils	92	Magician	Inactive	A	05/09/15		Alt - Accused		on	off	25168	04/03/15	Alt - Accused	
 Gentlewoman	86	Ranger	Member	A	03/27/16		Alt - Malvolio		off	off	0		Alt - Malvolio	
-Georgeo	105	Shadow Knight	Legend		08/28/16	Grand Guild Hall	Main Senior Citizen Discount		on	on	526057	08/21/16	Main Senior Citizen Discount	
+Georgeo	105	Shadow Knight	Legend		08/29/16		Main Senior Citizen Discount		on	on	526057	08/21/16	Main Senior Citizen Discount	
 Getaye	70	Wizard	Inactive		07/02/06		Retired Alumni		off	off	0		Retired Alumni	
 Gianae	105	Bard	Member		08/19/16		Alt--Gotjja		off	off	12450	07/11/16	Alt--Gotjja	
 Giri	105	Shadow Knight	Member		08/02/16		Main		on	off	101	07/13/14	Main	
-Glancex	105	Warrior	Recruit		08/28/16		alt - phatelo		off	off	0		alt - phatelo	
-Glenntop	105	Ranger	Legend	A	08/28/16		Alt - Alore		on	on	166919	04/24/15	Alt - Alore	
+Glancex	105	Warrior	Recruit		09/01/16		alt - phatelo		off	off	0		alt - phatelo	
+Glenntop	105	Ranger	Legend	A	08/29/16		Alt - Alore		on	on	166919	04/24/15	Alt - Alore	
 Glori	100	Cleric	Inactive	A	03/06/15		Alt - Autumn (played Nikar)		off	off	7741	11/22/14	Alt - Autumn (played Nikar)	
 Glorianne	100	Bard	Inactive	A	11/05/14		Alt - Autumn		off	off	0		Alt - Autumn	
 Gnarlheart	52	Cleric	Inactive		02/09/16		Main - Inactive		off	off	0		Main - Inactive	
 Gnugget	65	Wizard	Inactive	A	05/14/08		Alt - Callistto		off	off	0		Alt - Callistto	
-Gocoo	105	Enchanter	Member	A	08/28/16	The Guild Lobby	Alt - Shootmx		off	off	209047	10/03/15	Alt - Shootmx	
+Gocoo	105	Enchanter	Member	A	08/29/16		Alt - Shootmx		off	off	209047	10/03/15	Alt - Shootmx	
 Gonab	67	Cleric	Inactive		02/25/14		Main - Inactive		off	off	0		Main - Inactive	
 Gondall	100	Cleric	Inactive		10/21/14		Main		off	off	0		Main	
 Gooney	84	Magician	Inactive	A	06/23/14		Alt - Georgeo		off	off	1080	07/23/12	Alt - Georgeo	
 Gorbin	72	Cleric	Inactive	A	02/09/13		Alt - Blackfalcon		off	off	0		Alt - Blackfalcon	
-Gotbandaids	105	Cleric	Member		08/28/16		Alt - Vitriol		off	off	0		Alt - Vitriol	
-Gotjja	105	Cleric	Legend		08/28/16		g Main		on	on	119483	08/24/15	g Main	
-Graay	101	Berserker	Inactive	A	08/28/16	The Guild Lobby	Alt - Tseuq		off	off	13287	10/02/13	Alt - Tseuq	
+Gotbandaids	105	Cleric	Member		08/31/16		Alt - Vitriol		off	off	0		Alt - Vitriol	
+Gotjja	105	Cleric	Legend		08/31/16		g Main		on	on	119483	08/24/15	g Main	
+Graay	102	Berserker	Inactive	A	09/01/16		Alt - Tseuq		off	off	13287	10/02/13	Alt - Tseuq	
 Greekgod	100	Beastlord	Inactive		04/29/16		Main		on	off	0		Main	
 Grolsh	72	Warrior	Inactive	A	07/24/09		Alt - Majjisofhuffs		on	off	13496	05/13/09	Alt - Majjisofhuffs	
 Gromey	105	Ranger	Inactive		10/11/15		g Main		on	on	0		g Main	
@@ -302,7 +301,7 @@ Guraak	63	Wizard	Inactive	A	06/27/08		Alt - Gurach #72		off	off	0		Alt - Gurach 
 Gurach	80	Shadow Knight	Inactive		09/29/08		Retired		on	off	0		Retired	
 Gurakin	68	Druid	Inactive	A	09/30/08		Alt - Gurach		on	off	0		Alt - Gurach	
 Gurogga	69	Magician	Inactive	A	09/30/08		Alt - Gurach		off	off	0		Alt - Gurach	
-Gurola	100	Shadow Knight	Inactive		08/26/16		( Cleric app Duskn alt )		off	off	0		( Cleric app Duskn alt )	
+Gurola	100	Shadow Knight	Inactive		09/01/16		( Cleric app Duskn alt )		off	off	0		( Cleric app Duskn alt )	
 Gurrogue	55	Rogue	Inactive	A	09/29/08		Alt - Gurach		off	off	0		Alt - Gurach	
 Gurthel	70	Necromancer	Inactive		06/09/05		Retired		on	off	0		Retired	
 Guukab	95	Shaman	Inactive	A	09/13/12		Alt - Kazbal		off	off	38196	08/08/12	Alt - Kazbal	
@@ -313,17 +312,16 @@ Halbird	76	Druid	Inactive		05/04/12		Main - Inactive		off	off	0		Main - Inactive
 Hashishan	98	Monk	Member	A	08/15/16		Alt - Maggotmonger		off	off	0		Alt - Maggotmonger	
 Hasonv	90	Ranger	Inactive	A	08/19/16		Alt - Arey		off	off	750	04/12/12	Alt - Arey	
 Hatti	85	Ranger	Inactive		03/24/15		Kin - Tanisa Fiancee		off	off	0		Kin - Tanisa Fiancee	
-Healkelt	105	Cleric	Member	A	07/24/16		Alt - Keltiklen		off	off	0		Alt - Keltiklen	
 Healslore	95	Cleric	Member		08/22/16		alt - LoreWOOD		off	off	0		alt - LoreWOOD	
 Healsunot	105	Cleric	Inactive	A	06/20/15		Alt - Gromey		on	off	0		Alt - Gromey	
 Hebar	75	Beastlord	Inactive		07/01/08		Retired Alumni		on	off	1150	03/08/07	Retired Alumni	
 Hennie	65	Warrior	Inactive	A	07/16/15		Alt - Rimaraf		off	off	0		Alt - Rimaraf	
 Heresiarch	100	Shadow Knight	Member	A	08/07/16		Alt - Kanjin		on	on	98598	03/12/14	Alt - Kanjin	
 Heroi	75	Cleric	Inactive	A	07/01/08		Alt - Encien		off	off	0		Alt - Encien	
-Hhrolf	105	Shaman	Officer		08/26/16		g Main - Narcoleptic Esteemed Legend 		on	off	30414	07/04/16	g Main - Narcoleptic Esteemed Legend 	
-Highhealz	105	Cleric	Recruit		08/25/16		alt - minimatch		off	off	0		alt - minimatch	
+Hhrolf	105	Shaman	Officer		09/02/16		g Main - Narcoleptic Esteemed Legend 		on	off	30414	07/04/16	g Main - Narcoleptic Esteemed Legend 	
+Highhealz	105	Cleric	Recruit		09/02/16	The Nexus	alt - minimatch		off	off	0		alt - minimatch	
 Hillhairy	100	Paladin	Member	A	04/13/16		Alt - Phantasmus		off	off	0		Alt - Phantasmus	
-Hits	105	Berserker	Member	A	08/28/16	The Plane of Health	Alt - Madstomper		off	off	1232	05/07/16	Alt - Madstomper	
+Hits	105	Berserker	Member	A	09/01/16		Alt - Madstomper		off	off	1232	05/07/16	Alt - Madstomper	
 Hokar	91	Shaman	Inactive	A	10/14/14		Alt - Elrose 2Sep14		off	off	0		Alt - Elrose 2Sep14	
 Holms	100	Magician	Inactive		03/30/13		Main - (Smallzy)		off	off	0		Main - (Smallzy)	
 Horzak	76	Druid	Inactive		08/16/12		Main		off	off	0		Main	
@@ -331,18 +329,18 @@ Horzek	78	Cleric	Inactive	A	08/16/12		Alt - Horzak		off	off	6930	06/21/12	Alt - 
 Hubraen	105	Magician	Inactive		11/19/15		Kin - Laedyinie/silentall		off	off	0		Kin - Laedyinie/silentall	
 Humda	85	Shaman	Inactive		11/26/09		Main		on	off	3106	05/19/09	Main	
 Hundy	105	Monk	Recruit	A	08/27/16		Main		off	off	0		Main	
-Hurty	105	Monk	Member	A	08/28/16		alt  - Irenia		off	off	0		alt  - Irenia	
-Idaen	105	Ranger	Class Mentor		08/28/16		g Main		on	on	0		g Main	
+Hurty	105	Monk	Member	A	09/02/16		alt  - Irenia		off	off	0		alt  - Irenia	
+Idaen	105	Ranger	Class Mentor		09/02/16	Modest Guild Hall	g Main		on	on	0		g Main	
 Ider	105	Cleric	Inactive	A	07/23/15		Alt - Barper		off	off	67464	01/10/15	Alt - Barper	
-Igotsda	105	Bard	Member	A	08/28/16	Grand Guild Hall	Alt - Bigganz		off	off	543	06/14/16	Alt - Bigganz	
+Igotsda	105	Bard	Member	A	09/01/16		Alt - Bigganz		off	off	543	06/14/16	Alt - Bigganz	
 Illiria	80	Shadow Knight	Inactive		08/19/08		Retired MIA		off	off	0		Retired MIA	
-Ilsidri	105	Wizard	Member		08/28/16		Main		on	on	2759	06/09/16	Main	
-Ilyanir	105	Necromancer	Member		08/28/16		Main		on	off	0		Main	
+Ilsidri	105	Wizard	Member		08/31/16		Main		on	on	2759	06/09/16	Main	
+Ilyanir	105	Necromancer	Member		09/02/16	Shard's Landing	Main		on	off	0		Main	
 Immahealer	64	Cleric	Inactive	A	01/29/13		Alt - Kaoruu		off	off	0		Alt - Kaoruu	
 Immasiphon	105	Shadow Knight	Recruit		08/18/16		Notes needed - see officer please		off	off	0		Notes needed - see officer please	
 Imran	105	Monk	Inactive		01/24/15		Main 		off	off	54166	08/16/14	Main 	
 Injak	83	Rogue	Member	A	07/04/16		Alt - Kanjin		off	off	0		Alt - Kanjin	
-Irenia	105	Shadow Knight	Member		08/28/16		g Main		on	on	655768	04/18/16	g Main	
+Irenia	105	Shadow Knight	Member		08/30/16		g Main		on	on	655768	04/18/16	g Main	
 Jaggid	105	Rogue	Member		03/28/16		Main		on	off	0		Main	
 Jama	85	Magician	Inactive	A	05/31/16		Alt - Kanjin		off	off	0		Alt - Kanjin	
 Jamroar	104	Druid	Member	A	05/21/16		Alt - Phantasmus		off	off	0		Alt - Phantasmus	
@@ -358,7 +356,7 @@ Jodru	91	Druid	Member		07/06/16		Alt- Bashhum		off	off	0		Alt- Bashhum
 Joelynn	105	Wizard	Member		07/27/16		Alt - Attune		off	off	0		Alt - Attune	
 Johosophat	105	Shadow Knight	Member		07/27/16		Main		on	off	0		Main	
 Jopurr	76	Beastlord	Inactive		07/25/08		Retired		on	off	110509	10/30/06	Retired	
-Jordoin	105	Shaman	Recruit		08/28/16		Alt - Zerowaphex		off	off	0		Alt - Zerowaphex	
+Jordoin	105	Shaman	Recruit		08/29/16		Alt - Zerowaphex		off	off	0		Alt - Zerowaphex	
 Jouissance	94	Magician	Inactive	A	10/25/15		Alt - Kieff		off	off	0		Alt - Kieff	
 Jowolf	73	Druid	Member		05/30/07		Alt - Jopurr		off	off	0		Alt - Jopurr	
 Jrantix	85	Shadow Knight	Inactive		05/15/09		Main		off	off	12873	03/17/09	Main	
@@ -376,13 +374,12 @@ Kaoruu	85	Monk	Inactive		01/29/13		Main - MIA		on	off	66570	04/09/09	Main - MIA
 Katros	73	Bard	Inactive	A	05/09/14		Alt - Malhachite		off	off	0		Alt - Malhachite	
 Kaylis	85	Berserker	Inactive	A	11/07/14		Alt - Saberclaws		off	off	0		Alt - Saberclaws	
 Kaylong	105	Druid	Inactive		12/22/14		Main - This is one sneaky druid!		off	off	26268	09/06/14	Main - This is one sneaky druid!	
-Kaylord	105	Beastlord	Recruit		08/28/16		Alt - Wahzoo		off	off	7359	08/08/16	Alt - Wahzoo	
+Kaylord	105	Beastlord	Recruit		09/01/16		Alt - Wahzoo		off	off	7359	08/08/16	Alt - Wahzoo	
 Kazbal	95	Shadow Knight	Inactive	A	10/09/15		Main		on	off	32880	08/07/12	Main	
 Kazmere	68	Paladin	Inactive	A	08/17/09		Alt - Klay		off	off	0		Alt - Klay	
 Keglian	84	Ranger	Inactive	A	03/02/15		Alt - Erdean		off	off	0		Alt - Erdean	
 Kehl	92	Beastlord	Inactive	A	01/16/16		Alt - Tahn		off	off	0		Alt - Tahn	
-Keldivar	94	Cleric	Recruit		08/28/16		Main - returning player		on	off	10357	08/14/16	Main - returning player	
-Keltiklen	105	Paladin	Class Mentor		08/28/16		g *CLASS MENTOR (PAL) - Main		on	on	974527	11/15/15	g *CLASS MENTOR (PAL) - Main	
+Keldivar	95	Cleric	Recruit		09/02/16	Argath, Bastion of Illdaera	Main - returning player		on	off	10357	08/14/16	Main - returning player	
 Kemerin	57	Warrior	Inactive	A	03/04/15		Alt - Erdean		off	off	0		Alt - Erdean	
 Kenjiro	100	Necromancer	Inactive		09/04/13		Main		on	on	0		Main	
 Kenr	105	Enchanter	Recruit		07/29/16		MAIN 09/22		off	off	25685	09/27/15	MAIN 09/22	
@@ -394,18 +391,17 @@ Kieff	100	Bard	Inactive		08/10/16		Main		off	off	0		Main
 Kierra	94	Magician	Inactive		08/03/16		Kin - Chewi		off	off	0		Kin - Chewi	
 Kikkn	88	Monk	Member	A	07/02/16		Alt - Uniquote		off	off	0		Alt - Uniquote	
 Kilaa	16	Magician	Inactive	A	11/23/08		Alt - Lindyane		off	off	0		Alt - Lindyane	
-Kilyu	105	Rogue	Member	A	08/28/16		Alt - Lekri		off	off	0		Alt - Lekri	
+Kilyu	105	Rogue	Member	A	08/29/16		Alt - Lekri		off	off	0		Alt - Lekri	
 Kimmuriel	105	Necromancer	Inactive		01/06/15		Main - Kin		on	off	199804	12/21/14	Main - Kin	
 Kingy	100	Shaman	Inactive	A	07/28/16		Alt - Taigan		off	off	0		Alt - Taigan	
 Kitab	70	Necromancer	Inactive	A	05/10/14		Alt - Malhachite		off	off	0		Alt - Malhachite	
 Kittypryde	105	Beastlord	Member	A	08/22/16		Alt - Starchild		off	off	71109	10/11/15	Alt - Starchild	
 Klani	100	Necromancer	Inactive	A	12/21/14		Alt - Qdax		off	off	0		Alt - Qdax	
 Klepptoe	80	Rogue	Inactive		08/03/16		Main		off	off	526552	07/05/08	Main	
-Klopfer	103	Shaman	Member	A	05/01/16		Alt - Keltiklen		off	off	0		Alt - Keltiklen	
 Knifyar	85	Magician	Inactive		11/08/14		Main		off	off	0		Main	
 Kokopellee	102	Bard	Inactive		07/11/16		Main		on	on	197306	11/15/14	Main	
 Kooryks	98	Shaman	Inactive	A	04/04/15		Alt - Barper		off	off	0		Alt - Barper	
-Koramor	105	Rogue	Member		08/28/16		Main		off	off	20563	06/19/16	Main	
+Koramor	105	Rogue	Member		09/02/16	Plane of Knowledge	Main		off	off	20563	06/19/16	Main	
 Kraeven	80	Monk	Inactive		05/17/08		Main		off	off	0		Main	
 Kranth	100	Beastlord	Member		05/02/16		Main		off	off	108366	03/03/14	Main	
 Krazkanel	80	Shaman	Inactive	A	10/04/08		Alt - Gurach		off	off	0		Alt - Gurach	
@@ -413,7 +409,7 @@ Kreegothx	95	Shadow Knight	Inactive		06/28/16		Main		off	off	0		Main
 Kungarey	80	Monk	Inactive	A	12/22/15		Alt - Arey		off	off	0		Alt - Arey	
 Kunzea	101	Enchanter	Inactive	A	07/29/16		Alt - Taigan		off	off	0		Alt - Taigan	
 Kupsae	105	Warrior	Recruit		10/03/15		notes please		off	off	0		notes please	
-Kurrie	105	Beastlord	Member		08/28/16	Arcstone	Main		off	off	17015	07/19/16	Main	
+Kurrie	105	Beastlord	Member		09/01/16		Main		off	off	17015	07/19/16	Main	
 Kwitit	105	Enchanter	Member		05/08/16		Main -MIA - 1-7-16		off	off	0		Main -MIA - 1-7-16	
 Kyrah	85	Cleric	Inactive		03/19/14		Retired Alumni		off	off	0		Retired Alumni	
 Lachesis	93	Magician	Inactive	A	06/03/13		Alt - Drhealgood		on	off	0		Alt - Drhealgood	
@@ -424,11 +420,11 @@ Laedyinie	105	Enchanter	Member		05/02/16		g Main		off	off	25978	04/20/15	g Main
 Laehar	80	Necromancer	Inactive		10/24/08		Main		on	off	2577	08/11/08	Main	
 Lamarin	74	Warrior	Inactive	A	01/02/15		Alt - Georgeo		off	off	0		Alt - Georgeo	
 Lamorii	70	Shaman	Inactive	A	10/13/15		Alt - Moonrosedrop		off	off	0		Alt - Moonrosedrop	
-Lamudany	105	Warrior	Member		08/18/16		Alt - Litlex		on	off	3778	02/16/16	Alt - Litlex	
+Lamudany	105	Warrior	Member		09/01/16		Alt - Litlex		on	off	3778	02/16/16	Alt - Litlex	
 Larilia	100	Beastlord	Inactive		12/04/15		Main		off	off	3275	05/12/12	Main	
 Larrk	105	Shaman	Member	A	08/26/16		Alt - Souixxe		off	off	0		Alt - Souixxe	
 Lasanya	100	Rogue	Inactive		04/04/16		Main		off	off	0		Main	
-Latrezis	105	Monk	Member		08/28/16	Plane of Knowledge	Main		off	off	0		Main	
+Latrezis	105	Monk	Member		09/02/16	Plane of Knowledge	Main		off	off	0		Main	
 Lattrine	70	Druid	Inactive		10/13/05		Retired Alumni		on	off	17242	01/29/05	Retired Alumni	
 Lautzy	85	Cleric	Inactive		10/28/14		Main		off	off	0		Main	
 Lazaretto	90	Cleric	Inactive		09/12/14		Main 8/20/14		off	off	0		Main 8/20/14	
@@ -438,24 +434,24 @@ Leaween	102	Beastlord	Inactive		12/11/14		Main		off	off	0		Main
 Leegend	105	Warrior	Member	A	08/27/16		Alt - Aegerin		off	off	0		Alt - Aegerin	
 Legostor	91	Ranger	Inactive	A	01/25/15		Alt - Macadayno		off	off	0		Alt - Macadayno	
 Leimubi	71	Monk	Inactive		08/25/14		Retired		on	off	17567	05/10/05	Retired	
-Lekri	105	Druid	Legend		08/28/16		g Main		off	off	0		g Main	
+Lekri	105	Druid	Legend		08/29/16		g Main		off	off	0		g Main	
 Lemhar	100	Magician	Inactive		06/04/14		Main, Alumni		off	off	136912	05/01/14	Main, Alumni	
-Lenieli	105	Enchanter	Inactive	A	08/27/16		Alt - Necromaster		off	off	0		Alt - Necromaster	
+Lenieli	105	Enchanter	Inactive	A	09/02/16		Alt - Necromaster		off	off	0		Alt - Necromaster	
 Leonidil	105	Rogue	Inactive		12/17/15		g Main		on	off	43280	03/01/15	g Main	
 Lexyi	105	Enchanter	Officer	A	08/26/16		Alt - Souixxe		off	off	144167	05/11/15	Alt - Souixxe	
-Leyela	105	Shaman	Member	A	08/28/16		Alt - Madstomper		off	off	0		Alt - Madstomper	
+Leyela	105	Shaman	Member	A	09/01/16		Alt - Madstomper		off	off	0		Alt - Madstomper	
 Lharee	66	Druid	Inactive		11/28/13		Main		off	off	0		Main	
-Lianiax	105	Bard	Recruit		08/28/16		Alt = Zerowaphex		off	off	0		Alt = Zerowaphex	
+Lianiax	105	Bard	Recruit		08/29/16		Alt = Zerowaphex		off	off	0		Alt = Zerowaphex	
 Lifetaper	105	Necromancer	Member	A	07/03/16		Alt - Sargtlin		on	off	0		Alt - Sargtlin	
 Lilshift	21	Necromancer	Inactive	A	10/10/15		Alt - Fendywenya		off	off	0		Alt - Fendywenya	
 Lindyane	82	Enchanter	Inactive		04/28/09		Inactive Main		on	off	100000	11/23/08	Inactive Main	
-Linsey	105	Rogue	Member	A	08/28/16	The Plane of Health	Alt - Madstomper		off	off	0		Alt - Madstomper	
+Linsey	105	Rogue	Member	A	09/01/16		Alt - Madstomper		off	off	0		Alt - Madstomper	
 Liosis	105	Necromancer	Legend		08/16/16		Main		off	off	15363	01/07/16	Main	
 Lithal	88	Shaman	Inactive	A	03/22/14		Alt - Baleful		off	off	0		Alt - Baleful	
-Litlex	105	Rogue	Member		08/28/16	Argin-Hiz	Main		off	off	0		Main	
+Litlex	105	Rogue	Member		09/01/16		Main		off	off	0		Main	
 Ljtibs	81	Bard	Inactive	A	12/07/15		Alt - Fronenheimer		off	off	0		Alt - Fronenheimer	
 Loathian	65	Necromancer	Inactive	A	05/24/14		Alt - Metimbo		off	off	0		Alt - Metimbo	
-Lorewood	105	Paladin	Member		08/28/16	Plane of Knowledge	Main		on	off	207175	10/20/15	Main	
+Lorewood	105	Paladin	Member		08/31/16		Main		on	off	207175	10/20/15	Main	
 Lorzus	77	Enchanter	Inactive		09/06/13		Retired MIA		off	off	0		Retired MIA	
 Lrac	100	Shaman	Inactive		06/06/16		Main		on	off	98513	02/23/14	Main	
 Lullabies	96	Rogue	Inactive	A	09/10/15		Alt - Cursive		off	off	0		Alt - Cursive	
@@ -463,40 +459,40 @@ Lunisdul	100	Bard	Inactive		08/22/16		Main		off	off	38733	06/22/14	Main
 Lunna	65	Warrior	Inactive		01/09/06		Retired Alumni		off	off	0		Retired Alumni	
 Lutha	95	Necromancer	Inactive		07/21/15		Main		off	off	0		Main	
 Macadayno	95	Necromancer	Inactive		01/25/15		Main		off	off	0		Main	
-Madstomper	105	Warrior	Officer		08/28/16	The Plane of Health	Main		on	off	15150	03/27/16	Main	
-Maggotmonger	105	Necromancer	Class Mentor		08/28/16		*CLASS MENTOR (NEC) - Main		off	off	0		*CLASS MENTOR (NEC) - Main	
+Madstomper	105	Warrior	Officer		09/02/16	Grand Guild Hall	Main		on	off	15150	03/27/16	Main	
+Maggotmonger	105	Necromancer	Class Mentor		09/01/16		*CLASS MENTOR (NEC) - Main		off	off	0		*CLASS MENTOR (NEC) - Main	
 Maigan	80	Warrior	Inactive	A	07/23/16		Alt - Taigan		off	off	0		Alt - Taigan	
 Majjisofhuff	85	Rogue	Inactive		08/22/16		Retired Alumni		on	off	134457	03/30/12	Retired Alumni	
 Malhachite	100	Warrior	Inactive		01/24/16		Main		on	off	147636	04/22/14	Main	
 Malinia	85	Magician	Inactive	A	02/06/15		Alt - Tanisa		off	off	0		Alt - Tanisa	
-Malore	105	Magician	Member	A	08/27/16		Alt - Lorewood		off	off	0		Alt - Lorewood	
-Malvolio	105	Warrior	Member		08/28/16		Main		on	on	0		Main	
-Manarya	103	Shadow Knight	Member		08/19/16		Alt - Kurrie		off	off	0		Alt - Kurrie	
+Malore	105	Magician	Member	A	08/29/16		Alt - Lorewood		off	off	0		Alt - Lorewood	
+Malvolio	105	Warrior	Member		09/02/16	Grand Guild Hall	Main		on	on	0		Main	
+Manarya	103	Shadow Knight	Member		09/02/16	Plane of Knowledge	Alt - Kurrie		off	off	0		Alt - Kurrie	
 Maryssa	105	Cleric	Recruit		08/15/16		Alt - Methauros		off	off	0		Alt - Methauros	
 Mathondrakis	105	Magician	Member		06/04/16		Main		off	off	0		Main	
-Maximillious	105	Monk	Member	A	08/28/16	The Plane of Health	Alt - Madstomper		off	off	0		Alt - Madstomper	
+Maximillious	105	Monk	Member	A	09/01/16		Alt - Madstomper		off	off	0		Alt - Madstomper	
 Mayra	73	Wizard	Inactive		06/18/08		Honored Legend, Shall be missed. Was a wonderful person with a spirit of unsurpassed goodness. Miss you		off	off	0		Honored Legend, Shall be missed. Was a wonderful person with a spirit of unsurpassed goodness. Miss you	
-Mazen	105	Necromancer	Member		08/15/16		Main		off	off	0		Main	
+Mazen	105	Necromancer	Member		08/31/16		Main		off	off	0		Main	
 Meetsheeild	55	Warrior	Inactive	A	01/26/14		Alt - Hhrolf		off	off	0		Alt - Hhrolf	
-Megonigal	97	Wizard	Member	A	08/05/16		Alt - Darom		off	off	0		Alt - Darom	
+Megonigal	97	Wizard	Member	A	08/31/16		Alt - Darom		off	off	0		Alt - Darom	
 Melaleuca	105	Shaman	Inactive	A	08/18/16		Alt - Taigan		off	off	72928	09/06/14	Alt - Taigan	
 Meleka	85	Rogue	Inactive		12/27/08		Main		off	off	400	08/25/08	Main	
 Mellbu	83	Magician	Inactive	A	01/03/16		Alt - Ausil		off	off	0		Alt - Ausil	
 Menleniel	105	Cleric	Member		08/11/16		Main		on	off	0		Main	
 Menrez	80	Cleric	Inactive		07/14/08		Retired		on	off	7298	11/25/06	Retired	
 Metank	86	Warrior	Inactive	A	01/07/15		Alt - Shootmx		off	off	0		Alt - Shootmx	
-Methauros	105	Enchanter	Recruit		08/28/16		Main 3June2016		off	off	0		Main 3June2016	
+Methauros	105	Enchanter	Recruit		08/30/16		Main 3June2016		off	off	0		Main 3June2016	
 Metimbo	100	Wizard	Inactive		05/14/16		Main		on	on	94126	05/10/14	Main	
 Mezinya	86	Enchanter	Inactive	A	02/20/14		Alt - Todadome - KIN - Aegerin		off	off	48	01/28/14	Alt - Todadome - KIN - Aegerin	
 Mezues	81	Enchanter	Inactive	A	04/21/15		Alt - Rezonation		off	off	0		Alt - Rezonation	
 Mianya	105	Cleric	Inactive	A	01/03/16		Alt - Ashameon		off	off	0		Alt - Ashameon	
 Miaoxi	75	Monk	Inactive		06/24/07		Retired Alumni		on	off	3900	10/17/06	Retired Alumni	
 Miguelito	52	Druid	Inactive	A	06/08/13		Alt - Acinonyx		off	off	0		Alt - Acinonyx	
-Mineralin	105	Enchanter	Member	A	08/25/16		Alt - Johosophat		off	off	0		Alt - Johosophat	
-Mingoth	105	Shaman	Member	A	08/28/16		Alt - Thalas		off	off	0		Alt - Thalas	
+Mineralin	105	Enchanter	Member	A	08/30/16		Alt - Johosophat		off	off	0		Alt - Johosophat	
+Mingoth	105	Shaman	Member	A	08/31/16		Alt - Thalas		off	off	0		Alt - Thalas	
 Mingsawshi	100	Shaman	Inactive		10/26/14		Main		off	off	0		Main	
-Minimatch	105	Magician	Recruit		08/25/16		Main - 22 july 2016		off	off	0		Main - 22 july 2016	
-Minx	105	Druid	Member		08/28/16		Main		off	off	12341	06/18/16	Main	
+Minimatch	105	Magician	Recruit		09/02/16	The Nexus	Main - 22 july 2016		off	off	0		Main - 22 july 2016	
+Minx	105	Druid	Member		09/02/16		Main		off	off	12341	06/18/16	Main	
 Mired	94	Shaman	Inactive	A	05/03/15		Alt - Action		off	off	90390	08/29/14	Alt - Action	
 Mismorbid	92	Shaman	Inactive	A	10/28/14		Alt - Morbidknight		off	off	0		Alt - Morbidknight	
 Mistaka	70	Wizard	Inactive	A	10/03/15		Alt - Rootie		off	off	0		Alt - Rootie	
@@ -507,19 +503,19 @@ Mormat	81	Shadow Knight	Recruit		08/19/16				off	off	0
 Morphine	91	Shaman	Inactive		09/18/12		Main - Georgeo's friend		off	off	0		Main - Georgeo's friend	
 Morzaan	105	Magician	Inactive	A	10/24/15		Alt - Ashameon		off	off	0		Alt - Ashameon	
 Mrkicker	100	Monk	Inactive		10/20/14		Main 10/2/2014		off	off	0		Main 10/2/2014	
-Mrotsha	105	Magician	Member	A	08/28/16		Alt - Starchild		on	off	0		Alt - Starchild	
+Mrotsha	105	Magician	Member	A	09/02/16		Alt - Starchild		on	off	0		Alt - Starchild	
 Msmorbid	85	Berserker	Inactive	A	10/28/14		Alt - Morbid		off	off	0		Alt - Morbid	
-Musicah	105	Bard	Member	A	08/28/16	The Plane of Health	Alt - Madstomper		off	off	106762	03/27/16	Alt - Madstomper	
-Mysticskyy	85	Rogue	Inactive	A	03/13/14		Alt - Souixxe		off	off	0		Alt - Souixxe	
+Musicah	105	Bard	Member	A	09/01/16		Alt - Madstomper		off	off	106762	03/27/16	Alt - Madstomper	
+Mysticskyy	85	Rogue	Inactive	A	08/29/16		Alt - Souixxe		off	off	0		Alt - Souixxe	
 Naedea	105	Druid	Member	A	08/28/16		Alt - Starchild		off	off	0		Alt - Starchild	
-Nalamarie	105	Magician	Member	A	08/27/16		Alt - Kurrie		off	off	0		Alt - Kurrie	
+Nalamarie	105	Magician	Member	A	09/01/16		Alt - Kurrie		off	off	0		Alt - Kurrie	
 Namokski	100	Cleric	Inactive		03/02/16		Main		off	off	0		Main	
 Namtwo	91	Beastlord	Inactive	A	10/14/14		Alt - Namokski		off	off	0		Alt - Namokski	
 Nastharz	86	Shadow Knight	Inactive	A	03/04/15		Alt - Erdean		off	off	0		Alt - Erdean	
-Nataheln	105	Necromancer	Recruit		08/28/16		Main - 29Jul		off	off	0		Main - 29Jul	
+Nataheln	105	Necromancer	Recruit		09/01/16		Main - 29Jul		off	off	0		Main - 29Jul	
 Navip	105	Beastlord	Inactive	A	05/19/15		Alt  - Uisge		off	off	0		Alt  - Uisge	
 Nazdeth	78	Wizard	Inactive	A	01/25/09		Main		on	off	0		Main	
-Necromaster	105	Magician	Member		08/28/16		Main		off	off	0		Main	
+Necromaster	105	Magician	Member		09/02/16		Main		off	off	0		Main	
 Nenokai	105	Warrior	Member	A	07/14/16		Alt - Phantasmus		off	off	0		Alt - Phantasmus	
 Neroth	86	Necromancer	Inactive		02/26/16		Kin - Vatra		off	off	0		Kin - Vatra	
 Nestquick	93	Rogue	Inactive	A	12/29/13		Alt - Macadayno		off	off	0		Alt - Macadayno	
@@ -530,16 +526,16 @@ Nikcah	85	Shaman	Recruit		08/07/16		Notes needed - see officer please		off	off	0
 Nikira	97	Bard	Inactive	A	05/19/15		Alt - Larilia		off	off	0		Alt - Larilia	
 Nills	91	Ranger	Inactive		02/15/15		Main		off	off	16122	05/15/12	Main	
 Nimandar	105	Bard	Member		03/21/16		KIN 19Apr15		on	on	24498	05/03/15	KIN 19Apr15	
-Ninahartley	105	Ranger	Member	A	08/28/16		Alt - Gotjja		off	off	22260	07/25/16	Alt - Gotjja	
+Ninahartley	105	Ranger	Member	A	09/02/16	Grand Guild Hall	Alt - Gotjja		off	off	22260	07/25/16	Alt - Gotjja	
 Ninelin	104	Wizard	Member	A	05/02/16		Alt - Kranth		off	off	69569	07/28/15	Alt - Kranth	
 Ninkali	105	Necromancer	Inactive	A	07/30/16		Alt - Taigan		off	off	0		Alt - Taigan	
 Ninn	105	Cleric	Recruit		08/11/16		main 22 july 2016		on	off	0		main 22 july 2016	
 Nitanya	59	Magician	Inactive	A	02/03/16		Alt - Vanwe		off	off	0		Alt - Vanwe	
-Nocando	105	Shadow Knight	Member	A	08/25/16		Alt - Starchild		off	off	31009	03/27/16	Alt - Starchild	
+Nocando	105	Shadow Knight	Member	A	09/02/16		Alt - Starchild		off	off	31009	03/27/16	Alt - Starchild	
 Noctmos	81	Magician	Member	A	04/28/16		Alt - Therisid		off	off	0		Alt - Therisid	
 Noleaks	88	Cleric	Member	A	05/07/16		Alt - Glenntop / Lekri		off	off	0		Alt - Glenntop / Lekri	
 Norsa	66	Warrior	Inactive	A	02/24/16		Alt - Xenamten		off	off	0		Alt - Xenamten	
-Notty	85	Rogue	Member		08/19/16		Alt - Minx		off	off	0		Alt - Minx	
+Notty	85	Rogue	Member		09/01/16		Alt - Minx		off	off	0		Alt - Minx	
 Nuitari	96	Magician	Recruit		08/26/16		Main		on	off	12118	01/25/16	Main	
 Nuklbonz	66	Beastlord	Inactive	A	03/10/10		Alt - Acin		off	off	3104	11/22/09	Alt - Acin	
 Nurlatin	100	Necromancer	Inactive		02/22/14		Main		on	on	44255	12/08/13	Main	
@@ -548,35 +544,35 @@ Oatmealio	80	Cleric	Member		07/29/16		Alt - maggotmonger		off	off	0		Alt - maggo
 Obwan	100	Paladin	Inactive		04/27/15		Main		off	off	0		Main	
 Odisseus	74	Necromancer	Inactive	A	09/05/12		Alt - Rezonation		off	off	0		Alt - Rezonation	
 Ohring	97	Rogue	Inactive		04/03/15		Kin - Deathrig		off	off	0		Kin - Deathrig	
-Olarien	105	Necromancer	Member		08/28/16	Gulf of Gunthak	Main		off	off	0		Main	
-Olurane	105	Enchanter	Member	A	08/28/16	Argin-Hiz	Alt - Vitriol		off	off	0		Alt - Vitriol	
-Onilaar	105	Wizard	Legend		08/19/16		Main		off	off	44498	06/20/15	Main	
+Olarien	105	Necromancer	Member		09/02/16		Main		off	off	0		Main	
+Olurane	105	Enchanter	Member	A	09/01/16	Sarith, City of Tides	Alt - Vitriol		off	off	0		Alt - Vitriol	
+Onilaar	105	Wizard	Legend		08/29/16		Main		off	off	44498	06/20/15	Main	
 Onslot	88	Shadow Knight	Inactive	A	02/15/15		Alt - Nills		off	off	0		Alt - Nills	
-Ophelia	105	Magician	Member	A	08/27/16		Alt - Malvolio		off	off	0		Alt - Malvolio	
+Ophelia	105	Magician	Member	A	08/30/16		Alt - Malvolio		off	off	0		Alt - Malvolio	
 Oratorio	105	Bard	Member	A	08/28/16		Alt - Action		off	on	420224	07/31/16	Alt - Action	
 Orezkrad	51	Rogue	Inactive	A	03/03/16		Alt - Darkzero		off	off	0		Alt - Darkzero	
 Orthanos	75	Warrior	Inactive		09/15/08		Retired		off	off	0		Retired	
-Oshu	105	Monk	Recruit		08/28/16	The Dead Hills	Main		off	off	0		Main	
+Oshu	105	Monk	Recruit		09/01/16		Main		off	off	0		Main	
 Ozen	93	Paladin	Inactive		03/14/16		Main 		off	off	0		Main 	
 Pabazu	100	Shadow Knight	Inactive		12/18/13		Main		off	off	87295	09/26/13	Main	
 Pace	85	Enchanter	Inactive	A	03/01/15		Alt - Action		off	off	0		Alt - Action	
 Pagaz	78	Shadow Knight	Inactive	A	04/25/16		Alt - Veanda		off	off	6756	01/13/08	Alt - Veanda	
-Palerider	105	Shadow Knight	Recruit	A	08/21/16		Alt- Shaymous		off	off	0		Alt- Shaymous	
+Palerider	105	Shadow Knight	Recruit	A	08/29/16		Alt- Shaymous		off	off	0		Alt- Shaymous	
 Parsival	100	Enchanter	Inactive	A	07/26/15		Alt - Rimaraf		off	off	36354	05/05/14	Alt - Rimaraf	
 Pastreflexxess	59	Beastlord	Inactive	A	09/06/13		Alt - Macadayno		off	off	0		Alt - Macadayno	
-Patello	105	Druid	Member	A	08/28/16		Kin - Bolo		off	off	0		Kin - Bolo	
+Patello	105	Druid	Member	A	09/01/16		Kin - Bolo		off	off	0		Kin - Bolo	
 Pedostash	105	Magician	Inactive		01/11/16		Main - 12/28		off	off	0		Main - 12/28	
 Peetex	97	Shaman	Inactive	A	11/06/14		Alt - Imran		off	off	0		Alt - Imran	
 Pendoen	85	Beastlord	Inactive	A	04/02/15		Alt - Accused		off	off	0		Alt - Accused	
 Pennylane	98	Ranger	Inactive	A	05/31/13		Alt - Larilia		off	off	0		Alt - Larilia	
 Persuasion	60	Enchanter	Member		06/05/08		Alt - Bleus		off	off	0		Alt - Bleus	
 Phantasmus	105	Rogue	Member		07/17/16		Main		off	off	0		Main	
-Phatello	105	Beastlord	Member	A	08/28/16		Kin - Bolo		off	off	0		Kin - Bolo	
+Phatello	105	Beastlord	Member	A	09/01/16		Kin - Bolo		off	off	0		Kin - Bolo	
 Pherns	79	Druid	Inactive	A	10/03/13		Alt - Suntiberian  (Pherns Mia) 		on	off	0		Alt - Suntiberian  (Pherns Mia) 	
 Philiac	92	Necromancer	Inactive	A	09/04/12		Alt - Kazbal		off	off	0		Alt - Kazbal	
 Phillony	98	Rogue	Recruit		07/20/16		Recruit 25-06-2016 - needs 105 to raid app.		off	off	0		Recruit 25-06-2016 - needs 105 to raid app.	
 Phletch	85	Ranger	Member	A	02/19/16		Alt - Hhrolf		off	off	0		Alt - Hhrolf	
-Phriyne	96	Druid	Recruit		08/28/16		Main		off	off	0		Main	
+Phriyne	96	Druid	Recruit		09/02/16	Plane of Innovation	Main		off	off	0		Main	
 Phrom	105	Rogue	Member		08/22/16		Main		on	on	0		Main	
 Pinbal	90	Bard	Member	A	07/10/16		Alt - Kanjin		off	off	0		Alt - Kanjin	
 Pixii	57	Ranger	Inactive	A	06/06/16		Alt - Ldore		off	off	0		Alt - Ldore	
@@ -590,7 +586,7 @@ Pugna	100	Ranger	Inactive	A	10/26/14		Alt - Tahn		on	off	66837	08/30/14	Alt - Ta
 Purehearrt	105	Paladin	Recruit		08/26/16		Alt - Methauros		off	off	0		Alt - Methauros	
 Purrfecto	100	Bard	Inactive	A	10/26/14		Alt - Mingsawshi		off	off	0		Alt - Mingsawshi	
 Pyrexic	105	Enchanter	Member	A	08/26/16		Alt - Calloneous		off	off	0		Alt - Calloneous	
-Pzekl	105	Shaman	Recruit		08/28/16		Main 3june2016		off	off	0		Main 3june2016	
+Pzekl	105	Shaman	Recruit		08/29/16		Main 3june2016		off	off	0		Main 3june2016	
 Qdax	105	Magician	Inactive		01/26/15		Main		on	off	0		Main	
 Quay	105	Wizard	Member		08/28/16		Main		on	off	189087	10/10/15	Main	
 Quebash	104	Shaman	Inactive	A	08/13/16		Alt  - Rashelf		off	off	0		Alt  - Rashelf	
@@ -602,28 +598,28 @@ Ragnorakk	80	Shadow Knight	Inactive		06/22/08		Retired		on	off	236	04/14/08	Reti
 Rainwolff	66	Druid	Inactive	A	05/28/10		Alt - Runingwolf		off	off	0		Alt - Runingwolf	
 Raiyghn	100	Wizard	Inactive		02/08/15		Main		off	off	0		Main	
 Raltarin	43	Necromancer	Inactive	A	08/19/12		Alt - Blackfalcon		off	off	0		Alt - Blackfalcon	
-Raludin	105	Shaman	Recruit		08/10/16		Main		off	off	0		Main	
+Raludin	105	Shaman	Recruit		08/29/16		Main		off	off	0		Main	
 Ramaka	65	Cleric	Inactive	A	12/04/14		Alt - Leaween		off	off	0		Alt - Leaween	
 Ranaya	96	Wizard	Inactive		04/03/15		Kin - Deathrigs better half		off	off	0		Kin - Deathrigs better half	
 Ranvarian	70	Paladin	Inactive	A	08/02/13		Alt - Valhallan		off	off	0		Alt - Valhallan	
 Rarraazz	90	Shaman	Inactive	A	03/05/14		Alt - Kreegothx		off	off	0		Alt - Kreegothx	
-Rashelf	105	Ranger	Member		08/13/16		g Main		on	off	11243	08/30/15	g Main	
+Rashelf	105	Ranger	Member		08/30/16		g Main		on	off	11243	08/30/15	g Main	
 Rasparus	75	Ranger	Inactive		05/18/07		Retired MIA		on	off	841316	05/13/07	Retired MIA	
 Raynjabob	89	Ranger	Inactive	A	03/17/14		Alt - Ameni		off	off	26091	11/02/13	Alt - Ameni	
 Rayogen	73	Druid	Inactive	A	05/11/08		Alt - Ragnorakkabastsa		off	off	0		Alt - Ragnorakkabastsa	
 Regbok	72	Berserker	Inactive		03/06/15		Main		on	off	0		Main	
 Reignja	87	Ranger	Inactive	A	08/02/14		Alt - Metimbo		off	off	0		Alt - Metimbo	
 Reinaldo	80	Monk	Inactive		03/23/12		Main		off	off	0		Main	
-Renadane	105	Ranger	Inactive	A	08/28/16		Alt - Necromaster		off	off	0		Alt - Necromaster	
+Renadane	105	Ranger	Inactive	A	09/02/16		Alt - Necromaster		off	off	0		Alt - Necromaster	
 Renha	14	Magician	Inactive		09/08/14		Kin - Hhrolf		off	off	0		Kin - Hhrolf	
 Rezonation	75	Druid	Inactive	A	09/07/14		Main		off	off	0		Main	
 Rezzinyoa	80	Cleric	Inactive	A	08/27/16		Alt - Liosis		off	off	0		Alt - Liosis	
-Rezzoloot	105	Cleric	Member	A	08/28/16		Alt - Batevil		on	on	0		Alt - Batevil	
+Rezzoloot	105	Cleric	Member	A	09/01/16		Alt - Batevil		on	on	0		Alt - Batevil	
 Rikkab	85	Necromancer	Recruit		12/02/15		notes please		off	off	0		notes please	
 Rimaraf	100	Ranger	Inactive		09/04/15		Main		on	on	540924	10/06/14	Main	
 Rinli	90	Ranger	Inactive	A	06/12/13		Alt - Witness		off	off	0		Alt - Witness	
 Rips	57	Enchanter	Member	A	06/21/16		Alt - Arukus		off	off	0		Alt - Arukus	
-Riptore	105	Shadow Knight	Member	A	08/28/16		Alt - Arukus		off	off	0		Alt - Arukus	
+Riptore	105	Shadow Knight	Member	A	08/29/16		Alt - Arukus		off	off	0		Alt - Arukus	
 Ristle	96	Paladin	Inactive		06/08/16		Main		on	off	46333	05/07/13	Main	
 Rivendell	105	Ranger	Member	A	04/16/16		Alt - Kranth		off	off	44115	06/22/15	Alt - Kranth	
 Riverwyte	96	Rogue	Inactive	A	07/06/14		Alt - Jivex		off	off	0		Alt - Jivex	
@@ -631,30 +627,30 @@ Rllow	105	Beastlord	Recruit		08/02/16		main 28 june 2016		off	off	0		main 28 jun
 Robocop	96	Magician	Member	A	04/18/16		Alt - Kranth		off	off	0		Alt - Kranth	
 Roguelore	85	Rogue	Member	A	08/22/16		Alt - Lorewood		off	off	0		Alt - Lorewood	
 Rollow	93	Shadow Knight	Recruit	A	08/08/16		Alt- Rllow		off	off	0		Alt- Rllow	
-Ronale	105	Ranger	Member	A	08/24/16		Alt - Darom		off	off	0		Alt - Darom	
+Ronale	105	Ranger	Member	A	08/31/16		Alt - Darom		off	off	0		Alt - Darom	
 Rootie	86	Ranger	Inactive		04/17/16		Main		on	off	4431	04/05/09	Main	
-Rorszale	105	Shadow Knight	Class Mentor		08/28/16		CLASS MENTOR (SHD) - Main		off	off	0		CLASS MENTOR (SHD) - Main	
+Rorszale	105	Shadow Knight	Class Mentor		09/02/16	Plane of Knowledge	CLASS MENTOR (SHD) - Main		off	off	0		CLASS MENTOR (SHD) - Main	
 Rovul	105	Druid	Member	A	08/28/16		Alt - Chewi		off	off	0		Alt - Chewi	
 Rowman	83	Ranger	Inactive	A	12/19/12		Alt - Saean		off	off	0		Alt - Saean	
-Roxie	105	Enchanter	Member	A	08/28/16		Alt - Minx		off	off	0		Alt - Minx	
+Roxie	105	Enchanter	Member	A	09/01/16		Alt - Minx		off	off	0		Alt - Minx	
 Rpedsea	39	Druid	Inactive	A	03/12/12		Alt - Moonrosedrop		off	off	0		Alt - Moonrosedrop	
-Rronal	66	Shaman	Member	A	08/23/16		Alt - Rorszale		off	off	0		Alt - Rorszale	
-Ruarik	105	Warrior	Member		08/28/16		g Main Has a Garden Gnome Fetish		off	off	45552	08/02/15	g Main Has a Garden Gnome Fetish	
+Rronal	66	Shaman	Member	A	08/30/16		Alt - Rorszale		off	off	0		Alt - Rorszale	
+Ruarik	105	Warrior	Member		09/02/16		g Main Has a Garden Gnome Fetish		off	off	45552	08/02/15	g Main Has a Garden Gnome Fetish	
 Ruldas	85	Warrior	Inactive		06/18/14		Main		off	off	1	05/02/12	Main	
 Rusty	100	Ranger	Inactive	A	11/24/15		Alt - Autumn		off	off	0		Alt - Autumn	
 Ruvashusa	47	Ranger	Inactive	A	07/25/16		Alt - Kanjin		off	off	0		Alt - Kanjin	
 Saberclaws	100	Shadow Knight	Inactive		09/24/15		Main		on	on	0		Main	
-Sableshade	105	Enchanter	Recruit		08/25/16		Alt - phriyne		off	off	0		Alt - phriyne	
+Sableshade	105	Enchanter	Recruit	A	09/02/16		Alt - phriyne		off	off	0		Alt - phriyne	
 Sabretooth	100	Beastlord	Inactive		04/13/14		Main		off	off	68514	12/13/13	Main	
 Sacton	92	Paladin	Inactive		09/13/13		Main		off	off	6059	02/10/12	Main	
 Sadin	105	Wizard	Member	A	08/21/16		Alt - Sargtlin		off	off	0		Alt - Sargtlin	
-Salilye	105	Cleric	Member		08/28/16	Plane of Knowledge	Main		on	off	40799	08/03/16	Main	
+Salilye	105	Cleric	Member		08/29/16		Main		on	off	40799	08/03/16	Main	
 Saloria	77	Warrior	Inactive		05/09/15		Main		on	off	42235	05/23/06	Main	
 Sameny	75	Enchanter	Inactive		11/13/07		Retired MIA		on	off	24	12/14/06	Retired MIA	
 Sanctify	105	Bard	Recruit		08/11/16		Alt - Sixtyeight		off	off	0		Alt - Sixtyeight	
 Sandiees	105	Magician	Inactive		01/11/16		Main		off	off	0		Main	
 Sanrik	85	Wizard	Inactive	A	06/13/16		Alt - Kanjin		off	off	0		Alt - Kanjin	
-Sarcasm	105	Magician	Member	A	08/28/16	Argin-Hiz	Alt - Vitriol		off	off	8831	07/06/16	Alt - Vitriol	
+Sarcasm	105	Magician	Member	A	09/01/16	Sarith, City of Tides	Alt - Vitriol		off	off	8831	07/06/16	Alt - Vitriol	
 Sargtlin	105	Warrior	Guild Leader		08/28/16		g Main		on	on	462909	05/11/15	g Main	
 Savroc	96	Shaman	Inactive	A	11/08/14		Alt - Saber		off	off	0		Alt - Saber	
 Scheme	80	Shadow Knight	Inactive	A	12/12/13		Alt - Dolores		off	off	6	06/02/09	Alt - Dolores	
@@ -662,27 +658,26 @@ Scnilkle	85	Paladin	Inactive		09/06/14		Main		off	off	0		Main
 Scoman	80	Shaman	Inactive	A	06/28/08		Alt - Bashhum		off	off	0		Alt - Bashhum	
 Scooman	93	Shaman	Member		05/28/16		KIN - Bashhum's brother		off	off	0		KIN - Bashhum's brother	
 Scullmann	65	Paladin	Inactive		03/25/04		Retired - Founding Member		off	off	0		Retired - Founding Member	
-Sedoryx	105	Rogue	Member	A	08/28/16		Alt - Keltiklen		off	off	0		Alt - Keltiklen	
 Selindria	86	Bard	Member	A	08/20/16		Alt - Maggotmonger		off	off	0		Alt - Maggotmonger	
-Septentrio	91	Bard	Recruit		08/27/16		Atl - Oshu		off	off	0		Atl - Oshu	
+Septentrio	91	Bard	Recruit	A	09/01/16		Alt - Oshu		off	off	0		Alt - Oshu	
 Serda	85	Monk	Inactive	A	07/21/09		Alt - Humda		off	off	0		Alt - Humda	
 Severinja	89	Necromancer	Inactive	A	11/11/15		Alt - Druzak		off	off	0		Alt - Druzak	
 Shaddowless	105	Necromancer	Recruit		06/16/16		Kin - Phantasmus		off	off	0		Kin - Phantasmus	
 Shadowthumper	105	Shadow Knight	Recruit		08/25/16		alt - minimatch		off	off	0		alt - minimatch	
 Shakelf	85	Ranger	Inactive	A	05/10/14		Alt - Malhachite		off	off	0		Alt - Malhachite	
-Shalore	105	Shaman	Member	A	08/27/16		Alt - Lorewood		off	off	0		Alt - Lorewood	
+Shalore	105	Shaman	Member	A	08/29/16		Alt - Lorewood		off	off	0		Alt - Lorewood	
 Shamhat	105	Enchanter	Member		08/21/16		Main		on	off	0		Main	
 Shangsoong	82	Enchanter	Inactive	A	01/08/14		Alt - Sabretooth		off	off	0		Alt - Sabretooth	
 Sharedlen	76	Shadow Knight	Inactive		09/08/10		Retired MIA		on	off	4080	02/22/07	Retired MIA	
 Shato	77	Shaman	Inactive	A	11/12/13		Alt - Rezonation		off	off	0		Alt - Rezonation	
-Shawnteria	105	Shaman	Recruit		08/25/16				off	off	0			
+Shawnteria	105	Shaman	Member		08/31/16		Alt - Minx		off	off	0		Alt - Minx	
 Shaymous	105	Shaman	Member		08/28/16		Main		off	off	0		Main	
 Sheadrick	105	Paladin	Recruit		08/16/16		Main		off	off	0		Main	
 Sheetz	75	Bard	Inactive		01/26/08		Retired MIA		on	off	0		Retired MIA	
 Shonsu	75	Warrior	Inactive		08/10/12		Retired MIA		on	off	4266	08/24/06	Retired MIA	
-Shootmx	105	Ranger	Member		08/28/16	The Guild Lobby	g Main		on	on	989496	11/26/15	g Main	
+Shootmx	105	Ranger	Member		09/02/16	The Guild Lobby	g Main		on	on	989496	11/26/15	g Main	
 Showa	70	Necromancer	Inactive		03/21/07		Retired Alumni		on	off	10864	01/11/06	Retired Alumni	
-Siderius	105	Druid	Member	A	08/28/16		Alt - Irenia		off	off	0		Alt - Irenia	
+Siderius	105	Druid	Member	A	09/02/16		Alt - Irenia		off	off	0		Alt - Irenia	
 Sildiina	70	Wizard	Inactive	A	06/06/08		Alt - Lorzus		off	off	0		Alt - Lorzus	
 Silentfall	105	Monk	Inactive		11/07/15		g Main		off	off	0		g Main	
 Silycibin	105	Bard	Inactive		09/26/15		g Main		off	off	0		g Main	
@@ -691,8 +686,8 @@ Sindawen	87	Ranger	Inactive		06/07/12		Main		off	off	51038	05/16/12	Main
 Sindeon	80	Magician	Inactive		10/10/10		Main		off	off	0		Main	
 Sinerin	87	Ranger	Inactive	A	03/04/14		Alt - Zahbak		off	off	0		Alt - Zahbak	
 Sing	75	Bard	Inactive	A	05/19/10		Alt - Runingwolf		off	off	0		Alt - Runingwolf	
-Singorr	105	Bard	Member		08/28/16	Grand Guild Hall	Main		off	off	0		Main	
-Siouxe	105	Cleric	Guild Leader	A	08/28/16	Grand Guild Hall	g Main		on	on	518517	01/10/16	g Main	
+Singorr	105	Bard	Member		09/02/16		Main		off	off	0		Main	
+Siouxe	105	Cleric	Guild Leader	A	09/02/16		g Main		on	on	518517	01/10/16	g Main	
 Siraj	105	Enchanter	Member		07/14/16		Alt - Phantasmus		off	off	0		Alt - Phantasmus	
 Siriqe	105	Magician	Member	A	07/14/16		Alt - Phantasmus		off	off	0		Alt - Phantasmus	
 Sirshankz	102	Rogue	Member	A	08/22/16		Alt - Georgeo		on	off	184142	09/28/15	Alt - Georgeo	
@@ -714,9 +709,9 @@ Sohk	101	Rogue	Inactive	A	07/22/16		Alt - Taigan		off	off	0		Alt - Taigan
 Solarand	105	Magician	Member	A	08/26/16		Alt - Calloneous		off	off	0		Alt - Calloneous	
 Solarr	67	Wizard	Inactive		12/19/14		Retired Alumni		off	off	0		Retired Alumni	
 Sonniyaa	80	Magician	Member	A	06/19/16		Alt - Tandaor		off	off	0		Alt - Tandaor	
-Soppy	105	Magician	Recruit		08/20/16		Notes needed - see officers please		off	off	0		Notes needed - see officers please	
+Soppy	105	Magician	Recruit		08/31/16		Notes needed - see officers please		off	off	0		Notes needed - see officers please	
 Sorchax	77	Cleric	Inactive	A	07/22/15		Alt - Moonrosedrop		off	off	0		Alt - Moonrosedrop	
-Souixxe	105	Monk	Guild Leader		08/28/16	Grand Guild Hall	g Main 		on	on	682248	12/13/15	g Main 	
+Souixxe	105	Monk	Guild Leader		08/29/16		g Main 		on	on	682248	12/13/15	g Main 	
 Soulmends	105	Shaman	Member		06/28/16		g Main		off	off	27205	01/05/15	g Main	
 Soulsticher	79	Bard	Inactive	A	03/02/15		Alt - Erdean		off	off	0		Alt - Erdean	
 Sourly	89	Bard	Inactive	A	03/27/14		Alt - Baleful		off	off	0		Alt - Baleful	
@@ -724,23 +719,23 @@ Spartacuus	101	Warrior	Member	A	12/13/15		Alt - Liosis		off	off	0		Alt - Liosis
 Spellfizzle	88	Wizard	Inactive	A	03/05/14		Alt - Kreegothx		off	off	0		Alt - Kreegothx	
 Spinalis	75	Necromancer	Inactive	A	10/09/08		Alt - Baroq		off	off	0		Alt - Baroq	
 Spiritseer	105	Necromancer	Member	A	08/18/16		Alt - Starchild		off	off	0		Alt - Starchild	
-Splatted	105	Wizard	Recruit		08/28/16		Main - 12th jul 2016		on	off	0		Main - 12th jul 2016	
+Splatted	105	Wizard	Recruit		09/01/16		Main - 12th jul 2016		on	off	0		Main - 12th jul 2016	
 Spleenripper	105	Shadow Knight	Member		05/15/16		g Main		off	off	0		g Main	
 Spotthecat	35	Bard	Inactive	A	10/11/08		Alt - Lindy's Kitty Kat		off	off	0		Alt - Lindy's Kitty Kat	
 Spotzz	85	Beastlord	Inactive	A	07/18/16		Alt - Bashhum		off	off	0		Alt - Bashhum	
-Sprinkler	105	Wizard	Member	A	08/28/16		Alt - Irenia		off	off	0		Alt - Irenia	
-Squashbettle	105	Paladin	Member		08/28/16		Main		on	off	433110	02/27/16	Main	
+Sprinkler	105	Wizard	Member	A	09/02/16		Alt - Irenia		off	off	0		Alt - Irenia	
+Squashbettle	105	Paladin	Member		08/30/16		Main		on	off	433110	02/27/16	Main	
 Sserina	100	Cleric	Inactive	A	06/29/16		Alt - Baleful		off	off	17289	12/05/13	Alt - Baleful	
 Ssnarky	105	Shaman	Inactive	A	03/02/16		Alt - Jaggid		off	off	0		Alt - Jaggid	
 Stalkin	20	Enchanter	Inactive	A	10/06/08		Alt - Eindyn		off	off	0		Alt - Eindyn	
-Starchild	105	Ranger	Member		08/28/16		g Main		on	off	859627	08/21/16	g Main	
+Starchild	105	Ranger	Member		09/02/16		g Main		on	off	859627	08/21/16	g Main	
 Staypuft	89	Warrior	Inactive		10/30/15		Kin - Jettli		off	off	8137	10/24/15	Kin - Jettli	
 Steak	95	Wizard	Inactive		12/08/15		Kin - Xaest		off	off	0		Kin - Xaest	
 Strelec	105	Ranger	Recruit		08/15/16		Alt Methauros		off	off	0		Alt Methauros	
 Stringerr	84	Bard	Member	A	08/08/16		Alt - Darom		off	off	0		Alt - Darom	
 Studchanter	105	Enchanter	Inactive	A	06/10/15		Alt - Gromey		off	off	0		Alt - Gromey	
 Sunjai	105	Necromancer	Member	A	07/14/16		Alt - Phantasmus		off	off	0		Alt - Phantasmus	
-Sunmistress	105	Paladin	Recruit		08/28/16		Main		off	off	0		Main	
+Sunmistress	105	Paladin	Recruit		08/29/16		Main		off	off	0		Main	
 Supafists	101	Monk	Recruit		08/16/16				off	off	0			
 Susan	105	Druid	Recruit		08/28/16		Alt - Catness		off	off	0		Alt - Catness	
 Susankay	85	Paladin	Inactive		11/22/09		Main		on	off	2721	07/06/09	Main	
@@ -756,18 +751,18 @@ Tahlini	92	Paladin	Inactive	A	07/31/16		Alt - Taigan		off	off	0		Alt - Taigan
 Tahn	100	Shaman	Inactive		06/06/15		Main		on	off	206821	10/05/14	Main	
 Taigan	105	Ranger	Member		08/20/16		Main		off	off	306725	12/28/14	Main	
 Taika	105	Wizard	Inactive	A	07/31/16		Alt - Taigan		off	off	15000	10/31/14	Alt - Taigan	
-Takr	101	Shaman	Member		08/27/16	Plane of Knowledge	Alt - Kurrie		off	off	0		Alt - Kurrie	
+Takr	101	Shaman	Member		09/02/16	Plane of Knowledge	Alt - Kurrie		off	off	0		Alt - Kurrie	
 Takzek	105	Berserker	Member	A	06/21/16		Alt - Phantasmus		off	off	87066	01/24/16	Alt - Phantasmus	
 Taldorm	105	Warrior	Member		07/04/16		g Main		off	on	47663	12/23/14	g Main	
 Talihah	101	Beastlord	Inactive	A	07/22/16		Alt - Taigan		off	off	0		Alt - Taigan	
 Tamaria	85	Necromancer	Inactive	A	06/22/16		Alt - Teirdol		off	off	7049	02/29/16	Alt - Teirdol	
 Tandaor	105	Warrior	Member		07/27/16		Main		off	off	0		Main	
-Tanguren	91	Warrior	Member		08/28/16		Alt - Balthier		off	off	0		Alt - Balthier	
+Tanguren	93	Warrior	Member		09/01/16		Alt - Balthier		off	off	0		Alt - Balthier	
 Tanisa	105	Beastlord	Inactive		06/08/15		KIN Main		on	off	53883	03/09/15	KIN Main	
 Tanqu	102	Warrior	Inactive		06/06/15		Main		on	off	34536	04/24/15	Main	
 Tarvold	100	Enchanter	Inactive		12/10/15		Kin - Xaest		off	off	0		Kin - Xaest	
 Taveia	27	Rogue	Recruit		10/06/15		Main		off	off	0		Main	
-Taxicab	95	Wizard	Member		08/28/16		alt - vitriol		off	off	0		alt - vitriol	
+Taxicab	95	Wizard	Member		09/01/16		alt - vitriol		off	off	0		alt - vitriol	
 Teaen	71	Cleric	Inactive	A	05/15/08		Alt - Lindy		off	off	2247	01/01/08	Alt - Lindy	
 Teane	65	Druid	Inactive	A	08/05/16		Alt - Tosmall		off	off	0		Alt - Tosmall	
 Tearron	92	Shadow Knight	Inactive	A	02/02/15		Alt - Macadayno		off	off	0		Alt - Macadayno	
@@ -775,7 +770,7 @@ Telguin	85	Enchanter	Inactive		02/01/10		Retired Alumni		on	off	64619	08/07/09	R
 Tellmark	75	Magician	Inactive		07/04/07		Retired MIA		on	off	2000	03/27/07	Retired MIA	
 Telopia	101	Magician	Inactive	A	07/29/16		Alt - Kingy		off	off	0		Alt - Kingy	
 Tevek	80	Cleric	Inactive		02/24/08		Retired		off	off	1016	01/02/08	Retired	
-Thalas	105	Ranger	Member		08/28/16		Main		on	off	0		Main	
+Thalas	105	Ranger	Member		08/31/16		Main		on	off	0		Main	
 Tharja	105	Necromancer	Member	A	08/28/16		Alt - Balthier		off	off	0		Alt - Balthier	
 Thedion	47	Warrior	Inactive	A	02/09/13		Alt - Blackfalcon		off	off	0		Alt - Blackfalcon	
 Theleos	100	Ranger	Inactive		08/23/14		Main		off	off	17257	01/21/14	Main	
@@ -791,7 +786,7 @@ Timorrow	67	Enchanter	Inactive	A	06/21/13		Alt - Metimbo		off	off	0		Alt - Metim
 Timple	81	Cleric	Inactive	A	05/17/14		Alt - Metimbo		off	off	0		Alt - Metimbo	
 Tingwan	95	Shadow Knight	Inactive	A	10/23/14		Alt - Barper		off	off	0		Alt - Barper	
 Tinkergirl	63	Enchanter	Inactive	A	09/29/08		Alt - Gurach		off	off	0		Alt - Gurach	
-Tiogajoe	105	Ranger	Recruit		08/27/16		Main - Returning Legend 6 aug 16		off	off	0		Main - Returning Legend 6 aug 16	
+Tiogajoe	105	Ranger	Recruit		08/31/16		Main - Returning Legend 6 aug 16		off	off	0		Main - Returning Legend 6 aug 16	
 Titanyaa	100	Enchanter	Inactive		01/10/15		Main		off	off	133098	04/26/14	Main	
 Todadome	95	Ranger	Inactive		02/21/14		Main - KIN - Aegerin		on	off	1506	01/24/14	Main - KIN - Aegerin	
 Tolril	105	Bard	Recruit		06/04/16		Alt - Methauros		off	off	0		Alt - Methauros	
@@ -801,28 +796,27 @@ Toryn	76	Cleric	Inactive		06/22/08		Retired MIA		on	off	0		Retired MIA
 Tosmall	85	Magician	Member		08/18/16		Main - Official Salad Tosser		on	off	6034	02/23/09	Main - Official Salad Tosser	
 Traptus	93	Beastlord	Inactive	A	06/30/16		Alt - Xerzist		off	off	0		Alt - Xerzist	
 Trephan	102	Beastlord	Inactive		12/08/15		Kin - Xaest		off	off	0		Kin - Xaest	
-Triangles	100	Druid	Inactive		08/26/16		Main/E2's slave		on	off	148919	05/11/14	Main/E2's slave	
-Tricki	105	Enchanter	Member	A	08/23/16		Alt - Keltiklen		off	off	6720	12/18/13	Alt - Keltiklen	
+Triangles	100	Druid	Inactive		08/29/16		Main/E2's slave		on	off	148919	05/11/14	Main/E2's slave	
 True	87	Cleric	Inactive		07/04/12		Main		off	off	0		Main	
-Tseuq	102	Enchanter	Member		08/28/16	Plane of Knowledge	Main		on	on	7812	08/23/16	Main	
+Tseuq	103	Enchanter	Member		09/01/16		Main		on	on	7812	08/23/16	Main	
 Tumurbok	78	Shadow Knight	Inactive		12/14/07		Retired MIA		on	off	0		Retired MIA	
 Turboman	105	Monk	Inactive		03/05/15		g Main		off	off	0		g Main	
 Tuuuk	105	Monk	Member	A	07/31/16		Alt - Attune		off	off	0		Alt - Attune	
 Twinchins	37	Beastlord	Inactive	A	06/14/13		Alt - Rimaraf		off	off	0		Alt - Rimaraf	
-Twiztedtunes	105	Bard	Member	A	08/26/16		Alt - Wrekless. Taught Attune all he knows.		off	off	0		Alt - Wrekless. Taught Attune all he knows.	
+Twiztedtunes	105	Bard	Member	A	09/02/16		Alt - Wrekless. Taught Attune all he knows.		off	off	0		Alt - Wrekless. Taught Attune all he knows.	
 Tytania	76	Bard	Inactive	A	07/25/16		Alt - Taigan		off	off	0		Alt - Taigan	
-Uaneldar	105	Shadow Knight	Member		08/28/16	OFFLINE MODE	Main 22 july 2016		off	off	0		Main 22 july 2016	
+Uaneldar	105	Shadow Knight	Member		09/02/16	The Bazaar	Main 22 july 2016		off	off	0		Main 22 july 2016	
 Uisge	105	Cleric	Inactive		06/03/15		g Main		off	off	0		g Main	
 Umin	70	Cleric	Inactive	A	06/09/15		Alt - Kranth		off	off	0		Alt - Kranth	
 Ummlaar	76	Necromancer	Inactive	A	05/09/08		Alt - Kraeven		off	off	0		Alt - Kraeven	
-Umpkin	94	Enchanter	Recruit		08/28/16		Main		off	off	0		Main	
+Umpkin	95	Enchanter	Recruit		09/01/16		Main		off	off	0		Main	
 Underdark	94	Rogue	Recruit		08/10/16		Alt - Ninn		off	off	0		Alt - Ninn	
 Uptown	93	Magician	Inactive	A	04/01/15		Alt - Action		off	off	17789	08/19/14	Alt - Action	
 Urbik	102	Ranger	Inactive		04/01/16		Main		off	off	37083	01/25/16	Main	
 Urgot	104	Paladin	Inactive		12/16/15		KIN g Recruit - 14Apr15		off	off	7826	05/17/15	KIN g Recruit - 14Apr15	
 Usainbolt	105	Bard	Member	A	08/24/16		Alt - Liosis		off	off	0		Alt - Liosis	
 Vahaka	100	Shaman	Inactive		07/25/15		Main		off	off	0		Main	
-Vahsar	104	Monk	Member		08/18/16		Kin- darom		off	off	0		Kin- darom	
+Vahsar	104	Monk	Member	A	09/02/16	Crescent Reach	Alt - Singorr		off	off	0		Alt - Singorr	
 Valander	86	Enchanter	Inactive	A	08/25/13		Alt - Saber		off	off	0		Alt - Saber	
 Valhallan	79	Bard	Inactive		07/19/13		Main		off	off	33490	10/28/07	Main	
 Valukk	105	Magician	Legend	A	08/21/16		Alt - Sargtlin		off	off	72753	10/07/13	Alt - Sargtlin	
@@ -832,7 +826,7 @@ Vanwe	71	Druid	Inactive		02/03/16		Main		off	off	3550	08/01/13	Main
 Varsed	95	Bard	Inactive		08/10/15		Main		off	off	0		Main	
 Vates	105	Bard	Member	A	08/28/16		Alt - Batevil		off	off	8623	02/06/16	Alt - Batevil	
 Veanda	105	Beastlord	Legend		08/28/16		g *** Esteemed LEGEND Main		on	on	9313	09/06/14	g *** Esteemed LEGEND Main	
-Velos	105	Shadow Knight	Member		08/28/16	Grand Guild Hall	g Main		on	on	8851795	08/28/16	g Main	
+Velos	105	Shadow Knight	Member		09/01/16		g Main		on	on	8851795	08/28/16	g Main	
 Venator	100	Shadow Knight	Inactive	A	09/29/14		Alt - Tahn		off	off	7054	09/29/14	Alt - Tahn	
 Vermithrax	98	Shadow Knight	Member		06/29/16		Kin - Sycel		off	off	2000	03/10/16	Kin - Sycel	
 Vertabrake	95	Berserker	Inactive	A	04/04/15		Alt - Barper		off	off	0		Alt - Barper	
@@ -841,13 +835,13 @@ Villin	105	Shadow Knight	Inactive		04/22/15		Main - 11/30/2014		on	off	150789	03
 Vinlain	70	Necromancer	Inactive		06/26/16		Main		off	off	0		Main	
 Virtigaazure	70	Wizard	Inactive	A	07/26/16		Alt - Druzak		off	off	0		Alt - Druzak	
 Virus	88	Rogue	Member	A	03/28/16		Alt - Mazen		off	off	0		Alt - Mazen	
-Vitriol	105	Magician	Member		08/28/16	Argin-Hiz	Main		off	off	9599	06/05/16	Main	
+Vitriol	105	Magician	Member		09/02/16	Sarith, City of Tides	Main		off	off	9599	06/05/16	Main	
 Voranyth	93	Necromancer	Inactive	A	03/18/13		Alt - Larilia		off	off	0		Alt - Larilia	
 Vorashaega	92	Shaman	Inactive	A	07/22/14		Alt - Jivex		off	off	0		Alt - Jivex	
 Vulpine	100	Enchanter	Inactive	A	11/05/14		Alt - Autumn		off	off	0		Alt - Autumn	
 Vvard	102	Enchanter	Recruit		07/20/16		Recruit Main 25-06-2016		off	off	0		Recruit Main 25-06-2016	
 Vvivvi	85	Enchanter	Inactive	A	12/18/14		Alt - Abern		off	off	0		Alt - Abern	
-Wahzoo	105	Cleric	Member		08/28/16		Main  - 6 aug 2016		off	off	0		Main  - 6 aug 2016	
+Wahzoo	105	Cleric	Member		08/31/16		Main  - 6 aug 2016		off	off	0		Main  - 6 aug 2016	
 Wallter	85	Necromancer	Inactive	A	04/27/15		Alt - Georgeo		off	off	0		Alt - Georgeo	
 Warby	105	Ranger	Member	A	08/08/16		Alt - .wubbby		off	off	74818	01/04/16	Alt - .wubbby	
 Warfire	96	Beastlord	Inactive		10/20/13		Kin Main (Mrs Ameni)		off	off	0		Kin Main (Mrs Ameni)	
@@ -855,16 +849,16 @@ Warict	101	Cleric	Inactive		08/01/16		( Pre App Pending 105 To Raid )		off	off	0
 Warriorkin	88	Warrior	Inactive		03/11/14		Kin - Morbidknight		off	off	0		Kin - Morbidknight	
 Warwin	105	Shaman	Member		06/11/16		Main		on	off	0		Main	
 Weaolian	70	Ranger	Inactive	A	01/08/10		Alt - Tavie		off	off	0		Alt - Tavie	
-Weirdna	105	Magician	Member		08/28/16		Alt Gotjja		off	off	3667	07/28/16	Alt Gotjja	
-Wenya	105	Cleric	Member		08/28/16		Main		off	off	0		Main	
+Weirdna	105	Magician	Member	A	09/01/16		Alt Gotjja		off	off	3667	07/28/16	Alt Gotjja	
+Wenya	105	Cleric	Member		08/31/16		Main		off	off	0		Main	
 Wetey	58	Monk	Member		06/25/16		Kin - Attune		off	off	0		Kin - Attune	
 Wildmike	102	Berserker	Recruit		07/03/16		Main 27may2016		off	off	0		Main 27may2016	
 Wite	90	Bard	Recruit		08/10/16		Alt - Ninn		off	off	0		Alt - Ninn	
 Witness	95	Beastlord	Inactive		08/24/16		Main		off	off	75	04/26/13	Main	
-Wizlore	105	Wizard	Member	A	08/28/16	Modest Guild Hall	Alt - Lorewood		off	off	0		Alt - Lorewood	
-Wizzoo	105	Wizard	Recruit		08/25/16		Alt - Wahzoo		off	off	0		Alt - Wahzoo	
+Wizlore	105	Wizard	Member	A	08/29/16		Alt - Lorewood		off	off	0		Alt - Lorewood	
+Wizzoo	105	Wizard	Recruit		09/01/16		Alt - Wahzoo		off	off	0		Alt - Wahzoo	
 Wrathlo	87	Wizard	Inactive		03/11/16		Main		off	off	0		Main	
-Wrekless	105	Berserker	Member		08/25/16	The Dead Hills	Main		off	off	0		Main	
+Wrekless	105	Berserker	Member		09/01/16	The Dead Hills	Main		off	off	0		Main	
 Wulff	105	Shadow Knight	Member	A	08/16/16		Alt - Hhrolf		on	off	174129	04/06/16	Alt - Hhrolf	
 Xaest	105	Necromancer	Officer		04/10/16		g * CLASS MENTOR (NEC) Main		on	on	1798234	03/12/16	g * CLASS MENTOR (NEC) Main	
 Xaigan	89	Shadow Knight	Inactive	A	07/22/16		Alt - Taigan		off	off	0		Alt - Taigan	
@@ -876,13 +870,11 @@ Xochitl	96	Shaman	Inactive	A	05/23/15		Alt - Larilia		off	off	0		Alt - Larilia
 Xulakk	101	Shaman	Member	A	08/06/16		Alt - Sargtlin		off	off	0		Alt - Sargtlin	
 Xynia	89	Bard	Inactive		03/27/16		Kin - Baleful		off	off	0		Kin - Baleful	
 Yalmer	85	Shaman	Inactive	A	07/11/13		Alt - Accused		off	off	0		Alt - Accused	
-Yalpus	105	Cleric	Inactive	A	12/31/15		Alt - Keltiklen		off	off	0		Alt - Keltiklen	
-Yenari	85	Enchanter	Inactive		01/30/15		Kin...for now		off	off	0		Kin...for now	
+Yenari	85	Enchanter	Inactive		08/30/16		Kin...for now		off	off	0		Kin...for now	
 Yindian	102	Magician	Inactive		03/26/16		Main		off	off	0		Main	
 Yorrik	70	Shaman	Inactive	A	07/10/15		Alt - Majjisofhuffs		off	off	0		Alt - Majjisofhuffs	
 Yukikarei	57	Rogue	Inactive	A	08/02/08		Alt - Moonrosedrop		off	off	0		Alt - Moonrosedrop	
 Yumi	100	Magician	Inactive		09/07/13		Main		on	on	0		Main	
-Zaeher	88	Warrior	Member	A	07/24/16		Alt - Keltiklen		off	off	0		Alt - Keltiklen	
 Zahbak	100	Shaman	Inactive		02/07/16		Main		off	off	0		Main	
 Zaibez	105	Monk	Recruit		08/27/16		Main - 21 aug 2016		off	off	0		Main - 21 aug 2016	
 Zandrag	105	Magician	Recruit		08/15/16		Notes Please		off	off	0		Notes Please	
@@ -893,12 +885,12 @@ Zartuuk	100	Shadow Knight	Inactive		07/30/14		Main		off	off	0		Main
 Zeox	100	Wizard	Inactive		06/07/14		Main		off	off	0		Main	
 Zephhyr	71	Ranger	Inactive		12/14/06		Retired MIA		on	off	3600	05/07/05	Retired MIA	
 Zercien	69	Berserker	Inactive	A	07/03/08		Alt - Encien		off	off	0		Alt - Encien	
-Zerowaphex	105	Magician	Recruit		08/28/16		Main - 27 aug 2016		off	off	0		Main - 27 aug 2016	
+Zerowaphex	105	Magician	Recruit		09/01/16		Main - 27 aug 2016		off	off	0		Main - 27 aug 2016	
 Zialan	80	Cleric	Inactive	A	08/17/08		Alt - Gurach		off	off	0		Alt - Gurach	
 Zinging	90	Bard	Inactive		11/15/15		Kin - Xaest		off	off	0		Kin - Xaest	
 Zirconia	75	Magician	Inactive		08/17/07		Retired		off	off	574	02/24/07	Retired	
 Zorraak	105	Beastlord	Recruit		08/28/16		Main		on	on	0		Main	
-Zsaida	105	Druid	Member	A	07/04/16		Alt - Souixxe		off	off	36445	05/02/13	Alt - Souixxe	
+Zsaida	105	Druid	Member	A	09/02/16	ANONYMOUS	Alt - Souixxe		off	off	36445	05/02/13	Alt - Souixxe	
 Zugtarg	88	Berserker	Inactive	A	04/01/15		Alt - Erdean		off	off	0		Alt - Erdean	
 Zurokin	99	Berserker	Inactive		01/04/16		Main		off	off	0		Main	
 Zxiena	99	Druid	Inactive	A	08/01/15		Alt - Greekgod		off	off	0		Alt - Greekgod	
