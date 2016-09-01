@@ -38,8 +38,9 @@ public class PlayerInfo {
                 String comment = tokens[7];
                 
                 if (altFlag.equalsIgnoreCase("A")) {
-                    comment = comment.replace("Alt -", "");
-                    comment = comment.replace("Alt-", "");
+                    comment = comment.replace("Alt", "");
+                    comment = comment.replace("-", "");
+                    comment = comment.replace("=", "");
                     comment = comment.trim();
                     
                     if (comment.length() == 0) {
