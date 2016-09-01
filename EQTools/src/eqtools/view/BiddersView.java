@@ -9,6 +9,7 @@ import eqtools.Auctionator;
 import eqtools.PlayerInfo;
 import static eqtools.Auctionator.DICE_WEIGHT;
 import eqtools.data.Bidder;
+import eqtools.data.Player;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -103,10 +104,21 @@ public class BiddersView extends JPanel {
         g.setColor(Color.BLACK);
         
         String text;
-        if (PlayerInfo.getPlayer(bidder.name).isUnknown()) {
-            text = bidder.name + ": ? \"" + bidder.message + "\" \n";
+        
+        Player player = PlayerInfo.getPlayer(bidder.name);
+        
+        if (player.isAlt()) {
+            if (player.getMain().isUnknown()) {
+                text = bidder.name + ": ? [Alt of " + player.getMain().getName() + "] \"" + bidder.message + "\" \n"; 
+            } else {
+                text = bidder.name + ": " + player.getMain().score(DICE_WEIGHT) + " [Alt of " + player.getMain().getName() + "] \"" + bidder.message + "\" \n"; 
+            }
         } else {
-            text = bidder.name + ": " + bidder.score(DICE_WEIGHT) + " \"" + bidder.message + "\" \n";
+            if (player.isUnknown()) {
+                text = bidder.name + ": ? \"" + bidder.message + "\" \n";
+            } else {
+                text = bidder.name + ": " + bidder.score(DICE_WEIGHT) + " \"" + bidder.message + "\" \n";
+            }
         }
 
         graphics.drawString(text, x + 10, y);

@@ -21,6 +21,8 @@ public class Player {
     private String looted;
     private boolean isCorrupted;
     private boolean isUnknown = false;
+    private boolean isAlt = false;
+    private Player main;
     
     public Player() {
         name = "noname";
@@ -66,6 +68,19 @@ public class Player {
     
     public String getName() {
         return name;
+    }
+    
+    public void setAltOf(Player player) {
+        this.main = player;
+        isAlt = true;
+    }
+    
+    public Player getMain() {
+        return main;
+    }
+    
+    public boolean isAlt() {
+        return isAlt;
     }
     
     /**

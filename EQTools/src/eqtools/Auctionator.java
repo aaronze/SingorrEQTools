@@ -7,6 +7,7 @@ package eqtools;
 
 import eqtools.view.BiddersView;
 import eqtools.data.Bidder;
+import eqtools.data.Player;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
@@ -210,6 +211,9 @@ public class Auctionator extends javax.swing.JFrame {
         }
         
         auction = new Auction();
+        auction.addBidder(new Bidder("Vates", "Alt test"));
+        auction.addBidder(new Bidder("Baroot", "Alt test"));
+        auction.addBidder(new Bidder("Darom", "main test"));
         lblStatus.setText("Auction started. Waiting for tells ...");
     }//GEN-LAST:event_btnStartNewAuctionActionPerformed
 
@@ -257,14 +261,30 @@ public class Auctionator extends javax.swing.JFrame {
             }
         });
 
+        // First pass for mains
         for (Bidder bidder : list) {
-            if (PlayerInfo.getPlayer(bidder.name).isUnknown()) {
-                text += bidder.name + "[?] ";
-            } else {
-                text += bidder.name + "[" + bidder.score() + "] ";
+            Player player = PlayerInfo.getPlayer(bidder.name);
+            if (!player.isAlt()) {
+                if (player.isUnknown()) {
+                    text += bidder.name + "[?] ";
+                } else {
+                    text += bidder.name + "[" + bidder.score() + "] ";
+                }
             }
         }
-        
+ 
+        // Second pass for alts
+        for (Bidder bidder : list) {
+            Player player = PlayerInfo.getPlayer(bidder.name);
+            if (player.isAlt()) {
+                if (player.getMain().isUnknown()) {
+                    text += bidder.name + "[? " + "- Alt of " + player.getMain().getName() + "] "; 
+                } else {
+                    text += bidder.name + "[" + player.getMain().score(DICE_WEIGHT) + " - Alt of " + player.getMain().getName() + "] "; 
+                }
+            }
+        }
+
         StringSelection stringSelection = new StringSelection(text);
         Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
         clpbrd.setContents(stringSelection, null);
