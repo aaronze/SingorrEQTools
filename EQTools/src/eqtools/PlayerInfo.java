@@ -45,6 +45,9 @@ public class PlayerInfo {
                     
                     if (comment.length() == 0) {
                         comment = "Unknown";
+                    } else {
+                        comment = comment.toLowerCase();
+                        comment = comment.substring(0, 1).toUpperCase() + comment.substring(1);
                     }
                     
                     Player main = getPlayer(comment);
