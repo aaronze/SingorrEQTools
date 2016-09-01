@@ -211,9 +211,6 @@ public class Auctionator extends javax.swing.JFrame {
         }
         
         auction = new Auction();
-        auction.addBidder(new Bidder("Vates", "Alt test"));
-        auction.addBidder(new Bidder("Baroot", "Alt test"));
-        auction.addBidder(new Bidder("Darom", "main test"));
         lblStatus.setText("Auction started. Waiting for tells ...");
     }//GEN-LAST:event_btnStartNewAuctionActionPerformed
 
