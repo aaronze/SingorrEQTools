@@ -7,6 +7,7 @@ package eqtools.view;
 
 import eqtools.Auctionator;
 import eqtools.data.Bidder;
+import java.awt.Cursor;
 
 /**
  *
@@ -25,13 +26,8 @@ public class RemoveBidderButton extends ActionArea {
     }
 
     @Override
-    public void mouseEnter() {
-        
+    public void mouseOver() {
+        BiddersView.cursor = Cursor.HAND_CURSOR;
     }
-
-    @Override
-    public void mouseExit() {
-        
-    }
-    
+   
 }

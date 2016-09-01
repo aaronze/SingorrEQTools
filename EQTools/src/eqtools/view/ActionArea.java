@@ -24,6 +24,5 @@ public abstract class ActionArea {
     }
     
     public abstract void mouseClicked();
-    public abstract void mouseEnter();
-    public abstract void mouseExit();
+    public abstract void mouseOver();
 }

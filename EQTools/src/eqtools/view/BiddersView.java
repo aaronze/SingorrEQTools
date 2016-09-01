@@ -11,11 +11,15 @@ import static eqtools.Auctionator.DICE_WEIGHT;
 import eqtools.data.Bidder;
 import eqtools.data.Player;
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.MouseInfo;
+import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,6 +36,7 @@ public class BiddersView extends JPanel {
 
     private BufferedImage buffer = null;
     private Graphics graphics = null;
+    public static int cursor = Cursor.DEFAULT_CURSOR;
     
     private ArrayList<ActionArea> actions = new ArrayList<>();
     
@@ -53,12 +58,31 @@ public class BiddersView extends JPanel {
                 }
             }
         });
+        
+        addMouseMotionListener(new MouseMotionAdapter() {
+            @Override
+            public void mouseMoved(MouseEvent e) {
+                cursor = Cursor.DEFAULT_CURSOR;
+                
+                int x = e.getX();
+                int y = e.getY();
+                
+                for (ActionArea action : actions) {
+                    if (x >= action.area.x && x <= action.area.x + action.area.width && 
+                        y >= action.area.y && y <= action.area.y + action.area.height) {
+                        
+                        action.mouseOver();
+                    }
+                }
+            }
+        });
     }
 
     @Override
     public void paint(Graphics g) {
         // Clear all action areas
         actions.clear();
+        Auctionator.instance.setCursor(cursor);
         
         int width = getWidth();
         int height = getHeight();
