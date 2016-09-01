@@ -57,4 +57,8 @@ public class Auction {
     public void closeAuction() {
         isOpen = false;
     }
+
+    public void removeBidder(Bidder bidder) {
+        bidders.remove(bidder);
+    }
 }

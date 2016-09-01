@@ -8,14 +8,15 @@ package eqtools.view;
 import eqtools.Auctionator;
 import eqtools.PlayerInfo;
 import static eqtools.Auctionator.DICE_WEIGHT;
-import static eqtools.Auctionator.auction;
 import eqtools.data.Bidder;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
@@ -31,19 +32,33 @@ public class BiddersView extends JPanel {
     private BufferedImage buffer = null;
     private Graphics graphics = null;
     
+    private ArrayList<ActionArea> actions = new ArrayList<>();
+    
     public BiddersView() {
         super();
         
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseReleased(MouseEvent e) {
+                int x = e.getX();
+                int y = e.getY();
                 
+                for (ActionArea action : actions) {
+                    if (x >= action.area.x && x <= action.area.x + action.area.width && 
+                        y >= action.area.y && y <= action.area.y + action.area.height) {
+                        
+                        action.mouseClicked();
+                    }
+                }
             }
         });
     }
 
     @Override
     public void paint(Graphics g) {
+        // Clear all action areas
+        actions.clear();
+        
         int width = getWidth();
         int height = getHeight();
         
@@ -76,14 +91,7 @@ public class BiddersView extends JPanel {
                 for (int i = 0; i < list.size(); i++) {
                     Bidder bidder = list.get(i);
 
-                    String text;
-                    if (PlayerInfo.getPlayer(bidder.name).isUnknown()) {
-                        text = bidder.name + ": ? \"" + bidder.message + "\" \n";
-                    } else {
-                        text = bidder.name + ": " + bidder.score(DICE_WEIGHT) + " \"" + bidder.message + "\" \n";
-                    }
-
-                    graphics.drawString(text, 10, i * 20 + 20);
+                    drawBidder(graphics, bidder, 10, i*20 + 20, 100, 20);
                 }
             }
             
@@ -91,8 +99,30 @@ public class BiddersView extends JPanel {
         }
     }
     
-    public void drawBidder(Graphics g, Bidder bidder, int x, int y, int width, int height) {
+    public void drawBidder(Graphics g, final Bidder bidder, int x, int y, int width, int height) {
         g.setColor(Color.BLACK);
         
+        String text;
+        if (PlayerInfo.getPlayer(bidder.name).isUnknown()) {
+            text = bidder.name + ": ? \"" + bidder.message + "\" \n";
+        } else {
+            text = bidder.name + ": " + bidder.score(DICE_WEIGHT) + " \"" + bidder.message + "\" \n";
+        }
+
+        graphics.drawString(text, x + 10, y);
+        
+        graphics.setColor(Color.LIGHT_GRAY);
+        graphics.fillRoundRect(x-5, y-10, 10, 10, 2, 2);
+        
+        graphics.setColor(Color.GRAY);
+        graphics.drawRoundRect(x-5, y-10, 10, 10, 2, 2);
+        
+        graphics.setColor(Color.BLACK);
+        graphics.drawLine(x-2, y-7, x+2, y-3);
+        graphics.drawLine(x-2, y-3, x+2, y-7);
+        
+        ActionArea removeBidderButton = new RemoveBidderButton(bidder);
+        removeBidderButton.setArea(new Rectangle(x-5, y-10, 10, 10));
+        actions.add(removeBidderButton);
     }
 }

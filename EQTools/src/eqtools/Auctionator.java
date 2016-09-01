@@ -23,6 +23,7 @@ import javax.swing.JFileChooser;
  */
 public class Auctionator extends javax.swing.JFrame {
 
+    public static Auctionator instance;
     public static Auction auction;
     public static LogParser logReader;
     public static int DICE_WEIGHT = 0;
@@ -31,6 +32,8 @@ public class Auctionator extends javax.swing.JFrame {
      * Creates new form Auctionator
      */
     public Auctionator() {
+        instance = this;
+        
         initComponents();
         
         if (Config.hasConfig(Config.DICE_WEIGHT)) {
@@ -44,7 +47,7 @@ public class Auctionator extends javax.swing.JFrame {
                 logReader = new LogParser(file);
                 logReader.consumeFile(); // Only start reading from end of log file
                 
-                lblStatus.setText("Log Loaded Successfully! Start a new Auction when ready.");
+                lblStatus.setText("Log Loaded for " + logReader.getCharacterName() + "! Start a new Auction when ready.");
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -58,27 +61,6 @@ public class Auctionator extends javax.swing.JFrame {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        }
-        
-        if (auction != null) {
-            String text = "";
-            
-            List<Bidder> list = Arrays.asList(auction.getBidders());
-            Collections.sort(list, new Comparator<Bidder>() {
-                public int compare(Bidder left, Bidder right)  {
-                    return right.score(DICE_WEIGHT) - left.score(DICE_WEIGHT);
-                }
-            });
-            
-            for (Bidder bidder : list) {
-                if (PlayerInfo.getPlayer(bidder.name).isUnknown()) {
-                    text += bidder.name + ": ? \"" + bidder.message + "\" \n";
-                } else {
-                    text += bidder.name + ": " + bidder.score(DICE_WEIGHT) + " \"" + bidder.message + "\" \n";
-                }
-            }
-
-            bidders.setText(text);
         }
         
         validate();
@@ -104,13 +86,13 @@ public class Auctionator extends javax.swing.JFrame {
         btnSendToEQ = new javax.swing.JButton();
         txtChannel = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        bidders = new javax.swing.JTextArea();
         lblStatus = new javax.swing.JLabel();
         pnlBidders = new BiddersView();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         mnuLoadLogFile = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        mnuAddBidders = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -137,10 +119,6 @@ public class Auctionator extends javax.swing.JFrame {
 
         jLabel1.setText("Use Chat Channel");
 
-        bidders.setColumns(20);
-        bidders.setRows(5);
-        jScrollPane1.setViewportView(bidders);
-
         lblStatus.setText("Waiting for Log File ... (File -> Load Log File)");
         lblStatus.setToolTipText("");
 
@@ -152,7 +130,7 @@ public class Auctionator extends javax.swing.JFrame {
         );
         pnlBiddersLayout.setVerticalGroup(
             pnlBiddersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 381, Short.MAX_VALUE)
         );
 
         jMenu1.setText("File");
@@ -167,30 +145,39 @@ public class Auctionator extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
+        jMenu2.setText("Debug");
+
+        mnuAddBidders.setText("Add Bidders");
+        mnuAddBidders.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuAddBiddersActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mnuAddBidders);
+
+        jMenuBar1.add(jMenu2);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(pnlBidders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(0, 521, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtChannel, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(63, 63, 63)
                         .addComponent(btnSendToEQ, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(btnStartNewAuction, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(lblStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(pnlBidders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(lblStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -201,9 +188,7 @@ public class Auctionator extends javax.swing.JFrame {
                     .addComponent(btnStartNewAuction, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblStatus))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
-                    .addComponent(pnlBidders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnlBidders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -253,7 +238,7 @@ public class Auctionator extends javax.swing.JFrame {
                 Config.setConfig(Config.LAST_LOADED_LOG, file.getParent());
                 Config.setConfig(Config.LAST_LOADED_LOG_FILE, file.getPath());
                 
-                lblStatus.setText("Log Loaded Successfully! Start a new Auction when ready.");
+                lblStatus.setText("Log Loaded for " + logReader.getCharacterName() + "! Start a new Auction when ready.");
             } catch (Exception e) {
                 lblStatus.setText("Failed to Load Log File. Try Again?");
                 e.printStackTrace();
@@ -287,6 +272,20 @@ public class Auctionator extends javax.swing.JFrame {
         lblStatus.setText("Copied to Clipboard.");
         auction.closeAuction();
     }//GEN-LAST:event_btnSendToEQActionPerformed
+
+    private void mnuAddBiddersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuAddBiddersActionPerformed
+        if (auction != null) {
+            
+            for (int n = 0; n < 5; n++) {
+                String name = "";
+                for (int i = 0; i < 8; i++) {
+                    name += "abcdefghijklmnopqrstuvwxyz".charAt((int)(Math.random()*26));
+                }
+                
+                auction.addBidder(new Bidder(name, "This is a test"));
+            }
+        }
+    }//GEN-LAST:event_mnuAddBiddersActionPerformed
 
     
     /**
@@ -325,14 +324,14 @@ public class Auctionator extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea bidders;
     private javax.swing.JButton btnSendToEQ;
     private javax.swing.JButton btnStartNewAuction;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblStatus;
+    private javax.swing.JMenuItem mnuAddBidders;
     private javax.swing.JMenuItem mnuLoadLogFile;
     private javax.swing.JPanel pnlBidders;
     private javax.swing.JTextField txtChannel;
