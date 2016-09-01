@@ -5,6 +5,7 @@
  */
 package eqtools;
 
+import eqtools.view.BiddersView;
 import eqtools.data.Bidder;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
@@ -34,6 +35,19 @@ public class Auctionator extends javax.swing.JFrame {
         
         if (Config.hasConfig(Config.DICE_WEIGHT)) {
             DICE_WEIGHT = Integer.parseInt(Config.getConfig(Config.DICE_WEIGHT));
+        }
+        
+        // Automatically load the last loaded log file
+        if (Config.hasConfig(Config.LAST_LOADED_LOG_FILE)) {
+            try {
+                File file = new File(Config.getConfig(Config.LAST_LOADED_LOG_FILE));
+                logReader = new LogParser(file);
+                logReader.consumeFile(); // Only start reading from end of log file
+                
+                lblStatus.setText("Log Loaded Successfully! Start a new Auction when ready.");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
     
@@ -69,6 +83,10 @@ public class Auctionator extends javax.swing.JFrame {
         
         validate();
         repaint();
+        
+        if (pnlBidders != null) {
+            pnlBidders.repaint();
+        }
     }
     
     
@@ -89,6 +107,7 @@ public class Auctionator extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         bidders = new javax.swing.JTextArea();
         lblStatus = new javax.swing.JLabel();
+        pnlBidders = new BiddersView();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         mnuLoadLogFile = new javax.swing.JMenuItem();
@@ -125,6 +144,17 @@ public class Auctionator extends javax.swing.JFrame {
         lblStatus.setText("Waiting for Log File ... (File -> Load Log File)");
         lblStatus.setToolTipText("");
 
+        javax.swing.GroupLayout pnlBiddersLayout = new javax.swing.GroupLayout(pnlBidders);
+        pnlBidders.setLayout(pnlBiddersLayout);
+        pnlBiddersLayout.setHorizontalGroup(
+            pnlBiddersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        pnlBiddersLayout.setVerticalGroup(
+            pnlBiddersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
         jMenu1.setText("File");
 
         mnuLoadLogFile.setText("Load Log File");
@@ -146,7 +176,6 @@ public class Auctionator extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 521, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,7 +186,11 @@ public class Auctionator extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnStartNewAuction, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(lblStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(lblStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pnlBidders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -168,7 +201,9 @@ public class Auctionator extends javax.swing.JFrame {
                     .addComponent(btnStartNewAuction, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblStatus))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
+                    .addComponent(pnlBidders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -185,7 +220,7 @@ public class Auctionator extends javax.swing.JFrame {
     private void btnStartNewAuctionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStartNewAuctionActionPerformed
         // Must have loaded a log before starting auction
         if (logReader == null) {
-            lblStatus.setText("Failed to start auction. Load a Log File first!");
+            lblStatus.setText("Failed to start auction. Load a Log File first! (File -> Load Log)");
             return;
         }
         
@@ -216,8 +251,9 @@ public class Auctionator extends javax.swing.JFrame {
                 
                 // Save this path for next time
                 Config.setConfig(Config.LAST_LOADED_LOG, file.getParent());
+                Config.setConfig(Config.LAST_LOADED_LOG_FILE, file.getPath());
                 
-                lblStatus.setText("Log Loaded Successfully!");
+                lblStatus.setText("Log Loaded Successfully! Start a new Auction when ready.");
             } catch (Exception e) {
                 lblStatus.setText("Failed to Load Log File. Try Again?");
                 e.printStackTrace();
@@ -298,6 +334,7 @@ public class Auctionator extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblStatus;
     private javax.swing.JMenuItem mnuLoadLogFile;
+    private javax.swing.JPanel pnlBidders;
     private javax.swing.JTextField txtChannel;
     // End of variables declaration//GEN-END:variables
 }

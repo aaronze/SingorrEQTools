@@ -20,6 +20,7 @@ import java.util.regex.Pattern;
  */
 public class Config {
     public final static String LAST_LOADED_LOG = "last_loaded_log";
+    public final static String LAST_LOADED_LOG_FILE = "last_loaded_log_file";
     public final static String DICE_WEIGHT = "dice_weight";
     
     private final static HashMap<String, String> properties = new HashMap<>();
