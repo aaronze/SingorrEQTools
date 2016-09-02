@@ -7,7 +7,6 @@ package eqtools;
 
 import eqtools.data.Player;
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.util.HashMap;
 
@@ -17,8 +16,12 @@ import java.util.HashMap;
  */
 public class PlayerInfo {
     public final static HashMap<String, Player> players = new HashMap();
-
+    
     static {
+        reload();
+    }
+    
+    public static void reload() {
         try (BufferedReader reader = new BufferedReader(new FileReader("data.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {

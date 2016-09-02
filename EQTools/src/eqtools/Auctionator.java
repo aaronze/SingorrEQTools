@@ -8,6 +8,7 @@ package eqtools;
 import eqtools.view.BiddersView;
 import eqtools.data.Bidder;
 import eqtools.data.Player;
+import eqtools.server.Server;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
@@ -34,6 +35,8 @@ public class Auctionator extends javax.swing.JFrame {
      */
     public Auctionator() {
         instance = this;
+        
+        Server.patchFiles();
         
         initComponents();
         
