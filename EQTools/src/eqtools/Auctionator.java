@@ -239,7 +239,12 @@ public class Auctionator extends javax.swing.JFrame {
         if (Config.hasConfig(Config.LAST_LOADED_LOG)) {
             chooser = new JFileChooser(new File(Config.getConfig(Config.LAST_LOADED_LOG)));
         } else {
-            chooser = new JFileChooser();
+            File possibleEQ = new File("C:\\Users\\Public\\Daybreak Game Company\\Installed Games\\EverQuest\\Logs");
+            if (possibleEQ.exists()) {
+                chooser = new JFileChooser(possibleEQ);
+            } else {
+                chooser = new JFileChooser();
+            }
         }
 
         int returnVal = chooser.showOpenDialog(this);
