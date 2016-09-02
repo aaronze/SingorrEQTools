@@ -118,13 +118,27 @@ public class BiddersView extends JPanel {
 
                 for (int i = 0; i < list.size(); i++) {
                     Bidder bidder = list.get(i);
+                    
+                    int x = i / 18;
+                    int y = i % 18;
 
-                    drawBidder(graphics, bidder, 10, i*20 + 20, 100, 20);
+                    drawBidder(graphics, bidder, x*500 + 10, y*20 + 20, 100, 20);
                 }
             }
             
             g.drawImage(buffer, 0, 0, null);
         }
+    }
+    
+    public String ellipses(String string) {
+        return ellipses(string, 50);
+    }
+    
+    public String ellipses(String string, int length) {
+        if (string.length() > length) {
+            string = string.substring(0, length) + " ...";
+        }
+        return string;
     }
     
     public void drawBidder(Graphics g, final Bidder bidder, int x, int y, int width, int height) {
@@ -136,15 +150,15 @@ public class BiddersView extends JPanel {
         
         if (player.isAlt()) {
             if (player.getMain().isUnknown()) {
-                text = bidder.name + ": ? [Alt of " + player.getMain().getName() + "] \"" + bidder.message + "\" \n"; 
+                text = bidder.name + ": ? [Alt of " + player.getMain().getName() + "] \"" + ellipses(bidder.message) + "\" \n"; 
             } else {
-                text = bidder.name + ": " + player.getMain().score(DICE_WEIGHT) + " [Alt of " + player.getMain().getName() + "] \"" + bidder.message + "\" \n"; 
+                text = bidder.name + ": " + player.getMain().score(DICE_WEIGHT) + " [Alt of " + player.getMain().getName() + "] \"" + ellipses(bidder.message) + "\" \n"; 
             }
         } else {
             if (player.isUnknown()) {
-                text = bidder.name + ": ? \"" + bidder.message + "\" \n";
+                text = bidder.name + ": ? \"" + ellipses(bidder.message) + "\" \n";
             } else {
-                text = bidder.name + ": " + bidder.score(DICE_WEIGHT) + " \"" + bidder.message + "\" \n";
+                text = bidder.name + ": " + bidder.score(DICE_WEIGHT) + " \"" + ellipses(bidder.message) + "\" \n";
             }
         }
 
