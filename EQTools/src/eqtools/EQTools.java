@@ -44,7 +44,7 @@ public class EQTools {
     public EQTools() {
         auctionator = new Auctionator();
         auctionator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        auctionator.setTitle("Auctionator");
+        auctionator.setTitle("Singorr's EQ Tools");
         auctionator.setVisible(true);
         
         while (true) {
