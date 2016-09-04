@@ -22,6 +22,7 @@ public class Config {
     public final static String LAST_LOADED_LOG = "last_loaded_log";
     public final static String LAST_LOADED_LOG_FILE = "last_loaded_log_file";
     public final static String DICE_WEIGHT = "dice_weight";
+    public final static String LAST_CHANNEL_USED = "last_channel_used";
     
     private final static HashMap<String, String> properties = new HashMap<>();
     

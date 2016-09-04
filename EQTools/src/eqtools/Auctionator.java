@@ -56,6 +56,10 @@ public class Auctionator extends javax.swing.JFrame {
                 e.printStackTrace();
             }
         }
+        
+        if (Config.hasConfig(Config.LAST_CHANNEL_USED)) {
+            txtChannel.setText(Config.getConfig(Config.LAST_CHANNEL_USED));
+        }
     }
     
     public void step() {
@@ -308,6 +312,9 @@ public class Auctionator extends javax.swing.JFrame {
         
         lblStatus.setText("Copied to Clipboard.");
         auction.closeAuction();
+        
+        // Update config to use the given channel next time app loads
+        Config.setConfig(Config.LAST_CHANNEL_USED, txtChannel.getText());
     }//GEN-LAST:event_btnSendToEQActionPerformed
 
     private void mnuAddBiddersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuAddBiddersActionPerformed
