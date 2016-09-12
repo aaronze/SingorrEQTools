@@ -24,6 +24,14 @@
             <Property name="text" type="java.lang.String" value="Debug"/>
           </Properties>
           <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="mnuAddBidder">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Add Bidder ..."/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuAddBidderActionPerformed"/>
+              </Events>
+            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuAddBidders">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Add Bidders"/>

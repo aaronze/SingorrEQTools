@@ -18,6 +18,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -102,6 +103,7 @@ public class Auctionator extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         mnuLoadLogFile = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        mnuAddBidder = new javax.swing.JMenuItem();
         mnuAddBidders = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -160,6 +162,14 @@ public class Auctionator extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Debug");
+
+        mnuAddBidder.setText("Add Bidder ...");
+        mnuAddBidder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuAddBidderActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mnuAddBidder);
 
         mnuAddBidders.setText("Add Bidders");
         mnuAddBidders.addActionListener(new java.awt.event.ActionListener() {
@@ -331,6 +341,22 @@ public class Auctionator extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_mnuAddBiddersActionPerformed
 
+    private void mnuAddBidderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuAddBidderActionPerformed
+        String s = (String)JOptionPane.showInputDialog(
+                    this,
+                    "What is the name of the bidder?",
+                    "Add Bidder",
+                    JOptionPane.PLAIN_MESSAGE,
+                    null,
+                    null,
+                    "NoName");
+        
+        if (s != null) {
+            // User didn't click cancel
+            auction.addBidder(new Bidder(s, "Added Bidder"));
+        }
+    }//GEN-LAST:event_mnuAddBidderActionPerformed
+
     public String getSortBy() {
         return (String)boxSortBy.getSelectedItem();
     }
@@ -380,6 +406,7 @@ public class Auctionator extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JLabel lblStatus;
+    private javax.swing.JMenuItem mnuAddBidder;
     private javax.swing.JMenuItem mnuAddBidders;
     private javax.swing.JMenuItem mnuLoadLogFile;
     private javax.swing.JPanel pnlBidders;
