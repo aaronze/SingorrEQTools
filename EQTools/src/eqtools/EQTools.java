@@ -23,6 +23,8 @@ public class EQTools {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        testScores();
         new EQTools();
     }
     
@@ -44,7 +46,7 @@ public class EQTools {
     public EQTools() {
         auctionator = new Auctionator();
         auctionator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        auctionator.setTitle("Singorr's EQ Tools");
+        auctionator.setTitle("Singorr's Toolkit");
         auctionator.setVisible(true);
         
         while (true) {

@@ -23,7 +23,7 @@ public class Player {
     private boolean isUnknown = false;
     private boolean isAlt = false;
     private Player main;
-    
+
     public Player() {
         name = "noname";
         dkp = 0;
@@ -93,9 +93,9 @@ public class Player {
     public int score(int diceWeight) {
         int score = 0;
         
-        score += 103 - ((attendance60 - 1) * 23); // Give a large boost to high raid attendance
-        score += 19 * lastLooted; // Give a large boost to players who haven't won anything recently
-        score -= 5 * gearTotal60; // Give a small defecit per item won in the last 60 days
+        score += 600 - ((attendance60 - 1) * 150); // Give a large boost to high raid attendance
+        score += 35 * (lastLooted - 1); // Give a decent boost to players who haven't won anything recently
+        score -= 15 * gearTotal60; // Give a small defecit per item won in the last 60 days
         score += dkp / 200; // Give a tiny bonus to long term loyal raiders
         
         score += diceWeight; 
