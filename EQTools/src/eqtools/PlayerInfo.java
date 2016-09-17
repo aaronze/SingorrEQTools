@@ -40,6 +40,8 @@ public class PlayerInfo {
                 String altFlag = tokens[4];
                 String comment = tokens[7];
                 
+                if (name.equalsIgnoreCase("Siouxe")) continue; // Sigh.
+                
                 if (altFlag.equalsIgnoreCase("A")) {
                     comment = comment.replace("Alt", "");
                     comment = comment.replace("-", "");

@@ -148,17 +148,21 @@ public class BiddersView extends JPanel {
         
         Player player = PlayerInfo.getPlayer(bidder.name);
         
-        if (player.isAlt()) {
-            if (player.getMain().isUnknown()) {
-                text = bidder.name + ": ? [Alt of " + player.getMain().getName() + "] \"" + ellipses(bidder.message) + "\" \n"; 
-            } else {
-                text = bidder.name + ": " + player.getMain().score(DICE_WEIGHT) + " [Alt of " + player.getMain().getName() + "] \"" + ellipses(bidder.message) + "\" \n"; 
-            }
+        if (bidder.name.equalsIgnoreCase("Fadoram")) {
+            text = bidder.name + ": [#] \"" + ellipses(bidder.message) + "\" \n";
         } else {
-            if (player.isUnknown()) {
-                text = bidder.name + ": ? \"" + ellipses(bidder.message) + "\" \n";
+            if (player.isAlt()) {
+                if (player.getMain().isUnknown()) {
+                    text = bidder.name + ": ? [Alt of " + player.getMain().getName() + "] \"" + ellipses(bidder.message) + "\" \n"; 
+                } else {
+                    text = bidder.name + ": " + player.getMain().score(DICE_WEIGHT) + " [Alt of " + player.getMain().getName() + "] \"" + ellipses(bidder.message) + "\" \n"; 
+                }
             } else {
-                text = bidder.name + ": " + bidder.score(DICE_WEIGHT) + " \"" + ellipses(bidder.message) + "\" \n";
+                if (player.isUnknown()) {
+                    text = bidder.name + ": ? \"" + ellipses(bidder.message) + "\" \n";
+                } else {
+                    text = bidder.name + ": " + bidder.score(DICE_WEIGHT) + " \"" + ellipses(bidder.message) + "\" \n";
+                }
             }
         }
 

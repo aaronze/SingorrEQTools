@@ -296,6 +296,10 @@ public class Auctionator extends javax.swing.JFrame {
         for (Bidder bidder : list) {
             Player player = PlayerInfo.getPlayer(bidder.name);
             if (!player.isAlt()) {
+                if (player.getName().equalsIgnoreCase("Fadoram")) {
+                    text += bidder.name + "[#] ";
+                    continue;
+                }
                 if (player.isUnknown()) {
                     text += bidder.name + "[?] ";
                 } else {

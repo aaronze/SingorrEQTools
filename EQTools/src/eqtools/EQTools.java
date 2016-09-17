@@ -23,6 +23,8 @@ public class EQTools {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        //testScores();
         new EQTools();
     }
     
