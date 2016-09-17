@@ -23,6 +23,7 @@ public class Player {
     private boolean isUnknown = false;
     private boolean isAlt = false;
     private Player main;
+    private String rank;
 
     public Player() {
         name = "noname";
@@ -83,6 +84,14 @@ public class Player {
         return isAlt;
     }
     
+    public void setRank(String rank) {
+        this.rank = rank;
+    }
+    
+    public String getRank() {
+        return rank;
+    }
+    
     /**
      * Gives a weighted score based on players raid stats and items looted.
      * A weighted dice can be added by including a diceWeight more then 0.
@@ -99,6 +108,10 @@ public class Player {
         score += 35 * (lastLooted - 1); // Give a decent boost to players who haven't won anything recently
         score -= 15 * gearTotal60; // Give a small defecit per item won in the last 60 days
         score += dkp / 200; // Give a tiny bonus to long term loyal raiders
+        
+        if (rank.equalsIgnoreCase("Recruit")) {
+            score /= 10;
+        }
         
         score += diceWeight; 
         

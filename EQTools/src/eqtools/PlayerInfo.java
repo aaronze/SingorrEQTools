@@ -37,8 +37,11 @@ public class PlayerInfo {
             while ((line = reader.readLine()) != null) {
                 String[] tokens = line.split("\t");
                 String name = tokens[0];
+                String rank = tokens[3];
                 String altFlag = tokens[4];
                 String comment = tokens[7];
+                
+                getPlayer(name).setRank(rank);
                 
                 if (name.equalsIgnoreCase("Siouxe")) continue; // Sigh.
                 
@@ -57,7 +60,6 @@ public class PlayerInfo {
                     
                     Player main = getPlayer(comment);
                     getPlayer(name).setAltOf(main);
-                    
                 }
             }
         } catch (Exception e) {
