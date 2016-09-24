@@ -24,6 +24,7 @@ public class Player {
     private boolean isAlt = false;
     private Player main;
     private String rank;
+    private String lastLootedItem = "";
 
     public Player() {
         name = "noname";
@@ -34,6 +35,7 @@ public class Player {
         gearTotalAllTime = 0;
         looted = "00000000";
         isUnknown = true;
+        lastLootedItem = "";
     }
     
     public Player(String line) {
@@ -90,6 +92,37 @@ public class Player {
     
     public String getRank() {
         return rank;
+    }
+    
+    public void setLastLootedItem(String item) {
+        lastLootedItem = item;
+        lastLooted = 1;
+    }
+    
+    public String getLastLootedItem() {
+        return lastLootedItem;
+    }
+    
+    public String printLastLootedItem() {
+        if (lastLootedItem == null) {
+            return "";
+        }
+        if (lastLootedItem.isEmpty()) {
+            return "";
+        }
+        
+        return "<" + lastLootedItem + ">"; 
+    }
+    
+    public String printLastLootedMarker() {
+        if (lastLootedItem == null) {
+            return "";
+        }
+        if (lastLootedItem.isEmpty()) {
+            return "";
+        }
+        
+        return "*"; 
     }
     
     /**

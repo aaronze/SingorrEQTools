@@ -80,7 +80,9 @@ public class Auctionator extends javax.swing.JFrame {
         }
     }
     
-    
+    public void setVersionText(String text) {
+        txtVersion.setText(text);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -99,6 +101,7 @@ public class Auctionator extends javax.swing.JFrame {
         pnlBidders = new BiddersView();
         jLabel2 = new javax.swing.JLabel();
         boxSortBy = new javax.swing.JComboBox();
+        txtVersion = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         mnuLoadLogFile = new javax.swing.JMenuItem();
@@ -149,6 +152,8 @@ public class Auctionator extends javax.swing.JFrame {
 
         boxSortBy.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Score", "Tells Received" }));
 
+        txtVersion.setText("Checking Version ...");
+
         jMenu1.setText("File");
 
         mnuLoadLogFile.setText("Load Log File");
@@ -192,9 +197,12 @@ public class Auctionator extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(pnlBidders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(boxSortBy, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(boxSortBy, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtVersion))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 371, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtChannel, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -223,8 +231,10 @@ public class Auctionator extends javax.swing.JFrame {
                             .addComponent(jLabel1)
                             .addComponent(jLabel2)
                             .addComponent(boxSortBy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtChannel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtChannel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtVersion)))
                     .addComponent(btnSendToEQ, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
@@ -238,6 +248,8 @@ public class Auctionator extends javax.swing.JFrame {
             lblStatus.setText("Failed to start auction. Load a Log File first! (File -> Load Log)");
             return;
         }
+        
+        Server.patchFiles();
         
         auction = new Auction();
         lblStatus.setText("Auction started. Waiting for tells ...");
@@ -303,7 +315,7 @@ public class Auctionator extends javax.swing.JFrame {
                 if (player.isUnknown()) {
                     text += bidder.name + "[?] ";
                 } else {
-                    text += bidder.name + "[" + bidder.score() + "] ";
+                    text += bidder.name + "[" + bidder.score() + player.printLastLootedMarker() + "] ";
                 }
             }
         }
@@ -415,5 +427,6 @@ public class Auctionator extends javax.swing.JFrame {
     private javax.swing.JMenuItem mnuLoadLogFile;
     private javax.swing.JPanel pnlBidders;
     private javax.swing.JTextField txtChannel;
+    private javax.swing.JLabel txtVersion;
     // End of variables declaration//GEN-END:variables
 }

@@ -6,6 +6,7 @@
 package eqtools;
 
 import eqtools.data.Bidder;
+import eqtools.server.Server;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -103,6 +104,13 @@ public class LogParser extends Thread {
             String name = tellMatcher.group(1);
             String message = tellMatcher.group(2);
             Auctionator.auction.addBidder(new Bidder(name, message));
+        }
+        
+        Matcher lootMatcher = Pattern.compile("] --(.*) has looted a (.*).--").matcher(line);
+        if (lootMatcher.find()) {
+            String name = lootMatcher.group(1);
+            String item = lootMatcher.group(2);
+            Server.sendLoot(name, item);
         }
     }
     

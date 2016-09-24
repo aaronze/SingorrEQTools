@@ -6,6 +6,7 @@
 package eqtools;
 
 import eqtools.data.Player;
+import eqtools.server.Server;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.HashMap;
@@ -16,6 +17,9 @@ import java.util.HashMap;
  */
 public class PlayerInfo {
     public final static HashMap<String, Player> players = new HashMap();
+    
+    public static String CLIENT_VERSION = "1.6";
+    public static String SERVER_VERSION = null;
     
     static {
         reload();
@@ -61,6 +65,35 @@ public class PlayerInfo {
                     Player main = getPlayer(comment);
                     getPlayer(name).setAltOf(main);
                 }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        try (BufferedReader reader = new BufferedReader(new FileReader("version.txt"))) {
+            SERVER_VERSION = reader.readLine();
+            
+            if (SERVER_VERSION.equalsIgnoreCase(CLIENT_VERSION)) {
+                Auctionator.instance.setVersionText("You are using the latest version.");
+            } else {
+                Auctionator.instance.setVersionText("A new version of Singorr's Toolkit is available! Go to meteorice.com to download.");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Auctionator.instance.setVersionText("Runtime Error! Windows might be protecting this folder from me creating files. Try moving the jar somewhere else.");
+        }
+        
+        try {
+            String[] loots = Server.lootedString.split("\n");
+            
+            for (String loot : loots) {
+                String[] tokens = loot.split("\t");
+                
+                String name = tokens[0];
+                String date = tokens[1];
+                String item = tokens[2];
+                
+                getPlayer(name).setLastLootedItem(item);
             }
         } catch (Exception e) {
             e.printStackTrace();
