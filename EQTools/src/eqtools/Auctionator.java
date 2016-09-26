@@ -9,6 +9,8 @@ import eqtools.view.BiddersView;
 import eqtools.data.Bidder;
 import eqtools.data.Player;
 import eqtools.server.Server;
+import eqtools.view.ItemView;
+import eqtools.view.ScraperView;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
@@ -17,8 +19,11 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import javax.swing.DefaultListModel;
 import javax.swing.JFileChooser;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
+import javax.swing.ListModel;
 
 /**
  *
@@ -31,6 +36,8 @@ public class Auctionator extends javax.swing.JFrame {
     public static LogParser logReader;
     public static int DICE_WEIGHT = 0;
     
+    private DefaultListModel listModel = new DefaultListModel();
+    
     /**
      * Creates new form Auctionator
      */
@@ -40,6 +47,8 @@ public class Auctionator extends javax.swing.JFrame {
         Server.patchFiles();
         
         initComponents();
+        
+        lstAuctions.setModel(listModel);
         
         if (Config.hasConfig(Config.DICE_WEIGHT)) {
             DICE_WEIGHT = Integer.parseInt(Config.getConfig(Config.DICE_WEIGHT));
@@ -61,6 +70,22 @@ public class Auctionator extends javax.swing.JFrame {
         if (Config.hasConfig(Config.LAST_CHANNEL_USED)) {
             txtChannel.setText(Config.getConfig(Config.LAST_CHANNEL_USED));
         }
+        
+        Auction auction = new Auction("Parogressio", 2);
+        auction.addBidder(new Bidder("Action", ""));
+        auction.addBidder(new Bidder("Siouxe", ""));
+        auction.addBidder(new Bidder("Batevil", ""));
+        auction.addBidder(new Bidder("Singorr", ""));
+        auction.addBidder(new Bidder("Hhrolf", ""));
+        Scraper.auctions.add(auction);
+        
+        Auction auction2 = new Auction("Shimmering Quill of the Lady", 2);
+        auction2.addBidder(new Bidder("Hhrolf", ""));
+        auction2.addBidder(new Bidder("Veanda", ""));
+        auction2.addBidder(new Bidder("Thalas", ""));
+        auction2.addBidder(new Bidder("Idaen", ""));
+        auction2.addBidder(new Bidder("Singorr", ""));
+        Scraper.auctions.add(auction2);
     }
     
     public void step() {
@@ -71,6 +96,18 @@ public class Auctionator extends javax.swing.JFrame {
                 e.printStackTrace();
             }
         }
+        
+        Object selectedElement = lstAuctions.getSelectedValue();
+        for (int i = 0; i < Scraper.auctions.size(); i++) {
+            if (!listModel.contains(Scraper.auctions.get(i).getItem()))
+                listModel.addElement(Scraper.auctions.get(i).getItem());
+        }
+        lstAuctions.setSelectedValue(selectedElement, true);
+        
+        if (Scraper.getSelectedAuction() != null) {
+            lblItemType.setText(Scraper.getSelectedAuction().getItemType());
+        }
+        
         
         validate();
         repaint();
@@ -83,6 +120,14 @@ public class Auctionator extends javax.swing.JFrame {
     public void setVersionText(String text) {
         txtVersion.setText(text);
     }
+    
+    public String getItemType() {
+        return lblItemType.getText();
+    }
+    
+    public void viewItems(String[] items) {
+        ((ItemView)pnlItemViewer).viewItem(items[0]);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -93,15 +138,23 @@ public class Auctionator extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
         btnStartNewAuction = new javax.swing.JButton();
-        btnSendToEQ = new javax.swing.JButton();
-        txtChannel = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
         lblStatus = new javax.swing.JLabel();
         pnlBidders = new BiddersView();
-        jLabel2 = new javax.swing.JLabel();
-        boxSortBy = new javax.swing.JComboBox();
+        btnSendToEQ = new javax.swing.JButton();
         txtVersion = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        txtChannel = new javax.swing.JTextField();
+        boxSortBy = new javax.swing.JComboBox();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        lstAuctions = new javax.swing.JList();
+        pnlScraper = new ScraperView();
+        lblItemType = new javax.swing.JLabel();
+        pnlItemViewer = new ItemView();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         mnuLoadLogFile = new javax.swing.JMenuItem();
@@ -118,22 +171,6 @@ public class Auctionator extends javax.swing.JFrame {
             }
         });
 
-        btnSendToEQ.setText("Send To EQ");
-        btnSendToEQ.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSendToEQActionPerformed(evt);
-            }
-        });
-
-        txtChannel.setText("/2 ");
-        txtChannel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtChannelActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setText("Use Chat Channel");
-
         lblStatus.setText("Waiting for Log File ... (File -> Load Log File)");
         lblStatus.setToolTipText("");
 
@@ -145,14 +182,145 @@ public class Auctionator extends javax.swing.JFrame {
         );
         pnlBiddersLayout.setVerticalGroup(
             pnlBiddersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 381, Short.MAX_VALUE)
+            .addGap(0, 445, Short.MAX_VALUE)
         );
 
-        jLabel2.setText("Sort By:");
+        btnSendToEQ.setText("Send To EQ");
+        btnSendToEQ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSendToEQActionPerformed(evt);
+            }
+        });
+
+        txtVersion.setText("Checking Version ...");
+
+        jLabel1.setText("Use Chat Channel");
+
+        txtChannel.setText("/2 ");
+        txtChannel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtChannelActionPerformed(evt);
+            }
+        });
 
         boxSortBy.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Score", "Tells Received" }));
 
-        txtVersion.setText("Checking Version ...");
+        jLabel2.setText("Sort By:");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnStartNewAuction, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(13, 13, 13))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(pnlBidders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(boxSortBy, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtVersion))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtChannel, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(63, 63, 63)
+                        .addComponent(btnSendToEQ, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnStartNewAuction, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblStatus))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pnlBidders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(boxSortBy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtChannel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtVersion)))
+                    .addComponent(btnSendToEQ, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Bidders", jPanel1);
+
+        lstAuctions.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        lstAuctions.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                lstAuctionsValueChanged(evt);
+            }
+        });
+        jScrollPane1.setViewportView(lstAuctions);
+
+        javax.swing.GroupLayout pnlScraperLayout = new javax.swing.GroupLayout(pnlScraper);
+        pnlScraper.setLayout(pnlScraperLayout);
+        pnlScraperLayout.setHorizontalGroup(
+            pnlScraperLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        pnlScraperLayout.setVerticalGroup(
+            pnlScraperLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 525, Short.MAX_VALUE)
+        );
+
+        lblItemType.setText("Select an Auction");
+
+        pnlItemViewer.setText(" ");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(pnlScraper, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblItemType, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pnlItemViewer, javax.swing.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 8, Short.MAX_VALUE)
+                        .addComponent(lblItemType)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(pnlScraper, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pnlItemViewer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Scraper", jPanel2);
 
         jMenu1.setText("File");
 
@@ -192,51 +360,11 @@ public class Auctionator extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(pnlBidders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boxSortBy, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(txtVersion))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 371, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtChannel, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(63, 63, 63)
-                        .addComponent(btnSendToEQ, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(btnStartNewAuction, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
+            .addComponent(jTabbedPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnStartNewAuction, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblStatus))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnlBidders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(boxSortBy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtChannel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtVersion)))
-                    .addComponent(btnSendToEQ, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+            .addComponent(jTabbedPane1)
         );
 
         pack();
@@ -373,6 +501,10 @@ public class Auctionator extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_mnuAddBidderActionPerformed
 
+    private void lstAuctionsValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_lstAuctionsValueChanged
+        Scraper.selectAuctionForItem((String)lstAuctions.getSelectedValue());
+    }//GEN-LAST:event_lstAuctionsValueChanged
+
     public String getSortBy() {
         return (String)boxSortBy.getSelectedItem();
     }
@@ -421,11 +553,19 @@ public class Auctionator extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel lblItemType;
     private javax.swing.JLabel lblStatus;
+    private javax.swing.JList lstAuctions;
     private javax.swing.JMenuItem mnuAddBidder;
     private javax.swing.JMenuItem mnuAddBidders;
     private javax.swing.JMenuItem mnuLoadLogFile;
     private javax.swing.JPanel pnlBidders;
+    private javax.swing.JLabel pnlItemViewer;
+    private javax.swing.JPanel pnlScraper;
     private javax.swing.JTextField txtChannel;
     private javax.swing.JLabel txtVersion;
     // End of variables declaration//GEN-END:variables

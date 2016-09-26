@@ -18,7 +18,7 @@ import java.util.HashMap;
 public class PlayerInfo {
     public final static HashMap<String, Player> players = new HashMap();
     
-    public static String CLIENT_VERSION = "1.6";
+    public static String CLIENT_VERSION = "1.7";
     public static String SERVER_VERSION = null;
     
     static {
@@ -87,6 +87,8 @@ public class PlayerInfo {
             String[] loots = Server.lootedString.split("\n");
             
             for (String loot : loots) {
+                if (loot == null || loot.isEmpty()) continue;
+                
                 String[] tokens = loot.split("\t");
                 
                 String name = tokens[0];

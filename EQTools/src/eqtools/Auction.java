@@ -6,6 +6,7 @@
 package eqtools;
 
 import eqtools.data.Bidder;
+import eqtools.server.Magelo;
 import java.util.ArrayList;
 
 /**
@@ -14,7 +15,25 @@ import java.util.ArrayList;
  */
 public class Auction {
     private ArrayList<Bidder> bidders = new ArrayList<>();
+    private String item;
+    private int quantity = 1;
     private boolean isOpen = true;
+    private String itemType;
+    
+    public Auction() {
+        
+    }
+    
+    public Auction(String item) {
+        this.item = item;
+    }
+    
+    public Auction(String item, int quantity) {
+        this.item = item;
+        this.quantity = quantity;
+        
+        itemType = Magelo.getItemType(item);
+    }
 
     public void addBidder(Bidder bidder) {
         // Ensure person auctioning sending tells and using tell windows
@@ -60,5 +79,25 @@ public class Auction {
 
     public void removeBidder(Bidder bidder) {
         bidders.remove(bidder);
+    }
+    
+    public void setItem(String s) {
+        item = s;
+    }
+    
+    public String getItem() {
+        return item;
+    }
+    
+    public void setQuantity(int n) {
+        quantity = n;
+    }
+    
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public String getItemType() {
+        return itemType;
     }
 }

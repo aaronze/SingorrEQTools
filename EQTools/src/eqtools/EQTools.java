@@ -5,7 +5,10 @@
  */
 package eqtools;
 
+import eqtools.data.Bidder;
+import eqtools.data.MageloProfile;
 import eqtools.data.Player;
+import eqtools.server.Magelo;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -23,7 +26,6 @@ public class EQTools {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
         //testScores();
         new EQTools();
     }

@@ -88,10 +88,10 @@ public class LogParser extends Thread {
         if (Auctionator.auction != null) {
             parseAuction(line);
         }
+        parseScraper(line);
     }
     
     private void parseAuction(String line) {
-        // TODO Find a way to exclude outbound messages adding player by detecting player name by log file name
         Matcher tellWindowMatcher = Pattern.compile("\\[.*\\] (.*) \\-\\> .*: (.*)").matcher(line);
         if (tellWindowMatcher.find()) {
             String name = tellWindowMatcher.group(1);
@@ -111,6 +111,37 @@ public class LogParser extends Thread {
             String name = lootMatcher.group(1);
             String item = lootMatcher.group(2);
             Server.sendLoot(name, item);
+        }
+    }
+    
+    private void parseScraper(String line) {
+        Matcher scraperMatcher = Pattern.compile(".*tells colv2.*, '(.*)-\\s*(.*)'").matcher(line);
+        if (scraperMatcher.find()) {
+            String item = scraperMatcher.group(1);
+            String bidders = scraperMatcher.group(2);
+            
+            int quantity = 1;
+            
+            Matcher quantityMatcher = Pattern.compile("(x?\\s*\\d+)").matcher(item);
+            if (quantityMatcher.find()) {
+                String quantityString = quantityMatcher.group(1);
+                
+                item = item.replaceAll(quantityString, "");
+                
+                quantityString = quantityString.replaceAll("x", "");
+                quantityString = quantityString.replaceAll(" ", "");
+                
+                quantity = Integer.parseInt(quantityString);
+            }
+            
+            Auction auction = new Auction(item, quantity);
+            
+            bidders = bidders.replaceAll("[^a-zA-Z ]", "");
+            for (String bidder : bidders.split(" ")) {
+                auction.addBidder(new Bidder(bidder, "Scraper Added"));
+            }
+            
+            Scraper.auctions.add(auction);
         }
     }
     
