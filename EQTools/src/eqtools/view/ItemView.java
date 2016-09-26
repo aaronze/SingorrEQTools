@@ -25,13 +25,9 @@ public class ItemView extends JLabel {
         item = item.replaceAll("\\\\\\>", ">");
         item = item.replaceAll("\\\\\\'", "'");
         item = item.replaceAll("\\\\\\\"", "\"");
-        
-        System.out.println(item);
 
         String html = item.substring(item.indexOf("'<div") + 1);
         html = html.substring(0, html.indexOf("div>'"));
-        
-        System.out.println(html);
 
         this.setText("<html>" + html);
     }

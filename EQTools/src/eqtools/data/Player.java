@@ -142,7 +142,7 @@ public class Player {
         score -= 15 * gearTotal60; // Give a small defecit per item won in the last 60 days
         score += dkp / 200; // Give a tiny bonus to long term loyal raiders
         
-        if (rank.equalsIgnoreCase("Recruit")) {
+        if (rank != null && rank.equalsIgnoreCase("Recruit")) {
             score /= 10;
         }
         

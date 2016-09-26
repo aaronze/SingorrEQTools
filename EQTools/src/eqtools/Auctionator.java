@@ -8,6 +8,7 @@ package eqtools;
 import eqtools.view.BiddersView;
 import eqtools.data.Bidder;
 import eqtools.data.Player;
+import eqtools.server.Magelo;
 import eqtools.server.Server;
 import eqtools.view.ItemView;
 import eqtools.view.ScraperView;
@@ -77,15 +78,38 @@ public class Auctionator extends javax.swing.JFrame {
         auction.addBidder(new Bidder("Batevil", ""));
         auction.addBidder(new Bidder("Singorr", ""));
         auction.addBidder(new Bidder("Hhrolf", ""));
+        auction.addBidder(new Bidder("Anza", ""));
         Scraper.auctions.add(auction);
         
-        Auction auction2 = new Auction("Shimmering Quill of the Lady", 2);
-        auction2.addBidder(new Bidder("Hhrolf", ""));
-        auction2.addBidder(new Bidder("Veanda", ""));
-        auction2.addBidder(new Bidder("Thalas", ""));
-        auction2.addBidder(new Bidder("Idaen", ""));
-        auction2.addBidder(new Bidder("Singorr", ""));
-        Scraper.auctions.add(auction2);
+        auction = new Auction("Trophy of the Scapegoat", 1);
+        auction.addBidder(new Bidder("Action", ""));
+        auction.addBidder(new Bidder("Siouxe", ""));
+        auction.addBidder(new Bidder("Batevil", ""));
+        auction.addBidder(new Bidder("Singorr", ""));
+        auction.addBidder(new Bidder("Hhrolf", ""));
+        auction.addBidder(new Bidder("Anza", ""));
+        Scraper.auctions.add(auction);
+        
+        new Thread() {
+            @Override
+            public void run() {
+                for (Player player : PlayerInfo.players.values()) {
+                    if (player.isAlt()) continue;
+                    if (player.isUnknown()) continue;
+                    
+                    System.out.println("Fetching " + player.getName());
+                    Magelo.getProfile(player.getName());
+                }
+                
+                for (Player player : PlayerInfo.players.values()) {
+                    if (player.isAlt()) continue;
+                    if (player.isUnknown()) continue;
+                    
+                    System.out.println("Fetching " + player.getName() + " fresh");
+                    Magelo.getProfile(player.getName(), true);
+                }
+            }
+        }.start();
     }
     
     public void step() {
@@ -99,8 +123,13 @@ public class Auctionator extends javax.swing.JFrame {
         
         Object selectedElement = lstAuctions.getSelectedValue();
         for (int i = 0; i < Scraper.auctions.size(); i++) {
-            if (!listModel.contains(Scraper.auctions.get(i).getItem()))
-                listModel.addElement(Scraper.auctions.get(i).getItem());
+            String item = Scraper.auctions.get(i).getItem();
+            if (Scraper.auctions.get(i).getQuantity() > 1) {
+                item += " x" + Scraper.auctions.get(i).getQuantity();
+            }
+            
+            if (!listModel.contains(item))
+                listModel.addElement(item);
         }
         lstAuctions.setSelectedValue(selectedElement, true);
         
@@ -502,7 +531,16 @@ public class Auctionator extends javax.swing.JFrame {
     }//GEN-LAST:event_mnuAddBidderActionPerformed
 
     private void lstAuctionsValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_lstAuctionsValueChanged
-        Scraper.selectAuctionForItem((String)lstAuctions.getSelectedValue());
+        String itemName = (String)lstAuctions.getSelectedValue();
+        
+        if (itemName.charAt(itemName.length() - 2) == 'x') {
+            itemName = itemName.substring(0, itemName.length() - 3);
+        }
+        
+        Scraper.selectAuctionForItem(itemName);
+        
+        ScraperView.selectedIndex = -1;
+        ((ItemView)pnlItemViewer).setText("");
     }//GEN-LAST:event_lstAuctionsValueChanged
 
     public String getSortBy() {

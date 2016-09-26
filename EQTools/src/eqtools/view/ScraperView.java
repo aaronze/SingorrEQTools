@@ -41,7 +41,7 @@ public class ScraperView extends JPanel {
     
     private ArrayList<ActionArea> actions = new ArrayList<>();
     
-    public static int selectedIndex = 0;
+    public static int selectedIndex = -1;
     
     public ScraperView() {
         super();
@@ -178,7 +178,7 @@ public class ScraperView extends JPanel {
         graphics.drawString(text, x + 10, y);
         
         ActionArea selectBidderArea = new SelectBidderButton(index, bidder.name);
-        selectBidderArea.setArea(new Rectangle(x+10, y-10, 500, 10));
+        selectBidderArea.setArea(new Rectangle(x+10, y-15, 500, 20));
         actions.add(selectBidderArea);
     }
 }
