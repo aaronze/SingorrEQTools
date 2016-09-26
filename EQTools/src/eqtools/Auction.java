@@ -36,12 +36,6 @@ public class Auction {
     }
 
     public void addBidder(Bidder bidder) {
-        // Ensure person auctioning sending tells and using tell windows
-        // does not accidentally add themselves to the bidding pool
-        if (bidder.name.equalsIgnoreCase(Auctionator.logReader.getCharacterName())) {
-            return;
-        }
-        
         // Ensure no bidder is added twice
         if (hasBidder(bidder.name)) {
             return;

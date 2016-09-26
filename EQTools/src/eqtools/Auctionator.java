@@ -71,33 +71,14 @@ public class Auctionator extends javax.swing.JFrame {
         if (Config.hasConfig(Config.LAST_CHANNEL_USED)) {
             txtChannel.setText(Config.getConfig(Config.LAST_CHANNEL_USED));
         }
-        
-        Auction auction = new Auction("Parogressio", 2);
-        auction.addBidder(new Bidder("Action", ""));
-        auction.addBidder(new Bidder("Siouxe", ""));
-        auction.addBidder(new Bidder("Batevil", ""));
-        auction.addBidder(new Bidder("Singorr", ""));
-        auction.addBidder(new Bidder("Hhrolf", ""));
-        auction.addBidder(new Bidder("Anza", ""));
-        Scraper.auctions.add(auction);
-        
-        auction = new Auction("Trophy of the Scapegoat", 1);
-        auction.addBidder(new Bidder("Action", ""));
-        auction.addBidder(new Bidder("Siouxe", ""));
-        auction.addBidder(new Bidder("Batevil", ""));
-        auction.addBidder(new Bidder("Singorr", ""));
-        auction.addBidder(new Bidder("Hhrolf", ""));
-        auction.addBidder(new Bidder("Anza", ""));
-        Scraper.auctions.add(auction);
-        
+
         new Thread() {
             @Override
             public void run() {
                 for (Player player : PlayerInfo.players.values()) {
                     if (player.isAlt()) continue;
                     if (player.isUnknown()) continue;
-                    
-                    System.out.println("Fetching " + player.getName());
+
                     Magelo.getProfile(player.getName());
                 }
                 
@@ -105,7 +86,6 @@ public class Auctionator extends javax.swing.JFrame {
                     if (player.isAlt()) continue;
                     if (player.isUnknown()) continue;
                     
-                    System.out.println("Fetching " + player.getName() + " fresh");
                     Magelo.getProfile(player.getName(), true);
                 }
             }
@@ -156,6 +136,9 @@ public class Auctionator extends javax.swing.JFrame {
     
     public void viewItems(String[] items) {
         ((ItemView)pnlItemViewer).viewItem(items[0]);
+        if (items.length > 1) {
+            ((ItemView)pnlItemViewer2).viewItem(items[1]);
+        }
     }
 
     /**
@@ -183,7 +166,9 @@ public class Auctionator extends javax.swing.JFrame {
         lstAuctions = new javax.swing.JList();
         pnlScraper = new ScraperView();
         lblItemType = new javax.swing.JLabel();
+        pnlItemViewer2 = new ItemView();
         pnlItemViewer = new ItemView();
+        jSeparator1 = new javax.swing.JSeparator();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         mnuLoadLogFile = new javax.swing.JMenuItem();
@@ -211,7 +196,7 @@ public class Auctionator extends javax.swing.JFrame {
         );
         pnlBiddersLayout.setVerticalGroup(
             pnlBiddersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 445, Short.MAX_VALUE)
+            .addGap(0, 692, Short.MAX_VALUE)
         );
 
         btnSendToEQ.setText("Send To EQ");
@@ -312,10 +297,12 @@ public class Auctionator extends javax.swing.JFrame {
         );
         pnlScraperLayout.setVerticalGroup(
             pnlScraperLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 525, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         lblItemType.setText("Select an Auction");
+
+        pnlItemViewer2.setText(" ");
 
         pnlItemViewer.setText(" ");
 
@@ -327,12 +314,19 @@ public class Auctionator extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(pnlScraper, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblItemType, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(lblItemType, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 54, Short.MAX_VALUE))
+                    .addComponent(pnlScraper, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(pnlItemViewer, javax.swing.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(pnlItemViewer, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(8, 8, 8))
+                    .addComponent(pnlItemViewer2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(2, 2, 2))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -340,12 +334,16 @@ public class Auctionator extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 8, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(lblItemType)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(pnlScraper, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(pnlItemViewer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pnlScraper, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(pnlItemViewer, javax.swing.GroupLayout.DEFAULT_SIZE, 384, Short.MAX_VALUE)
+                        .addGap(3, 3, 3)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 5, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pnlItemViewer2, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -540,7 +538,7 @@ public class Auctionator extends javax.swing.JFrame {
         Scraper.selectAuctionForItem(itemName);
         
         ScraperView.selectedIndex = -1;
-        ((ItemView)pnlItemViewer).setText("");
+        ((ItemView)pnlItemViewer2).setText("");
     }//GEN-LAST:event_lstAuctionsValueChanged
 
     public String getSortBy() {
@@ -594,6 +592,7 @@ public class Auctionator extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel lblItemType;
     private javax.swing.JLabel lblStatus;
@@ -603,6 +602,7 @@ public class Auctionator extends javax.swing.JFrame {
     private javax.swing.JMenuItem mnuLoadLogFile;
     private javax.swing.JPanel pnlBidders;
     private javax.swing.JLabel pnlItemViewer;
+    private javax.swing.JLabel pnlItemViewer2;
     private javax.swing.JPanel pnlScraper;
     private javax.swing.JTextField txtChannel;
     private javax.swing.JLabel txtVersion;

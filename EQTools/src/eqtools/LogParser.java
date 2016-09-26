@@ -96,14 +96,24 @@ public class LogParser extends Thread {
         if (tellWindowMatcher.find()) {
             String name = tellWindowMatcher.group(1);
             String message = tellWindowMatcher.group(2);
-            Auctionator.auction.addBidder(new Bidder(name, message));
+            
+            // Ensure person auctioning sending tells and using tell windows
+            // does not accidentally add themselves to the bidding pool
+            if (!name.equalsIgnoreCase(Auctionator.logReader.getCharacterName())) {
+                Auctionator.auction.addBidder(new Bidder(name, message));
+            }
         }
         
         Matcher tellMatcher = Pattern.compile("\\[.*\\] (.*) tells you, '(.*)'").matcher(line);
         if (tellMatcher.find()) {
             String name = tellMatcher.group(1);
             String message = tellMatcher.group(2);
-            Auctionator.auction.addBidder(new Bidder(name, message));
+            
+            // Ensure person auctioning sending tells and using tell windows
+            // does not accidentally add themselves to the bidding pool
+            if (!name.equalsIgnoreCase(Auctionator.logReader.getCharacterName())) {
+                Auctionator.auction.addBidder(new Bidder(name, message));
+            }
         }
         
         Matcher lootMatcher = Pattern.compile("] --(.*) has looted a (.*).--").matcher(line);

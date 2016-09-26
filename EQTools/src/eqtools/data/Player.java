@@ -14,8 +14,8 @@ import java.text.NumberFormat;
 public class Player {
     private String name;
     private int dkp;
-    private int attendance60;
-    private int lastLooted;
+    public int attendance60;
+    public int lastLooted;
     private int gearTotal60;
     private int gearTotalAllTime;
     private String looted;

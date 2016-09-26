@@ -32,6 +32,8 @@ public class MageloProfile {
     public Date lastUpdated;
     public String[] equipment = new String[Slot.values().length];
     
+    public String circleOfLegends;
+    
     public String[] getItemsForSlot(String type) {
         type = type.toLowerCase();
         ArrayList<String> items = new ArrayList<>();

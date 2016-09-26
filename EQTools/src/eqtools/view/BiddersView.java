@@ -119,8 +119,8 @@ public class BiddersView extends JPanel {
                 for (int i = 0; i < list.size(); i++) {
                     Bidder bidder = list.get(i);
                     
-                    int x = i / 18;
-                    int y = i % 18;
+                    int x = i / 30;
+                    int y = i % 30;
 
                     drawBidder(graphics, bidder, x*500 + 10, y*20 + 20, 100, 20);
                 }

@@ -122,8 +122,8 @@ public class ScraperView extends JPanel {
                 for (int i = 0; i < list.size(); i++) {
                     Bidder bidder = list.get(i);
                     
-                    int x = i / 18;
-                    int y = i % 18;
+                    int x = i / 40;
+                    int y = i % 40;
 
                     drawBidder(graphics, bidder, x*500 + 10, y*20 + 20, 100, 20, i);
                 }
@@ -174,8 +174,21 @@ public class ScraperView extends JPanel {
             graphics.fillRect(x-20, y-15, 500, 20);
             graphics.setColor(Color.LIGHT_GRAY);
         }
-
         graphics.drawString(text, x + 10, y);
+        
+        graphics.setColor(Color.GREEN);
+        if (player.attendance60 == 1) graphics.setColor(new Color(56, 118, 29));
+        if (player.attendance60 == 2) graphics.setColor(new Color(106, 168, 79));
+        if (player.attendance60 == 3) graphics.setColor(new Color(230, 145, 56));
+        if (player.attendance60 == 4) graphics.setColor(new Color(234, 153, 153));
+        graphics.fillRect(x-20, y-15, 17, 20);
+        
+        graphics.setColor(Color.PINK);
+        if (player.lastLooted == 1) graphics.setColor(new Color(56, 118, 29));
+        if (player.lastLooted == 2) graphics.setColor(new Color(106, 168, 79));
+        if (player.lastLooted == 3) graphics.setColor(new Color(230, 145, 56));
+        if (player.lastLooted == 4) graphics.setColor(new Color(234, 153, 153));
+        graphics.fillRect(x-3, y-15, 7, 20);
         
         ActionArea selectBidderArea = new SelectBidderButton(index, bidder.name);
         selectBidderArea.setArea(new Rectangle(x+10, y-15, 500, 20));

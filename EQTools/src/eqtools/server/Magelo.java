@@ -102,21 +102,21 @@ public class Magelo {
     }
     
     public static MageloProfile getProfile(String name, boolean forceLatest) {
+        MageloProfile profile = new MageloProfile();
+        profile.name = name;
+        
         if (profiles.containsKey(name)) {
             if (!forceLatest) {
                 return profiles.get(name);
             }
+            profile = getProfile(name);
         }
-        
-        MageloProfile profile = new MageloProfile();
-        profile.name = name;
-        
+
         profile.downloadProfileFromMagelo();
         
-        if (profiles.containsKey(name)) {
-            profiles.remove(name);
+        if (!profiles.containsKey(name)) {
+            addProfile(profile);
         }
-        addProfile(profile);
         
         writeToFile();
         
