@@ -148,7 +148,7 @@ public class LogParser extends Thread {
             
             bidders = bidders.replaceAll("[^a-zA-Z ]", "");
             for (String bidder : bidders.split(" ")) {
-                auction.addBidder(new Bidder(bidder, "Scraper Added"));
+                auction.addBidder(new Bidder(Utils.ucfirst(bidder), "Scraper Added"));
             }
             
             Scraper.auctions.add(auction);

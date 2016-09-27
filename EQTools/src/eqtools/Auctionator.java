@@ -548,7 +548,7 @@ public class Auctionator extends javax.swing.JFrame {
         
         if (s != null) {
             // User didn't click cancel
-            auction.addBidder(new Bidder(s, "Added Bidder"));
+            auction.addBidder(new Bidder(Utils.ucfirst(s), "Added Bidder"));
         }
     }//GEN-LAST:event_mnuAddBidderActionPerformed
 
