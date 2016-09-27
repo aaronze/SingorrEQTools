@@ -509,7 +509,9 @@ public class Auctionator extends javax.swing.JFrame {
             }
         }
 
-        text = text.substring(0, 400);
+        if (text.length() > 400) {
+            text = text.substring(0, 400);
+        }
         
         StringSelection stringSelection = new StringSelection(text);
         Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
