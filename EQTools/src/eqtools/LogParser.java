@@ -132,7 +132,7 @@ public class LogParser extends Thread {
             
             int quantity = 1;
             
-            Matcher quantityMatcher = Pattern.compile("(x?\\s*\\d+)").matcher(item);
+            Matcher quantityMatcher = Pattern.compile("(\\d+x)").matcher(item);
             if (quantityMatcher.find()) {
                 String quantityString = quantityMatcher.group(1);
                 
@@ -144,7 +144,19 @@ public class LogParser extends Thread {
                 quantity = Integer.parseInt(quantityString);
             }
             
-            Auction auction = new Auction(item, quantity);
+            quantityMatcher = Pattern.compile("(x?\\s*\\d+)").matcher(item);
+            if (quantityMatcher.find()) {
+                String quantityString = quantityMatcher.group(1);
+                
+                item = item.replaceAll(quantityString, "");
+                
+                quantityString = quantityString.replaceAll("x", "");
+                quantityString = quantityString.replaceAll(" ", "");
+                
+                quantity = Integer.parseInt(quantityString);
+            }
+            
+            Auction auction = new Auction(item.trim(), quantity);
             
             bidders = bidders.replaceAll("[^a-zA-Z ]", "");
             for (String bidder : bidders.split(" ")) {
