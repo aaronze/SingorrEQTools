@@ -37,8 +37,6 @@ public class Auctionator extends javax.swing.JFrame {
     public static LogParser logReader;
     public static int DICE_WEIGHT = 0;
     
-    private DefaultListModel listModel = new DefaultListModel();
-    
     /**
      * Creates new form Auctionator
      */
@@ -48,8 +46,6 @@ public class Auctionator extends javax.swing.JFrame {
         Server.patchFiles();
         
         initComponents();
-        
-        lstAuctions.setModel(listModel);
         
         if (Config.hasConfig(Config.DICE_WEIGHT)) {
             DICE_WEIGHT = Integer.parseInt(Config.getConfig(Config.DICE_WEIGHT));
@@ -90,6 +86,22 @@ public class Auctionator extends javax.swing.JFrame {
                 }
             }
         }.start();
+        
+        Auction auction = new Auction("Parogressio", 1);
+        auction.addBidder(new Bidder("Anza", "Test"));
+        Scraper.auctions.add(auction);
+        
+        Auction auction2 = new Auction("Parogressio", 1);
+        auction2.addBidder(new Bidder("Thalas", "Test"));
+        Scraper.auctions.add(auction2);
+        
+        Auction auction3 = new Auction("Sharpened Scale of Emollious", 1);
+        auction3.addBidder(new Bidder("Thalas", "Test"));
+        Scraper.auctions.add(auction3);
+        
+        Auction auction4 = new Auction("Parogressio", 1);
+        auction4.addBidder(new Bidder("Thalas", "Test"));
+        Scraper.auctions.add(auction4);
     }
     
     public void step() {
@@ -101,17 +113,18 @@ public class Auctionator extends javax.swing.JFrame {
             }
         }
         
-        Object selectedElement = lstAuctions.getSelectedValue();
+        int selectedIndex = lstAuctions.getSelectedIndex();
+        DefaultListModel listModel = new DefaultListModel();
         for (int i = 0; i < Scraper.auctions.size(); i++) {
             String item = Scraper.auctions.get(i).getItem();
             if (Scraper.auctions.get(i).getQuantity() > 1) {
                 item += " x" + Scraper.auctions.get(i).getQuantity();
             }
             
-            if (!listModel.contains(item))
-                listModel.addElement(item);
+            listModel.addElement(item);
         }
-        lstAuctions.setSelectedValue(selectedElement, true);
+        lstAuctions.setModel(listModel);
+        lstAuctions.setSelectedIndex(selectedIndex);
         
         if (Scraper.getSelectedAuction() != null) {
             lblItemType.setText(Scraper.getSelectedAuction().getItemType());
@@ -555,13 +568,7 @@ public class Auctionator extends javax.swing.JFrame {
     }//GEN-LAST:event_mnuAddBidderActionPerformed
 
     private void lstAuctionsValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_lstAuctionsValueChanged
-        String itemName = (String)lstAuctions.getSelectedValue();
-        
-        if (itemName.charAt(itemName.length() - 2) == 'x') {
-            itemName = itemName.substring(0, itemName.length() - 3);
-        }
-        
-        Scraper.selectAuctionForItem(itemName);
+        Scraper.selectAuction(lstAuctions.getSelectedIndex());
         
         ScraperView.selectedIndex = -1;
         ((ItemView)pnlItemViewer2).setText("");

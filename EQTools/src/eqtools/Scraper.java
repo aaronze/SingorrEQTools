@@ -19,13 +19,12 @@ public class Scraper {
         return selectedAuction;
     }
 
-    public static void selectAuctionForItem(String item) {
-        for (Auction auction : auctions) {
-            if (auction.getItem().equalsIgnoreCase(item)) {
-                selectedAuction = auction;
-                return;
-            }
+    public static void selectAuction(int index) {
+        if (index < 0 || index > auctions.size()) {
+            selectedAuction = null;
+            return;
         }
-        selectedAuction = null;
+        
+        selectedAuction = auctions.get(index);
     }
 }
