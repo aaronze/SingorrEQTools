@@ -22,6 +22,11 @@ public class ItemView extends JLabel {
     }
     
     public void viewItem(String item) {
+        if (item == null || item.length() == 0 || item.equalsIgnoreCase("null")) {
+            this.setText("");
+            return;
+        }
+        
         item = item.replaceAll("\\\\\\>", ">");
         item = item.replaceAll("\\\\\\'", "'");
         item = item.replaceAll("\\\\\\\"", "\"");
