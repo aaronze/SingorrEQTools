@@ -33,6 +33,8 @@ public class Auction {
         this.quantity = quantity;
         
         itemType = Magelo.getItemType(item);
+        
+        System.out.println(itemType);
     }
 
     public void addBidder(Bidder bidder) {

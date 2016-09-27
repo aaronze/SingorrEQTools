@@ -70,6 +70,8 @@ public class Magelo {
     }
     
     public static String getItemType(String item) {
+        item = item.trim();
+        
         try {
             URL url = new URL("http://eq.magelo.com/items?q=" + URLEncoder.encode(item, "UTF-8") + "&k=90");
 
