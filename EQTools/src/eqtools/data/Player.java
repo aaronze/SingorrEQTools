@@ -18,7 +18,7 @@ public class Player {
     public int lastLooted;
     private int gearTotal60;
     private int gearTotalAllTime;
-    private String looted;
+    public String looted = "00000000";
     private boolean isCorrupted;
     private boolean isUnknown = false;
     private boolean isAlt = false;
@@ -62,7 +62,7 @@ public class Player {
         
         gearTotal60 = Integer.parseInt(tokens[7]);
         gearTotalAllTime = Integer.parseInt(tokens[8]);
-        looted = tokens[10];
+        looted = tokens[10].trim();
     }
     
     public void setName(String name) {
