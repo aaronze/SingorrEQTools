@@ -88,6 +88,28 @@ public class MageloProfile {
                 e.printStackTrace();
             }
         }
+        if (profile == null || profile.equalsIgnoreCase("null")) {
+            try {
+                url = new URL("http://eq.magelo.com/quick_search.jspa?keyword=" + name);
+                
+                try (BufferedReader in = new BufferedReader(new InputStreamReader(new GZIPInputStream(url.openStream())))) {
+                    String line;
+                    while ((line = in.readLine()) != null) {
+                        if (line.contains(name) && line.contains("viewProfile")) {
+                            line = line.substring(line.indexOf("viewProfile(") + "viewProfile(".length());
+                            line = line.substring(0, line.indexOf(")"));
+                            
+                            profile = line;
+                            break;
+                        }
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } 
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
         
         try {
             url = new URL("http://eq.magelo.com/profile/" + profile);

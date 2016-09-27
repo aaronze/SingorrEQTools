@@ -176,6 +176,9 @@ public class Auctionator extends javax.swing.JFrame {
         mnuAddBidder = new javax.swing.JMenuItem();
         mnuAddBidders = new javax.swing.JMenuItem();
         mnuAddEveryone = new javax.swing.JMenuItem();
+        jSeparator3 = new javax.swing.JPopupMenu.Separator();
+        mnuAddScraper = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -387,6 +390,16 @@ public class Auctionator extends javax.swing.JFrame {
             }
         });
         jMenu2.add(mnuAddEveryone);
+        jMenu2.add(jSeparator3);
+
+        mnuAddScraper.setText("Add Scraper");
+        mnuAddScraper.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuAddScraperActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mnuAddScraper);
+        jMenu2.add(jSeparator2);
 
         jMenuBar1.add(jMenu2);
 
@@ -634,6 +647,90 @@ public class Auctionator extends javax.swing.JFrame {
         auction.addBidder(new Bidder("Lekri", "Test"));
     }//GEN-LAST:event_mnuAddEveryoneActionPerformed
 
+    private void mnuAddScraperActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuAddScraperActionPerformed
+        Auction auction = new Auction("Parogressio", 1);
+        auction.addBidder(new Bidder("Bashhum", "Test"));
+        auction.addBidder(new Bidder("Koramor", "Test"));
+        auction.addBidder(new Bidder("Balthier", "Test"));
+        auction.addBidder(new Bidder("Fadoram", "Test"));
+        auction.addBidder(new Bidder("Action", "Test"));
+        auction.addBidder(new Bidder("Skars", "Test"));
+        auction.addBidder(new Bidder("Keltiklen", "Test"));
+        auction.addBidder(new Bidder("Ruarik", "Test"));
+        auction.addBidder(new Bidder("Olarien", "Test"));
+        auction.addBidder(new Bidder("Madstomper", "Test"));
+        auction.addBidder(new Bidder("Arukus", "Test"));
+        auction.addBidder(new Bidder("Catness", "Test"));
+        auction.addBidder(new Bidder("Salilye", "Test"));
+        auction.addBidder(new Bidder("Shootmx", "Test"));
+        auction.addBidder(new Bidder("Wahzoo", "Test"));
+        auction.addBidder(new Bidder("Velos", "Test"));
+        auction.addBidder(new Bidder("Zerowaphex", "Test"));
+        auction.addBidder(new Bidder("Keldivar", "Test"));
+        auction.addBidder(new Bidder("Singorr", "Test"));
+        auction.addBidder(new Bidder("Ilyanir", "Test"));
+        auction.addBidder(new Bidder("Cazzin", "Test"));
+        auction.addBidder(new Bidder("Liosis", "Test"));
+        auction.addBidder(new Bidder("Batevil", "Test"));
+        auction.addBidder(new Bidder("Zzot", "Test"));
+        auction.addBidder(new Bidder("Minx", "Test"));
+        auction.addBidder(new Bidder("Kalyca", "Test"));
+        auction.addBidder(new Bidder("Sjofn", "Test"));
+        auction.addBidder(new Bidder("Calloneous", "Test"));
+        auction.addBidder(new Bidder("Nataheln", "Test"));
+        auction.addBidder(new Bidder("Rengurdar", "Test"));
+        auction.addBidder(new Bidder("Syreena", "Test"));
+        auction.addBidder(new Bidder("Idaen", "Test"));
+        auction.addBidder(new Bidder("Quay", "Test"));
+        auction.addBidder(new Bidder("Malvolio", "Test"));
+        auction.addBidder(new Bidder("Eldros", "Test"));
+        auction.addBidder(new Bidder("Shawnteria", "Test"));
+        auction.addBidder(new Bidder("Osirys", "Test"));
+        auction.addBidder(new Bidder("Kanjin", "Test"));
+        auction.addBidder(new Bidder("Vitriol", "Test"));
+        auction.addBidder(new Bidder("Kurrie", "Test"));
+        auction.addBidder(new Bidder("Wenya", "Test"));
+        auction.addBidder(new Bidder("Anza", "Test"));
+        auction.addBidder(new Bidder("Starchild", "Test"));
+        auction.addBidder(new Bidder("Methauros", "Test"));
+        auction.addBidder(new Bidder("Darom", "Test"));
+        auction.addBidder(new Bidder("Shierahall", "Test"));
+        auction.addBidder(new Bidder("Chewi", "Test"));
+        auction.addBidder(new Bidder("Shaymous", "Test"));
+        auction.addBidder(new Bidder("Ninn", "Test"));
+        auction.addBidder(new Bidder("Moak", "Test"));
+        auction.addBidder(new Bidder("Bigganz", "Test"));
+        auction.addBidder(new Bidder("Daigeh", "Test"));
+        auction.addBidder(new Bidder("Litlex", "Test"));
+        auction.addBidder(new Bidder("Tseuq", "Test"));
+        auction.addBidder(new Bidder("Hhrolf", "Test"));
+        auction.addBidder(new Bidder("Arillia", "Test"));
+        auction.addBidder(new Bidder("Uaneldar", "Test"));
+        auction.addBidder(new Bidder("Oshu", "Test"));
+        auction.addBidder(new Bidder("Squashbettle", "Test"));
+        auction.addBidder(new Bidder("Maggotmonger", "Test"));
+        auction.addBidder(new Bidder("Ilsidri", "Test"));
+        auction.addBidder(new Bidder("Georgeo", "Test"));
+        auction.addBidder(new Bidder("Latrezis", "Test"));
+        auction.addBidder(new Bidder("Tiogajoe", "Test"));
+        auction.addBidder(new Bidder("Rorszale", "Test"));
+        auction.addBidder(new Bidder("Veanda", "Test"));
+        auction.addBidder(new Bidder("Acruxx", "Test"));
+        auction.addBidder(new Bidder("Thalas", "Test"));
+        auction.addBidder(new Bidder("Sargtlin", "Test"));
+        auction.addBidder(new Bidder("Siouxe", "Test"));
+        auction.addBidder(new Bidder("Gotjja", "Test"));
+        auction.addBidder(new Bidder("Atlans", "Test"));
+        auction.addBidder(new Bidder("Lorewood", "Test"));
+        auction.addBidder(new Bidder("Dunkn", "Test"));
+        auction.addBidder(new Bidder("Foresst", "Test"));
+        auction.addBidder(new Bidder("Furryface", "Test"));
+        auction.addBidder(new Bidder("Alore", "Test"));
+        auction.addBidder(new Bidder("Zaibez", "Test"));
+        auction.addBidder(new Bidder("Lekri", "Test"));
+        Scraper.auctions.add(auction);
+    }//GEN-LAST:event_mnuAddScraperActionPerformed
+
     public String getSortBy() {
         return (String)boxSortBy.getSelectedItem();
     }
@@ -686,6 +783,8 @@ public class Auctionator extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel lblItemType;
     private javax.swing.JLabel lblStatus;
@@ -693,6 +792,7 @@ public class Auctionator extends javax.swing.JFrame {
     private javax.swing.JMenuItem mnuAddBidder;
     private javax.swing.JMenuItem mnuAddBidders;
     private javax.swing.JMenuItem mnuAddEveryone;
+    private javax.swing.JMenuItem mnuAddScraper;
     private javax.swing.JMenuItem mnuLoadLogFile;
     private javax.swing.JPanel pnlBidders;
     private javax.swing.JLabel pnlItemViewer;
