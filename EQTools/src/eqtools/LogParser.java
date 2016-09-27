@@ -165,6 +165,47 @@ public class LogParser extends Thread {
             
             Scraper.auctions.add(auction);
         }
+        
+        scraperMatcher = Pattern.compile(".*tell colv2.*, '(.*)-\\s*(.*)'").matcher(line);
+        if (scraperMatcher.find()) {
+            String item = scraperMatcher.group(1);
+            String bidders = scraperMatcher.group(2);
+            
+            int quantity = 1;
+            
+            Matcher quantityMatcher = Pattern.compile("(\\d+x)").matcher(item);
+            if (quantityMatcher.find()) {
+                String quantityString = quantityMatcher.group(1);
+                
+                item = item.replaceAll(quantityString, "");
+                
+                quantityString = quantityString.replaceAll("x", "");
+                quantityString = quantityString.replaceAll(" ", "");
+                
+                quantity = Integer.parseInt(quantityString);
+            }
+            
+            quantityMatcher = Pattern.compile("(x?\\s*\\d+)").matcher(item);
+            if (quantityMatcher.find()) {
+                String quantityString = quantityMatcher.group(1);
+                
+                item = item.replaceAll(quantityString, "");
+                
+                quantityString = quantityString.replaceAll("x", "");
+                quantityString = quantityString.replaceAll(" ", "");
+                
+                quantity = Integer.parseInt(quantityString);
+            }
+            
+            Auction auction = new Auction(item.trim(), quantity);
+            
+            bidders = bidders.replaceAll("[^a-zA-Z ]", "");
+            for (String bidder : bidders.split(" ")) {
+                auction.addBidder(new Bidder(Utils.ucfirst(bidder), "Scraper Added"));
+            }
+            
+            Scraper.auctions.add(auction);
+        }
     }
     
 }
