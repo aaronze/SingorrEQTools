@@ -86,22 +86,6 @@ public class Auctionator extends javax.swing.JFrame {
                 }
             }
         }.start();
-        
-        Auction auction = new Auction("Parogressio", 1);
-        auction.addBidder(new Bidder("Anza", "Test"));
-        Scraper.auctions.add(auction);
-        
-        Auction auction2 = new Auction("Parogressio", 1);
-        auction2.addBidder(new Bidder("Thalas", "Test"));
-        Scraper.auctions.add(auction2);
-        
-        Auction auction3 = new Auction("Sharpened Scale of Emollious", 1);
-        auction3.addBidder(new Bidder("Thalas", "Test"));
-        Scraper.auctions.add(auction3);
-        
-        Auction auction4 = new Auction("Parogressio", 1);
-        auction4.addBidder(new Bidder("Thalas", "Test"));
-        Scraper.auctions.add(auction4);
     }
     
     public void step() {
