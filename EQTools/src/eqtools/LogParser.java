@@ -125,7 +125,7 @@ public class LogParser extends Thread {
     }
     
     private void parseScraper(String line) {
-        Matcher scraperMatcher = Pattern.compile(".*tells colv2.*, '(.*)-\\s*(.*)'").matcher(line);
+        Matcher scraperMatcher = Pattern.compile(".*tells colv2.*, '(.*)--\\s*(.*)'").matcher(line);
         if (scraperMatcher.find()) {
             String item = scraperMatcher.group(1);
             String bidders = scraperMatcher.group(2);
@@ -166,7 +166,7 @@ public class LogParser extends Thread {
             Scraper.auctions.add(auction);
         }
         
-        scraperMatcher = Pattern.compile(".*tell colv2.*, '(.*)-\\s*(.*)'").matcher(line);
+        scraperMatcher = Pattern.compile(".*tell colv2.*, '(.*)--\\s*(.*)'").matcher(line);
         if (scraperMatcher.find()) {
             String item = scraperMatcher.group(1);
             String bidders = scraperMatcher.group(2);
