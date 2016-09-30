@@ -111,7 +111,7 @@ public class Magelo {
             if (!forceLatest) {
                 return profiles.get(name);
             }
-            profile = getProfile(name);
+            profile = profiles.get(name);
         }
 
         profile.downloadProfileFromMagelo();

@@ -42,6 +42,7 @@ public class ScraperView extends JPanel {
     private ArrayList<ActionArea> actions = new ArrayList<>();
     
     public static int selectedIndex = -1;
+    public static int selectedPlayer = -1;
     
     public ScraperView() {
         super();
@@ -169,7 +170,7 @@ public class ScraperView extends JPanel {
             }
         }
         
-        if (index == selectedIndex) {
+        if (index == selectedPlayer) {
             graphics.setColor(Color.BLACK);
             graphics.fillRect(x-20, y-15, 500, 20);
             graphics.setColor(Color.LIGHT_GRAY);
@@ -191,7 +192,7 @@ public class ScraperView extends JPanel {
         graphics.fillRect(x-3, y-15, 7, 20);
         
         for (int i = 0; i < 8; i++) {
-            if (selectedIndex == index) {
+            if (selectedPlayer == index) {
                 graphics.setColor(Color.WHITE);
             } else {
                 graphics.setColor(new Color(255  / (int)(Math.pow(1.5, i+1)), 0, 255, 255 / (int)(Math.pow(1.5, i+1))));

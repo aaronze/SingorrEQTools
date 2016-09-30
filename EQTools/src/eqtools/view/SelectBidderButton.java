@@ -25,7 +25,7 @@ public class SelectBidderButton extends ActionArea {
 
     @Override
     public void mouseClicked() {
-        ScraperView.selectedIndex = index;
+        ScraperView.selectedPlayer = index;
         
         MageloProfile profile = Magelo.getProfile(name);
         String[] items = profile.getItemsForSlot(Auctionator.instance.getItemType());

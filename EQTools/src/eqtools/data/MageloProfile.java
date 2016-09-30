@@ -63,6 +63,8 @@ public class MageloProfile {
     }
     
     public void downloadProfileFromMagelo() {
+        lastUpdated = new Date();
+        
         URL url;
         if (profile == null) {
             try {

@@ -552,10 +552,13 @@ public class Auctionator extends javax.swing.JFrame {
     }//GEN-LAST:event_mnuAddBidderActionPerformed
 
     private void lstAuctionsValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_lstAuctionsValueChanged
-        Scraper.selectAuction(lstAuctions.getSelectedIndex());
-        
-        ScraperView.selectedIndex = -1;
-        ((ItemView)pnlItemViewer2).setText("");
+        if (lstAuctions.getSelectedIndex() != -1 && lstAuctions.getSelectedIndex() != ScraperView.selectedIndex) {
+            Scraper.selectAuction(lstAuctions.getSelectedIndex());
+            ScraperView.selectedIndex = lstAuctions.getSelectedIndex();
+
+            ScraperView.selectedPlayer = -1;
+            ((ItemView)pnlItemViewer2).setText("");
+        }
     }//GEN-LAST:event_lstAuctionsValueChanged
 
     private void mnuAddEveryoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuAddEveryoneActionPerformed
