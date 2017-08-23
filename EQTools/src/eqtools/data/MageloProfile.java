@@ -68,7 +68,7 @@ public class MageloProfile {
         URL url;
         if (profile == null) {
             try {
-                url = new URL("http://eq.magelo.com/ranking?gn=Circle%20of%20Legends&s=24&f=h73_0_0");
+                url = new URL("https://eq.magelo.com/ranking?gn=Circle%20of%20Legends&s=24&f=h73_0_0");
                 
                 try (BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()))) {
                     String line;
@@ -92,9 +92,9 @@ public class MageloProfile {
         }
         if (profile == null || profile.equalsIgnoreCase("null")) {
             try {
-                url = new URL("http://eq.magelo.com/quick_search.jspa?keyword=" + name);
+                url = new URL("https://eq.magelo.com/quick_search.jspa?keyword=" + name);
                 
-                try (BufferedReader in = new BufferedReader(new InputStreamReader(new GZIPInputStream(url.openStream())))) {
+                try (BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()))) {
                     String line;
                     while ((line = in.readLine()) != null) {
                         if (line.contains(name) && line.contains("viewProfile")) {
@@ -114,9 +114,9 @@ public class MageloProfile {
         }
         
         try {
-            url = new URL("http://eq.magelo.com/profile/" + profile);
+            url = new URL("https://eq.magelo.com/profile/" + profile);
             
-            try (BufferedReader in = new BufferedReader(new InputStreamReader(new GZIPInputStream(url.openStream())))) {
+            try (BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()))) {
                 String line;
                 while ((line = in.readLine()) != null) {
                     if (line.contains("items[")) {

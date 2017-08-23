@@ -7,11 +7,17 @@ package eqtools;
 
 import eqtools.data.Bidder;
 import eqtools.server.Server;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
@@ -25,8 +31,8 @@ public class LogParser extends Thread {
     private final BufferedReader logReader;
     private final int POLL_INTERVAL = 10;
     private boolean keepAlive = true;
-    private final File logFile;
-    private final String characterName;
+    private static File logFile;
+    private static String characterName;
    
     public LogParser(File logFile) throws FileNotFoundException {
         this.logFile = logFile;
@@ -89,6 +95,12 @@ public class LogParser extends Thread {
             parseAuction(line);
         }
         parseScraper(line);
+        
+        if (Auctionator.isRaidBot) {
+            parseRaidbot(line);
+        }
+        
+        parseCLI(line);
     }
     
     private void parseAuction(String line) {
@@ -208,4 +220,135 @@ public class LogParser extends Thread {
         }
     }
     
+    private void parseRaidbot(String line) {
+        Matcher tellWindowMatcher = Pattern.compile("\\[.*\\] (.*) \\-\\> .*: (.*)").matcher(line);
+        if (tellWindowMatcher.find()) {
+            String name = tellWindowMatcher.group(1);
+            String message = tellWindowMatcher.group(2);
+            
+            if (!name.equalsIgnoreCase(Auctionator.logReader.getCharacterName())) {
+                raidinvite(name);
+            }
+        }
+        
+        Matcher tellMatcher = Pattern.compile("\\[.*\\] (.*) tells you, '(.*)'").matcher(line);
+        if (tellMatcher.find()) {
+            String name = tellMatcher.group(1);
+            String message = tellMatcher.group(2);
+
+            if (!name.equalsIgnoreCase(Auctionator.logReader.getCharacterName())) {
+                raidinvite(name);
+            }
+        }
+    }
+    
+    private void parseCLI(String line) {
+        Matcher sayMatcher = Pattern.compile("\\[.*\\] You say, '\\{Raidbot\\:(.*)\\}'").matcher(line);
+        if (sayMatcher.find()) {
+            String message = sayMatcher.group(1);
+            
+            if (message.equalsIgnoreCase("start")) {
+                Auctionator.instance.getRaidbotAutoInviteCheckbox().setSelected(true);
+                Auctionator.isRaidBot = true;
+            }
+            if (message.equalsIgnoreCase("stop")) {
+                Auctionator.instance.getRaidbotAutoInviteCheckbox().setSelected(false);
+                Auctionator.isRaidBot = false;
+            }
+        }
+    }
+    
+    ArrayList<String> responders = new ArrayList<>();
+    
+    private void raidinvite(String name) {
+        eqsay("/raidinvite " + name);
+        
+        String message = Auctionator.instance.getAutoRaidInviteCustomMessage();
+        
+        if (!responders.contains(name) && message != null) {
+            eqsay("/tell " + name + " " + message);
+        }
+        
+        responders.add(name);
+    }
+    
+    private void eqsay(String s) {
+        StringSelection selection = new StringSelection(s);
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(selection, selection);
+        
+        try {
+            Robot robot = new Robot();
+            
+            robot.delay(10);
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.delay(2);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+
+            robot.delay(10);
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.delay(10);
+            robot.keyPress(KeyEvent.VK_V);
+            robot.delay(1);
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+            robot.keyRelease(KeyEvent.VK_V);
+            
+            robot.delay(10);
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.delay(2);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+            
+            robot.delay(20);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public static String findConversationsFor(String convName) {
+        String conversation = "";
+        
+        try (BufferedReader logReader = new BufferedReader(new FileReader(logFile))) {
+            String line;
+            while ((line = logReader.readLine()) != null) {
+                Matcher tellWindowMatcher = Pattern.compile("\\[.*\\] (.*) \\-\\> (.*): (.*)").matcher(line);
+                if (tellWindowMatcher.find()) {
+                    String name = tellWindowMatcher.group(1);
+                    String otherName = tellWindowMatcher.group(2);
+                    String message = tellWindowMatcher.group(3);
+                    
+                    if (name.equalsIgnoreCase(convName)) {
+                        conversation += name + ": " + message + "\n";
+                    }
+                    if (otherName.equalsIgnoreCase(convName)) {
+                        conversation += characterName + ": " + message + "\n";
+                    }
+                }
+
+                Matcher tellMatcher = Pattern.compile("\\[.*\\] (.*) tells you, '(.*)'").matcher(line);
+                if (tellMatcher.find()) {
+                    String name = tellMatcher.group(1);
+                    String message = tellMatcher.group(2);
+
+                    if (name.equalsIgnoreCase(convName)) {
+                        conversation += name + ": " + message + "\n";
+                    }
+                }
+                
+                Matcher tellOtherMatcher = Pattern.compile("\\[.*\\] You told (.*), '(.*)'").matcher(line);
+                if (tellOtherMatcher.find()) {
+                    String name = tellOtherMatcher.group(1);
+                    System.out.println(name);
+                    String message = tellOtherMatcher.group(2);
+
+                    if (name.equalsIgnoreCase(convName)) {
+                        conversation += characterName + ": " + message + "\n";
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        return conversation;
+    }
 }

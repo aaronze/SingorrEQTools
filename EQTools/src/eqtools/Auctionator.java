@@ -11,12 +11,14 @@ import eqtools.data.Player;
 import eqtools.server.Magelo;
 import eqtools.server.Server;
 import eqtools.view.ItemView;
+import eqtools.view.MageloLookupView;
 import eqtools.view.ScraperView;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.io.File;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -36,6 +38,8 @@ public class Auctionator extends javax.swing.JFrame {
     public static Auction auction;
     public static LogParser logReader;
     public static int DICE_WEIGHT = 0;
+    
+    public static boolean isRaidBot = false;
     
     /**
      * Creates new form Auctionator
@@ -71,14 +75,15 @@ public class Auctionator extends javax.swing.JFrame {
         new Thread() {
             @Override
             public void run() {
-                for (Player player : PlayerInfo.players.values()) {
+                Collection<Player> players = PlayerInfo.players.values();
+                for (Player player : players) {
                     if (player.isAlt()) continue;
                     if (player.isUnknown()) continue;
 
                     Magelo.getProfile(player.getName());
                 }
                 
-                for (Player player : PlayerInfo.players.values()) {
+                for (Player player : players) {
                     if (player.isAlt()) continue;
                     if (player.isUnknown()) continue;
                     
@@ -166,6 +171,14 @@ public class Auctionator extends javax.swing.JFrame {
         pnlItemViewer2 = new ItemView();
         pnlItemViewer = new ItemView();
         jSeparator1 = new javax.swing.JSeparator();
+        jPanel3 = new javax.swing.JPanel();
+        txtConversationName = new javax.swing.JTextField();
+        btnFindConversation = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtConversation = new javax.swing.JTextArea();
+        jPanel4 = new javax.swing.JPanel();
+        chkAutoRaidInvites = new javax.swing.JCheckBox();
+        txtAutoRaidInviteCustomMessage = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         mnuLoadLogFile = new javax.swing.JMenuItem();
@@ -294,7 +307,7 @@ public class Auctionator extends javax.swing.JFrame {
         pnlScraper.setLayout(pnlScraperLayout);
         pnlScraperLayout.setHorizontalGroup(
             pnlScraperLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 319, Short.MAX_VALUE)
         );
         pnlScraperLayout.setVerticalGroup(
             pnlScraperLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -313,13 +326,11 @@ public class Auctionator extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(lblItemType, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 54, Short.MAX_VALUE))
-                    .addComponent(pnlScraper, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lblItemType, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnlScraper, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -349,6 +360,85 @@ public class Auctionator extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Scraper", jPanel2);
+
+        txtConversationName.setText("Name of Player");
+
+        btnFindConversation.setText("Find Conversations");
+        btnFindConversation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFindConversationActionPerformed(evt);
+            }
+        });
+
+        txtConversation.setColumns(20);
+        txtConversation.setRows(5);
+        jScrollPane2.setViewportView(txtConversation);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(txtConversationName, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnFindConversation, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 600, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnFindConversation, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                    .addComponent(txtConversationName))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 767, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Conversations", jPanel3);
+
+        chkAutoRaidInvites.setText("Auto Raid Invites");
+        chkAutoRaidInvites.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkAutoRaidInvitesActionPerformed(evt);
+            }
+        });
+
+        txtAutoRaidInviteCustomMessage.setText("Custom Message Here");
+        txtAutoRaidInviteCustomMessage.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAutoRaidInviteCustomMessageKeyTyped(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(chkAutoRaidInvites, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtAutoRaidInviteCustomMessage, javax.swing.GroupLayout.DEFAULT_SIZE, 843, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(chkAutoRaidInvites, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAutoRaidInviteCustomMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(778, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Raidbot", jPanel4);
 
         jMenu1.setText("File");
 
@@ -416,23 +506,6 @@ public class Auctionator extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnStartNewAuctionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStartNewAuctionActionPerformed
-        // Must have loaded a log before starting auction
-        if (logReader == null) {
-            lblStatus.setText("Failed to start auction. Load a Log File first! (File -> Load Log)");
-            return;
-        }
-        
-        Server.patchFiles();
-        
-        auction = new Auction();
-        lblStatus.setText("Auction started. Waiting for tells ...");
-    }//GEN-LAST:event_btnStartNewAuctionActionPerformed
-
-    private void txtChannelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtChannelActionPerformed
-        
-    }//GEN-LAST:event_txtChannelActionPerformed
-
     private void mnuLoadLogFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuLoadLogFileActionPerformed
         // If user has loaded a log before, start with that folder in File Chooser
         JFileChooser chooser;
@@ -467,60 +540,10 @@ public class Auctionator extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_mnuLoadLogFileActionPerformed
 
-    private void btnSendToEQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendToEQActionPerformed
-        String text = txtChannel.getText() + " ";
-        
-        List<Bidder> list = Arrays.asList(auction.getBidders());
-        Collections.sort(list, new Comparator<Bidder>() {
-            @Override
-            public int compare(Bidder left, Bidder right)  {
-                return right.score(DICE_WEIGHT) - left.score(DICE_WEIGHT);
-            }
-        });
-
-        // First pass for mains
-        for (Bidder bidder : list) {
-            Player player = PlayerInfo.getPlayer(bidder.name);
-            if (!player.isAlt()) {
-                if (player.getName().equalsIgnoreCase("Fadoram")) {
-                    text += bidder.name + "[#] ";
-                    continue;
-                }
-                if (player.isUnknown()) {
-                    text += bidder.name + "[?] ";
-                } else {
-                    text += bidder.name + "[" + bidder.score() + player.printLastLootedMarker() + "] ";
-                }
-            }
-        }
- 
-        // Second pass for alts
-        for (Bidder bidder : list) {
-            Player player = PlayerInfo.getPlayer(bidder.name);
-            if (player.isAlt()) {
-                if (player.getMain().isUnknown()) {
-                    text += bidder.name + "[? " + "- Alt of " + player.getMain().getName() + "] "; 
-                } else {
-                    text += bidder.name + "[" + player.getMain().score(DICE_WEIGHT) + " - Alt of " + player.getMain().getName() + "] "; 
-                }
-            }
-        }
-
-        if (text.length() > 400) {
-            text = text.substring(0, 400);
-        }
-        
-        StringSelection stringSelection = new StringSelection(text);
-        Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
-        clpbrd.setContents(stringSelection, null);
-        
-        lblStatus.setText("Copied to Clipboard.");
-        auction.closeAuction();
-        
-        // Update config to use the given channel next time app loads
-        Config.setConfig(Config.LAST_CHANNEL_USED, txtChannel.getText());
-    }//GEN-LAST:event_btnSendToEQActionPerformed
-
+    public javax.swing.JCheckBox getRaidbotAutoInviteCheckbox() {
+        return chkAutoRaidInvites;
+    }
+    
     private void mnuAddBiddersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuAddBiddersActionPerformed
         if (auction != null) {
             
@@ -550,16 +573,6 @@ public class Auctionator extends javax.swing.JFrame {
             auction.addBidder(new Bidder(Utils.ucfirst(s), "Added Bidder"));
         }
     }//GEN-LAST:event_mnuAddBidderActionPerformed
-
-    private void lstAuctionsValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_lstAuctionsValueChanged
-        if (lstAuctions.getSelectedIndex() != -1 && lstAuctions.getSelectedIndex() != ScraperView.selectedIndex) {
-            Scraper.selectAuction(lstAuctions.getSelectedIndex());
-            ScraperView.selectedIndex = lstAuctions.getSelectedIndex();
-
-            ScraperView.selectedPlayer = -1;
-            ((ItemView)pnlItemViewer2).setText("");
-        }
-    }//GEN-LAST:event_lstAuctionsValueChanged
 
     private void mnuAddEveryoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuAddEveryoneActionPerformed
         auction.addBidder(new Bidder("Bashhum", "Test"));
@@ -727,6 +740,107 @@ public class Auctionator extends javax.swing.JFrame {
         Scraper.auctions.add(auction);
     }//GEN-LAST:event_mnuAddScraperActionPerformed
 
+    private void lstAuctionsValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_lstAuctionsValueChanged
+        if (lstAuctions.getSelectedIndex() != -1 && lstAuctions.getSelectedIndex() != ScraperView.selectedIndex) {
+            Scraper.selectAuction(lstAuctions.getSelectedIndex());
+            ScraperView.selectedIndex = lstAuctions.getSelectedIndex();
+
+            ScraperView.selectedPlayer = -1;
+            ((ItemView)pnlItemViewer2).setText("");
+        }
+    }//GEN-LAST:event_lstAuctionsValueChanged
+
+    private void txtChannelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtChannelActionPerformed
+
+    }//GEN-LAST:event_txtChannelActionPerformed
+
+    private void btnSendToEQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendToEQActionPerformed
+        String text = txtChannel.getText() + " ";
+
+        List<Bidder> list = Arrays.asList(auction.getBidders());
+        Collections.sort(list, new Comparator<Bidder>() {
+            @Override
+            public int compare(Bidder left, Bidder right)  {
+                return right.score(DICE_WEIGHT) - left.score(DICE_WEIGHT);
+            }
+        });
+
+        // First pass for mains
+        for (Bidder bidder : list) {
+            Player player = PlayerInfo.getPlayer(bidder.name);
+            if (!player.isAlt()) {
+                if (player.getName().equalsIgnoreCase("Fadoram")) {
+                    text += bidder.name + "[#] ";
+                    continue;
+                }
+                if (player.isUnknown()) {
+                    text += bidder.name + "[?] ";
+                } else {
+                    text += bidder.name + "[" + bidder.score() + player.printLastLootedMarker() + "] ";
+                }
+            }
+        }
+
+        // Second pass for alts
+        for (Bidder bidder : list) {
+            Player player = PlayerInfo.getPlayer(bidder.name);
+            if (player.isAlt()) {
+                if (player.getMain().isUnknown()) {
+                    text += bidder.name + "[? " + "- Alt of " + player.getMain().getName() + "] ";
+                } else {
+                    text += bidder.name + "[" + player.getMain().score(DICE_WEIGHT) + " - Alt of " + player.getMain().getName() + "] ";
+                }
+            }
+        }
+
+        if (text.length() > 400) {
+            text = text.substring(0, 400);
+        }
+
+        StringSelection stringSelection = new StringSelection(text);
+        Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clpbrd.setContents(stringSelection, null);
+
+        lblStatus.setText("Copied to Clipboard.");
+        auction.closeAuction();
+
+        // Update config to use the given channel next time app loads
+        Config.setConfig(Config.LAST_CHANNEL_USED, txtChannel.getText());
+    }//GEN-LAST:event_btnSendToEQActionPerformed
+
+    private void btnStartNewAuctionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStartNewAuctionActionPerformed
+        // Must have loaded a log before starting auction
+        if (logReader == null) {
+            lblStatus.setText("Failed to start auction. Load a Log File first! (File -> Load Log)");
+            return;
+        }
+
+        Server.patchFiles();
+
+        auction = new Auction();
+        lblStatus.setText("Auction started. Waiting for tells ...");
+    }//GEN-LAST:event_btnStartNewAuctionActionPerformed
+
+    private void btnFindConversationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFindConversationActionPerformed
+        String name = Utils.ucfirst(txtConversationName.getText().trim());
+        txtConversation.setText(LogParser.findConversationsFor(name));
+    }//GEN-LAST:event_btnFindConversationActionPerformed
+
+    private void chkAutoRaidInvitesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkAutoRaidInvitesActionPerformed
+        isRaidBot = chkAutoRaidInvites.isSelected();
+    }//GEN-LAST:event_chkAutoRaidInvitesActionPerformed
+
+    private void txtAutoRaidInviteCustomMessageKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAutoRaidInviteCustomMessageKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAutoRaidInviteCustomMessageKeyTyped
+
+    public String getAutoRaidInviteCustomMessage() {
+        if (txtAutoRaidInviteCustomMessage.getText().equalsIgnoreCase("Custom Message Here")) {
+            return null;
+        }
+        return txtAutoRaidInviteCustomMessage.getText();
+    }
+    
     public String getSortBy() {
         return (String)boxSortBy.getSelectedItem();
     }
@@ -768,8 +882,10 @@ public class Auctionator extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox boxSortBy;
+    private javax.swing.JButton btnFindConversation;
     private javax.swing.JButton btnSendToEQ;
     private javax.swing.JButton btnStartNewAuction;
+    private javax.swing.JCheckBox chkAutoRaidInvites;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
@@ -777,7 +893,10 @@ public class Auctionator extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
@@ -794,7 +913,10 @@ public class Auctionator extends javax.swing.JFrame {
     private javax.swing.JLabel pnlItemViewer;
     private javax.swing.JLabel pnlItemViewer2;
     private javax.swing.JPanel pnlScraper;
+    private javax.swing.JTextField txtAutoRaidInviteCustomMessage;
     private javax.swing.JTextField txtChannel;
+    private javax.swing.JTextArea txtConversation;
+    private javax.swing.JTextField txtConversationName;
     private javax.swing.JLabel txtVersion;
     // End of variables declaration//GEN-END:variables
 }

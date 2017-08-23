@@ -73,11 +73,11 @@ public class Magelo {
         item = item.trim();
         
         try {
-            URL url = new URL("http://eq.magelo.com/items?q=" + URLEncoder.encode(item, "UTF-8") + "&k=90");
+            URL url = new URL("https://eq.magelo.com/items?q=" + URLEncoder.encode(item, "UTF-8") + "&k=90");
 
-            try (BufferedReader in = new BufferedReader(new InputStreamReader(new GZIPInputStream(url.openStream())))) {
+            try (BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()))) {
                 item = item.replaceAll("'", "\\\\'");
-                
+
                 String line;
                 while ((line = in.readLine()) != null) {
                     if (line.contains(item) && line.contains("var data=")) {

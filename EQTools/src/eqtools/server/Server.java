@@ -27,7 +27,7 @@ import java.util.TimeZone;
  * @author AaronServer
  */
 public class Server {
-    private final static String SERVER = "http://meteorice.com/";
+    private final static String SERVER = "https://storms.000webhostapp.com/";
     private final static String[] patchedFiles = {
         "data.txt",
         "guild.txt",

@@ -18,7 +18,7 @@ import java.util.HashMap;
 public class PlayerInfo {
     public final static HashMap<String, Player> players = new HashMap();
     
-    public static String CLIENT_VERSION = "2.0";
+    public static String CLIENT_VERSION = "2.3";
     public static String SERVER_VERSION = null;
     
     static {
